@@ -1,6 +1,8 @@
 # Shop-Event / Grupo 3
 
-Shop-Event es una tienda de venta de tickets online.
+Shop-Event es una tienda web de venta de Tickets para eventos de categorías como Festivales de Música, Teatro, Deportes, Cine, Conciertos y Eventos virtuales.
+Nuestra audiencia objetivo son jovenes mayores de edad y adultos que quieran disfrutar de los mejores eventos y que radiquen en Argentina.
+Ofrecemos eventos de calidad con buena organización y con presencia en redes sociales, ofreciendo descuentos y preventas con nuestro banco aliado BanShop.
 
 ### Integrantes:
 
@@ -19,6 +21,3 @@ Shop-Event es una tienda de venta de tickets online.
 6. https://www.skullcandy.com/
 7. https://www.joinnus.com/
 8. https://www.allaccess.com.ar/
-
-
-
