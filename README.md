@@ -9,7 +9,7 @@ Ofrecemos eventos de calidad con buena organización y con presencia en redes so
 * Ramón de Jesús Ortega: Es un joven mexicano que estudio la Licenciatura en Física y que tiene más de dos años programando. Actualmente se encuentra desarrollando aplicaciones moviles hibridas con Flutter de manera freelance. Le gusta escuchar música y aprender nuevas cosas.
 * Lorena Cabrera: Es una abogada, especializada en derecho de Familia, Sucesiones, demanda civiles, y litigios laborales, además, trabaja en una gestoria Judicial, dedicada al diligenciamiento de diversos tramites, tanto presenciales, como diligenciamientos web. Le gustan los animales y disfrutar de la vida en familia.
 * Janneth Cadima: Soy de Argentina, estudie lic en turismo.Trabajo actualmente en una empresa de turismo, hablo portugues y estudio ingles, me gusta los deportes y viajar. gi
-* Adolfo Yakov Castañeda Navarrete: Ing. en Computación nacido en Guadalajara, México, con experiencia en desarrollo web y bases de datos. Actualmente interesado en aprender nuevas tecnologías como React  Node
+* Adolfo Yakov Castañeda Navarrete: Ing. en Computación nacido en Guadalajara, México, con experiencia en desarrollo web y bases de datos. Actualmente interesado en aprender nuevas tecnologías como React  Noderem
 
 ### Referencias de sitios web:
 
