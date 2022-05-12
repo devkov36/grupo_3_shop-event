@@ -18,3 +18,7 @@ Ofrecemos eventos de calidad con buena organización y con presencia en redes so
 3. https://livepass.com.ar/ - El home nos pareció atractivo ya que distingue los eventos por categorías. El detalle del evento también es bastante amigable con el usuario y su página es responsive. Nos gusto que la página cuenta con un calendario con el cual puedes filtras eventos por fecha.
 4. https://boletia.com/ - La página es bastante completa y tiene un diseño amigable con el usuario, lo que más nos gusto de esta página es el proceso de login y register ya que es muy simple para el usuario. El home es bastante interesante ya que el carrusel  principal, muestra fechas y lugares por evento. Los eventos están catalogados por categorías y tenemos secciones de eventos proximos o top de eventos. El footer nos parece bastante interesante ya que cuenta con redes sociales como Itunes, Spotify.
 5. https://www.allaccess.com.ar/ - Nos gusto esta pagina por los productos que ofrecen ya que son similares a los que vamos a ofrecer nosotros. La usabilidad y el diseño de la página nos parecieron simples pero elegantes y el home nos pareció bastante atractivo para cualquier persona y es responsive. La orden de compras es bastante intuitiva y nos pareció que tiene un gran diseño.
+
+### ACCESO AL WIREFRAME DESDE FIGMA:
+
+https://www.figma.com/file/CHTdIPSWJIhoxog0fJ9due/Shop-Event-Wireframes?node-id=0%3A1 
