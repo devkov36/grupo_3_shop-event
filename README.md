@@ -22,3 +22,7 @@ Ofrecemos eventos de calidad con buena organización y con presencia en redes so
 ### ACCESO AL WIREFRAME DESDE FIGMA:
 
 https://www.figma.com/file/CHTdIPSWJIhoxog0fJ9due/Shop-Event-Wireframes?node-id=0%3A1 
+
+### ACCESO AL TRELLO:
+
+https://trello.com/b/IXE7shrD/grupo3-digitalhouse 
