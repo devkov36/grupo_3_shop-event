@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #CA4B40;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+footer {
+    background-color: #301711;
+    font-family: 'Roboto', sans-serif;
+}
