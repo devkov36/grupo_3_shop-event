@@ -6,10 +6,13 @@
 
 body{
     min-height: 100vh;
-    display: flex;
+    background-color: #162D50;
+}
+
+section {
     align-items: center;
     justify-content: center;
-    background-color: #162D50;
+    display: flex;
     padding: 30px;
 }
 
@@ -119,7 +122,8 @@ form .form-content button:hover{
         height: 100%;
         width: 50%;
         z-index: 98;
-        background-image: url(../images/banner.jpeg);
+        background-position: center;
+        background-image: url(../images/concierto2.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -132,7 +136,8 @@ form .form-content button:hover{
         height: 100%;
         width: 50%;
         z-index: 98;
-        background-image: url(../images/banner.jpeg);
+        background-position: center;
+        background-image: url(../images/concierto.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
     }
