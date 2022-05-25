@@ -1,15 +1,139 @@
+
 *{
     margin: 0px;
     padding: 0px;
+    
 }
 
+p
+{
+    font-size: 12px;
+}
+
+.fa-solid{
+    color:#e7b698;
+}
+
+h3{
+    color: #00778A;
+    text-shadow: #162d50;
+    font-size: xx-large;
+    text-align: center;
+    font: bolder;
+   }
+
+/* HEADER */
+.contenedor-header{
+    display: flex;
+    position: relative;
+}
+
+.logout {
+    display: flex;
+    position: absolute;
+    font-size: 40px;
+    padding: 5px;
+    top: 500px;
+    left: 960px;
+    
+}
+
+.user-login {
+    display: flex;
+    position: absolute;
+    font-size: 40px;
+    padding: 5px;
+    top: 500px;
+    left: 890px;}
+
+header .ticket-icon {
+    display: flex;
+    position: absolute;
+    font-size: 40px;
+    padding: 5px;
+    top: 500px;
+    left: 820px;
+}
+
+.banner {
+    display: flex;
+    position: relative;
+    
+}
+.logos {
+    box-sizing: border-box;
+}
+
+
+
+/*body*/
 body{
     background-color: #CA4B40;
     font-family: 'Roboto', sans-serif;
     
 }
 
+.concierto-contenedor {
+    display: flex;
+    position: relative;
+}
+
+.imagen-concierto {
+    display: flex;
+    position: relative;
+}
+.fa-solid {
+    display: flex;
+    position: relative;
+}
+.description {
+    display: flex;
+    position: relative;
+}
+.fecha {
+    display: flex;
+    position: relative;
+}
+.hora {
+    display: flex;
+    position: relative;
+}
+.lugar {
+    display: flex;
+    position: relative;
+}
+
 footer {
     background-color: #301711;
     font-family: 'Roboto', sans-serif;
 }
+
+@media (min-width: 100px ){
+    
+}
+
+@media (max-width: 360px){
+    
+    }
+
+  
+        
+@media (min-width: 361px){
+
+      
+    
+}
+
+
+
+
+
+
+@media (min-width: 769px){
+
+   
+}
+
+
+
+
