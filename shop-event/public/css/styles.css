@@ -158,11 +158,23 @@ div .main-article{
     display: grid;
     color: #ca4b40;
     font-size: x-large;
-    margin: auto;
+    margin: 5px;
     padding: 0px;
+    padding-left: 10px;
     background-color: #ffff;
+    width: 50%;
+    text-align: center;
 }
 
 h3 {
     color: #ca4b40;
+    background-color: #e7b698;
+    text-align: center;
+    font-size: larger
+}
+
+.imprimi {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
 }
