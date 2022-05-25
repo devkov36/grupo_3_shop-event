@@ -9,11 +9,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aquamarine;
+    background-color: #162D50;
     padding: 30px;
 }
 
-.container{
+.container-login,
+.container-signup{
     position: relative;
     max-width: 860px;
     width: 100%;
@@ -22,22 +23,20 @@ body{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.container form{
+.container-login form,
+.container-signup{
     height: 100%;
     width: 100%;
     background-color: #fff;
 }
 
-.container .form-content{
+.container-login .form-content,
+.container-signup .form-content{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* .form-content .login-form,
-.form-content .image-container{
-    width: 45%;
-} */
 
 form h3{
     font-size: 24;
@@ -88,25 +87,31 @@ form .form-content .login-button{
 
 form .form-content button{
     color: white;
-    background: blueviolet;
+    background: #00778A;
     border-radius: 12px;
     padding: 8px 0;
     width: 100%;
-
+    transition: background 450ms;
 }
 
-.container .image-container{
+form .form-content button:hover{
+    background: #008599;
+}
+
+.container-login .image-container,
+.container-signup .image-container{
     display: none;
 }
 
 .form-content .login-form,
+.form-content .signup-form,
 .form-content .image-container{
     width: 100%;
 }
 
 @media (min-width: 481px) {
 
-    .container .image-container{
+    .container-login .image-container{
         display: block;
         position: absolute;
         top: 0;
@@ -119,6 +124,20 @@ form .form-content button{
         background-size: cover;
     }
 
+    .container-signup .image-container{
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0%;
+        height: 100%;
+        width: 50%;
+        z-index: 98;
+        background-image: url(../images/banner.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .form-content .signup-form,
     .form-content .login-form{
         width: 45%;
     }
