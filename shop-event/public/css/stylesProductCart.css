@@ -23,6 +23,7 @@ h3{
    }
 
 /* HEADER */
+
 .contenedor-header{
     display: flex;
     position: relative;
@@ -103,17 +104,17 @@ body{
     position: relative;
 }
 
+.product_img {
+    width: 100%;
+}
+
+
 footer {
     background-color: #301711;
     font-family: 'Roboto', sans-serif;
 }
 
-@media (min-width: 100px ){
-    
-}
-
-@media (max-width: 360px){
-    
+ 
     }
 
   

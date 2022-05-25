@@ -60,3 +60,109 @@ footer img{
     }
 
 }
+
+
+.contenedor-header{
+    display: flex;
+    position: relative;
+}
+
+.logout {
+    display: flex;
+    position: absolute;
+    font-size: 40px;
+    padding: 5px;
+    top: 500px;
+    left: 960px;
+    
+}
+
+.user-login {
+    display: flex;
+    position: absolute;
+    font-size: 40px;
+    padding: 5px;
+    top: 500px;
+    left: 890px;}
+
+header .ticket-icon {
+    display: flex;
+    position: absolute;
+    font-size: 40px;
+    padding: 5px;
+    top: 500px;
+    left: 820px;
+}
+
+.banner {
+    display: flex;
+    position: relative;
+    
+}
+.logos {
+    box-sizing: border-box;
+}
+
+
+
+/*body*/
+body{
+    background-color: #162D50;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.concierto-contenedor {
+    display: flex;
+    position: relative;
+}
+
+.imagen-concierto {
+    display: flex;
+    position: relative;
+}
+.fa-solid {
+    display: flex;
+    position: relative;
+}
+.description {
+    display: flex;
+    position: relative;
+}
+.fecha {
+    display: flex;
+    position: relative;
+}
+.hora {
+    display: flex;
+    position: relative;
+}
+.lugar {
+    display: flex;
+    position: relative;
+}
+
+.product_img-carrito {
+    width: 50%;
+    display: flex;
+}
+
+.contenedor-articulo-carrito {
+    display: flex;
+    padding: 20px;
+    margin: auto;
+    margin: 10px;
+}
+
+div .main-article{
+    display: grid;
+    color: #ca4b40;
+    font-size: x-large;
+    margin: auto;
+    padding: 0px;
+    background-color: #ffff;
+}
+
+h3 {
+    color: #ca4b40;
+}
