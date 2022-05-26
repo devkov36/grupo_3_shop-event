@@ -1,4 +1,4 @@
-
+/*
 *{
     margin: 0px;
     padding: 0px;
@@ -22,7 +22,7 @@ h3{
     font: bolder;
    }
 
-/* HEADER */
+-- HEADER --
 
 .contenedor-header{
     display: flex;
@@ -67,7 +67,7 @@ header .ticket-icon {
 
 
 
-/*body*/
+--body--
 body{
     background-color: #CA4B40;
     font-family: 'Roboto', sans-serif;
@@ -130,7 +130,7 @@ footer {
 
    
 }
-
+*/
 
 
 
