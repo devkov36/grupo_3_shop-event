@@ -112,6 +112,30 @@ form .form-content button:hover{
     width: 100%;
 }
 
+footer{
+    padding: 20px;
+    display: flex;
+}
+
+footer .info-center-left,
+footer .info-center-right{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .info-center-left a,
+footer .info-center-right a{
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+}
+
+footer i{
+    padding-left: 10px;
+    font-size: 30px;
+    color: white;
+}
+
 @media (min-width: 481px) {
 
     .container-login .image-container{
