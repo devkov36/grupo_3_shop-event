@@ -28,3 +28,6 @@ app.get ( '/productDetail', ( req , res) => {
 app.get ( '/', ( req , res) => { 
     res.sendFile ( path.resolve ('./views/index.html'));
 });
+app.get ( '/home', ( req , res) => { 
+    res.sendFile ( path.resolve ('./views/home.html'));
+});
