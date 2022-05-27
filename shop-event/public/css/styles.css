@@ -375,3 +375,17 @@ div .main-article {
 .comprar {
     font-size: x-large
 }
+
+.conciertos-recomendados {
+    padding-bottom: 80px;
+}
+.descarga {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+}
+.compra-carrito {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+}
