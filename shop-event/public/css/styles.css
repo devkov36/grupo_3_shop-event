@@ -209,10 +209,6 @@ div .main-article {
         padding-left: 0px;
         margin: 0px;
     }
-
-
-
-
 }
 
 .navbar {
@@ -250,8 +246,6 @@ div .main-article {
 }
 
 .container {
-    width: 100%;
-    height: 50vh;
     background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1)), url('../images/music.jpg');
     background-size: cover;
 
@@ -261,7 +255,7 @@ div .main-article {
 .container .main-article {
 
     color: #ca4b40;
-
+    display: flex;
     margin: 0px;
     width: 100%;
     height: 50vh;
@@ -273,11 +267,9 @@ div .main-article {
 }
 
 .container .main-article input {
-    width: 40em;
+    width: 80%;
     padding: 12px 20px;
-    margin: 10px 0;
     font-size: x-large;
-    display: inline-block;
     border: 1px solid lightgray;
     border-radius: 4px;
     background-color: #ECECEC;
@@ -286,12 +278,6 @@ div .main-article {
 
 }
 
-.container .contenedor-div {
-    display: flex;
-    width: 100%;
-
-
-}
 .eventos-cercanos {
     display: flex;        
     width: 100%;
@@ -302,11 +288,6 @@ div .main-article {
     
 
 }
-@media (max-width:800px) {
-    .eventos-cercanos {
-      width: max-content;
-    }
-  }
 
 .eventos-cercanos .column {
     float: left;
