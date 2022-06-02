@@ -38,7 +38,6 @@ header .menu-right {
 }
 
 footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -374,7 +373,8 @@ div .main-article {
 
 /* CSS de Login y Register */
 
-.login-section {
+.login-section,
+.register-section {
     align-items: center;
     justify-content: center;
     display: flex;
