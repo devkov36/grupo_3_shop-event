@@ -26,3 +26,15 @@ https://www.figma.com/file/CHTdIPSWJIhoxog0fJ9due/Shop-Event-Wireframes?node-id=
 ### ACCESO AL TRELLO:
 
 https://trello.com/b/IXE7shrD/grupo3-digitalhouse 
+
+### RECTROSPECTIVA DEL SEGUNDO SPRINT:
+    - PAUTAS PARA MEJORAR:
+♥ De acuerdo a la cantidad de tareas determinar en que tiempo debemos intentar resolverlas, para llevar un buen tiempo.-
+
+♥ Si bien tuvimos muy buena comunicación, y buena organización al momento de dividir tareas, creo que se nos atrasó un poco la última reunión para ver detalles y trabajar en conjunto.
+    - PAUTAS A TENER EN CUENTA:
+♥ Ayudarnos y colaborar entre las partes de cada uno, dando criticas constrictivas o mejoras.
+
+♥ El trabajo en equipo y la comunicación, si alguno tiene problemas me parece perfecto que entre todos tratamos de sacar adelante el problema.
+
+♥ Cuestiones tecnicas. Quizas no avanzamos tanto el proyecto ya que las herramientas se nos dan por clases y quisimos avanzar referencia a la clase.
