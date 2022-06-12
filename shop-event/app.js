@@ -3,31 +3,15 @@ const app = express ();
 const path = require ('path');
 const port = 3000
 
+const mainRoutes = require('./src/routes/mainRoutes');
+const productsRoutes = require('./src/routes/productsRoutes');
+
 app.use(express.static(path.join (__dirname, 'public')));
 
 app.listen ( port , () => {
     console.log (`Servidor corriendo en el puerto ${port}`);
 });
 
-app.get ( '/login', ( req , res) => { 
-    res.sendFile ( path.resolve ('./views/login.html'));
-});
+app.use('/', mainRoutes);
 
-app.get ( '/productCart', ( req , res) => { 
-    res.sendFile ( path.resolve ('./views/productCart.html'));
-});
-
-app.get ( '/register', ( req , res) => { 
-    res.sendFile ( path.resolve ('./views/register.html'));
-});
-
-app.get ( '/productDetail', ( req , res) => { 
-    res.sendFile ( path.resolve ('./views/productDetail.html'));
-});
-
-app.get ( '/', ( req , res) => { 
-    res.sendFile ( path.resolve ('./views/index.html'));
-});
-app.get ( '/home', ( req , res) => { 
-    res.sendFile ( path.resolve ('./views/home.html'));
-});
+app.use('/product', productsRoutes);
