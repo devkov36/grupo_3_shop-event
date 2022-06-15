@@ -38,13 +38,14 @@ header .menu-right {
 }
 
 footer {
+    flex-direction: column;
     bottom: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #080200;
-    padding: 0 20px;
+    padding: 20px 20px;
 }
 
 footer img {
@@ -55,10 +56,12 @@ footer .info-center-left,
 footer .info-center-right{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 footer .info-center-left a,
 footer .info-center-right a{
+    align-items: center;
     padding: 10px 0;
     color: white;
     text-decoration: none;
@@ -519,5 +522,10 @@ form .form-content button:hover{
     header .burguer-menu {
         display: none;
     }
+}
 
+@media (min-width: 769px) {
+    footer{
+        flex-direction: row;
+    }
 }
