@@ -126,7 +126,7 @@ header .ticket-icon {
     position: relative;
 }
 
-.fa-solid {
+main .fa-solid  {
     display: flex;
     position: relative;
 }
@@ -360,7 +360,7 @@ div .main-article {
 }
 
 .conciertos-recomendados {
-    padding-bottom: 80px;
+    padding-bottom: 300px;
 }
 .descarga {
     font-size: 20px;
@@ -522,7 +522,17 @@ form .form-content button:hover{
     header .burguer-menu {
         display: none;
     }
+
+    .conciertos-recomendados {
+        padding-bottom: 300px;
+    }
+
+    main {
+        padding-bottom: 20%;
+    }
 }
+
+
 
 @media (min-width: 769px) {
     footer{
