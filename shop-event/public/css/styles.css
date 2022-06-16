@@ -308,25 +308,7 @@ div .main-article {
     clear: both;
   }
   
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .eventos-cercanos  .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
   
-  /* Style the counter cards */
-  .eventos-cercanos .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-    border-radius: 8px; 
-    height: 25vh;
-  }
-
 
   doby{
     font-family:sans-serif;
@@ -336,27 +318,58 @@ div .main-article {
     {
     background-color:#e7b698;
     height: 15vh;
-    flex-direction: column;
+    flex-direction: center;
     justify-content:space-around;
     align-items:center;
     text-align: center;
 
      }
+     /*body details descripcion*/
+    p {font-family: 'Roboto', sans-serif;
+     color: black;
+     background-color: white
+   }
+   #titulo {color: #ca4b40;
+    background-color:#e7b698
+    
+  } 
+  .promo h4{
+    position: center;
+
+  } 
+  /*.contenedor-boton details{
+   
+    margin-left: auto;
+    margin-right: auto;
+    
+   
+  }*/
+
+
 .product_img-detail{
     width: 100%;
 }
 
 .medio-de-pago {
-    display: flex;
+    /*display: flex;*/
     flex-wrap: flex;
     flex-flow: column;
     align-items: center;
     background-color: ca4b40;
     background-color: #ca4b40;
-    font-size: xx-large;
+    font-size: 20px;
 }
 .comprar {
-    font-size: x-large
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+     color: black;
+    background: #00778A;
+    border-radius: 10px;
+    padding: 5px 0;
+    width: 100%;
+    transition: background 50ms;
+      
+
 }
 
 .conciertos-recomendados {
@@ -539,3 +552,40 @@ form .form-content button:hover{
         flex-direction: row;
     }
 }
+
+/*************************************************
+**************************************************
+++++++++++++          HOME           +++++++++++++
+**************************************************
+**************************************************/
+
+
+/* Style the counter cards */
+  
+
+.card-row{
+    margin-top:5%;
+    margin-bottom:5%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    grid-gap:10px;
+    justify-content: space-between;
+}
+.card-row .card {
+    width: 320px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 8px; 
+    height: 25vh;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .card-row {
+       grid-template-columns: repeat(1, 1fr); 
+    }
+  }
+  
