@@ -316,7 +316,7 @@ div .main-article {
   
   /* Style the counter cards */
   .eventos-cercanos .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 #e7b698(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
@@ -333,27 +333,58 @@ div .main-article {
     {
     background-color:#e7b698;
     height: 15vh;
-    flex-direction: column;
+    flex-direction: center;
     justify-content:space-around;
     align-items:center;
     text-align: center;
 
      }
+     /*body details descripcion*/
+    p {font-family: 'Roboto', sans-serif;
+     color: black;
+     background-color: white
+   }
+   #titulo {color: #ca4b40;
+    background-color:#e7b698
+    
+  } 
+  .promo h4{
+    position: center;
+
+  } 
+  /*.contenedor-boton details{
+   
+    margin-left: auto;
+    margin-right: auto;
+    
+   
+  }*/
+
+
 .product_img-detail{
     width: 100%;
 }
 
 .medio-de-pago {
-    display: flex;
+    /*display: flex;*/
     flex-wrap: flex;
     flex-flow: column;
     align-items: center;
     background-color: ca4b40;
     background-color: #ca4b40;
-    font-size: xx-large;
+    font-size: 20px;
 }
 .comprar {
-    font-size: x-large
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+     color: black;
+    background: #00778A;
+    border-radius: 10px;
+    padding: 5px 0;
+    width: 100%;
+    transition: background 50ms;
+      
+
 }
 
 .conciertos-recomendados {
