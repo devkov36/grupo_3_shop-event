@@ -308,25 +308,7 @@ div .main-article {
     clear: both;
   }
   
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .eventos-cercanos  .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
   
-  /* Style the counter cards */
-  .eventos-cercanos .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-    border-radius: 8px; 
-    height: 25vh;
-  }
-
 
   doby{
     font-family:sans-serif;
@@ -529,3 +511,43 @@ form .form-content button:hover{
         flex-direction: row;
     }
 }
+
+/*************************************************
+**************************************************
+++++++++++++          HOME           +++++++++++++
+**************************************************
+**************************************************/
+
+
+/* Style the counter cards */
+  
+
+.card-row{
+    margin-top:5%;
+    margin-bottom:5%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    grid-gap:10px;
+    justify-content: space-between;
+}
+.card-row .card {
+    width: 320px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 8px; 
+    height: 25vh;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .card-row {
+       grid-template-columns: repeat(1, 1fr); 
+    }
+  }
+  @media (min-width: 900px) {
+    .card-row { grid-template-columns: repeat(1, 1fr); }
+  }
+  
