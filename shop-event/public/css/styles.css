@@ -38,13 +38,14 @@ header .menu-right {
 }
 
 footer {
+    flex-direction: column;
     bottom: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #080200;
-    padding: 0 20px;
+    padding: 20px 20px;
 }
 
 footer img {
@@ -55,10 +56,12 @@ footer .info-center-left,
 footer .info-center-right{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 footer .info-center-left a,
 footer .info-center-right a{
+    align-items: center;
     padding: 10px 0;
     color: white;
     text-decoration: none;
@@ -305,25 +308,7 @@ div .main-article {
     clear: both;
   }
   
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .eventos-cercanos  .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
   
-  /* Style the counter cards */
-  .eventos-cercanos .card {
-    box-shadow: 0 4px 8px 0 #e7b698(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-    border-radius: 8px; 
-    height: 25vh;
-  }
-
 
   doby{
     font-family:sans-serif;
@@ -550,5 +535,47 @@ form .form-content button:hover{
     header .burguer-menu {
         display: none;
     }
-
 }
+
+@media (min-width: 769px) {
+    footer{
+        flex-direction: row;
+    }
+}
+
+/*************************************************
+**************************************************
+++++++++++++          HOME           +++++++++++++
+**************************************************
+**************************************************/
+
+
+/* Style the counter cards */
+  
+
+.card-row{
+    margin-top:5%;
+    margin-bottom:5%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    grid-gap:10px;
+    justify-content: space-between;
+}
+.card-row .card {
+    width: 320px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 8px; 
+    height: 25vh;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .card-row {
+       grid-template-columns: repeat(1, 1fr); 
+    }
+  }
+  
