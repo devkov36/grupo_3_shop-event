@@ -547,7 +547,4 @@ form .form-content button:hover{
        grid-template-columns: repeat(1, 1fr); 
     }
   }
-  @media (min-width: 900px) {
-    .card-row { grid-template-columns: repeat(1, 1fr); }
-  }
   
