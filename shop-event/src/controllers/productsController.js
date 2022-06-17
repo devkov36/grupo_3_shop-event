@@ -6,7 +6,11 @@ const productController = {
     },
     detail: (req, res) => {
         res.sendFile(path.join(__dirname, '../views/productDetail.html'));
+    },
+    index1: (req, res) => {
+        res.sendFile(path.join(__dirname, '../views/index1.html'));
     }
+
 }
 
 module.exports = productController;
