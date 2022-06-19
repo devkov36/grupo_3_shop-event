@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include('./partials/head.ejs')-%>
+    <body>
+        <%- include('./partials/header.ejs')-%>
+
+<div class="sub-header">
+    <h2>CONTACTO</h2>
+</div>
+<div class="box-contacto">
+    <section class="box-form-contacto">
+        <form  class="form-contacto" action="/" method="POST">
+            <p>
+                <label class="form-label-hide" for="nombre">Nombre completo</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre completo" required>
+            </p>
+
+            <p>
+                <label class="form-label-hide" for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Ingrese su correo electrónico" required>
+            </p>
+                
+            <p>
+                <label class="form-label-hide" for="telefono">Telefono</label>
+                <input type="text" name="telefono" id="telefono" placeholder="Ingrese su teléfono" required>
+            </p>
+
+            <p>
+                <label class="form-label-hide" for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" placeholder="Ingrese su consulta" required rows="4" cols="50"></textarea>
+            </p>
+
+                     
+            <p>
+                <input class="btn-form2" id="enviar" type="submit" name="enviar" value="ENVIAR">
+            </p>                        
+        </form>
+        
+    </section>
+
+    <section class="box-img-contacto">
+        <img src="/images/generic-image.jpg" alt="Banner Login" class="img-login">
+    </section>
+</div> 
+
+
+</body>
+
+<%- include('./partials/footer')-%>
+</html>
+

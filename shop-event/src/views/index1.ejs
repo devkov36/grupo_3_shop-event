@@ -24,22 +24,131 @@
             </div>
         </section>
         <section class="conciertos-home">
-            <div class="carrousel">
-                <div class="grande">
-                    <img src="#" alt ="Imagen 1" class="img">
-                    <img src="#" alt ="Imagen 2" class="img">
+                <div class="conciertos-recomendados-contenedor">
+                    <script> 
+                                            
+                        let fila = document.querySelector(contenedor-carrousel);
+                        let conciertos= document.querySelectorAll(evento-home);
+                        let flechaIzquierda = document.getElementById(flecha-izquierda);
+                        let flechaDerecha = document.getElementById(flecha-derecha);
+
+                        /*event listen para felcha derecha*/
+
+                        flechaDerecha.addEventListener('click',() => {
+                            fila.scroleft += fila.offsetWidth;   
+
+
+                        const indicadorActivo = document.querySelector(indicadores .activo);
+                        if(indicadorActivo.nextSibling){
+                            indicadorActivo.nextSibling.classList.add(activo);
+                            indicadorActivo.classList.remove(activo);
+                        }
+                        });
+                        /* ----- ----- Event Listener para la flecha izquierda. ----- -----*/
+
+                        flechaIzquierda.addEventListener ( 'clic' ,  ( )  =>  {
+                            fila.scrollLeft  -=  fila.offsetWidth ;
+
+
+                            const indicadorActivo = document.querySelector(indicadores .activo);
+                            if(indicadorActivo.previousSibling){
+                                indicadorActivo.previousSibling.classList.add(activo);
+                                indicadorActivo.classList.remove(activo);
+                            }
+                        })
+
+
+                        /*Paginacion*/
+
+                        const numeroPaginas = math.ceil(conciertos.length / 5);
+
+                        for(let i = 0; i < numeroPaginas; i++){
+                            const indicador = document.createElement(button);
+
+                            if(i === 0){
+                                indicador.classList.add('activo');
+                            }
+
+                            document.querySelector(indicadores).appendChild(indicador);
+                            indicador.addEventListener('click', (e) => {
+                                fila.scrollLeft = i * fila.offsetWidth;
+
+                                document.querySelector(indicadores .activo).classList.remove('activo');
+                                e.target.classList.add('activo');
+                            });
+                        }
+
+                        // ? ----- ----- Hover ----- -----
+                        conciertos.forEach((conciertos) => {
+                            conciertos.addEventListener('mouseenter', (e) => {
+                                const elemento = e.currentTarget;
+                                setTimeout(() => {
+                                    conciertos.forEach(concierto => concierto.classList.remove(hover));
+                                    elemento.classList.add(hover);
+                                }, 300);
+                            });
+                        });
+
+                        fila.addEventListener('mouseleave', () => {
+                            conciertoss.forEach(concierto => concierto.classList.remove(hover));
+                        });
+                    </script>                    
+                    <div class="carrousel-titulo-controlador">
+                        <h2>Conciertos Recomedados</h2>
+                        <div class="indicadores"></div>
+                    </div>
+                    <div class="contenedor-principal">
+                        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                            "fa fa-angle-left" aria-hidden="true"></i></button>
+
+                        <div class="contendor-carrousel">
+                            <div class="carrousel">
+                                <div class="evento-home">
+                                    <img src="/images/duki.jpeg" alt="duki" class="product_img-carrito">
+                                </div>
+
+                                <div class="evento-home">
+                                    <img src="/images/rosalia.jpeg" alt="rosalia" class="product_img-carrito">
+                                </div>
+
+                                <div class="evento-home">
+                                    <img src="/images/yatra.jpeg" alt="yatra" class="product_img-carrito">
+                                </div>
+
+                                <div class="evento-home">
+                                    <p><img src="/images/tacuba2.jpg" alt="CafeTacuba" class="product_img-carrito">
+                                </div>
+
+                                <div class="evento-home">
+                                    <p><img src="/images/primavera-sound.jpeg" alt="Primavera" class="product_img-carrito">
+                                </div>
+
+                                <div class="evento-home">
+                                    <img src="/images/angeles-azules.jpeg" alt="Los-angeles-azules" class="product_img-carrito">
+                                </div>
+
+                                <div class="evento-home">
+                                    <p><img src="/images/babasonicos.jpeg" alt="babasonicos" class="product_img-carrito">
+                                </div>
+
+                                <div class="evento-home">
+                                    <p><img src="/images/bad-bunny.jpeg" alt="bad-bunny" class="product_img-carrito">
+                                </div>
+
+                                <div class="evento-home">
+                                    <p><img src="/images/coldplay.jpeg" alt="coldplay" class="product_img-carrito">
+                                </div>
+
+                                <div class="evento-home">
+                                    <p><img src="/images/diego-torres.jpeg" alt="diego-torres" class="product_img-carrito">
+                                </div>
+                            </div>                
+                        </div>
+                    </div>
                 </div>
-
-                <ul class="puntos">
-                    <li class="punto"></li>
-                    <li class="punto"></li>
-                </ul>
-
-
-
-                <div class="productos">
+            <div class="productos">
                     <article class="contenedor-articulo-carrito">
-                        <img src="/images/duki.jpeg" alt="Duki" class="product_img-carrito">
+                        <img src="/images/duki.jpeg" alt="duki" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
@@ -51,7 +160,7 @@
                         </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <img src="/images/rosalia.jpeg" alt="Rosalia" class="product_img-carrito">
+                        <img src="/images/rosalia.jpeg" alt="rosalia" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">

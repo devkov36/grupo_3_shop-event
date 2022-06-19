@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -588,4 +588,132 @@ form .form-content button:hover{
        grid-template-columns: repeat(1, 1fr); 
     }
   }
-  
+
+
+
+  /*------>contenedor titulo  y controles ------------*/
+
+.carrousel-titulo-controlador{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+}
+
+.carrousel-titulo-controlador h2 {
+    color: #e7b698;
+    font-size: 20px;
+}
+
+.carrousel-titulo-controlador button {
+    background: #ffff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.carrousel-titulo-controlador button:hover, 
+.carrousel-titulo-controlador button.activo {
+    background: #ca4b40;}
+
+   
+/*----->carrousel ------------*/
+
+.conciertos-recomendados-contenedor .contenedor-carrousel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    
+}
+
+.conciertos-recomendados-contenedor .carrousel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.conciertos-recomendados-contenedor .contenedor-carousel .carousel .evento-home {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.conciertos-recomendados-contenedor .contenedor-carousel .carrousel .evento-home.hover{
+    transform: scale(1.2);
+    transform-origin: center;
+
+}
+
+.conciertos-recomendados-contenedor .contenedor-carrousel .carrousel .evento-home img {
+
+    width: 100%;
+    vertical-align: top;
+}
+
+/*----->contenedor principal y flechas ------------*/
+.conciertos-recomendados-contenedor{
+    margin-bottom: 70px;
+
+}
+
+.conciertos-recomendados-contenedor .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+
+.conciertos-recomendados-contenedor .contenedor-principal .flecha-izquierda , 
+.conciertos-recomendados-contenedor .contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    font-size: 20px;
+    height: 50%;
+    top: calc(50% - 25%); 
+    line-height: 40px;
+    width: 40px;
+    color: coral;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2 ease all;
+
+}
+
+.conciertos-recomendados-contenedor .contenedor-principal .flecha-izquierda:hover , 
+.conciertos-recomendados-contenedor .contenedor-principal .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.conciertos-recomendados-contenedor .contenedor-principal .flecha-izquierda{
+    left: 0
+}
+
+.conciertos-recomendados-contenedor .contenedor-principal .flecha-derecha{
+    right: 0
+}
+
+
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+
+    .conciertos-recomendados-contenedor .contenedor-carousel {
+        overflow: visible;
+    }
+
+    .conciertos-recomendados-contenedor .contenedor-carousel .carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .conciertos-recomendados-contenedor .flecha-izquierda,
+    .conciertos-recomendados-contenedor .indicadores,
+    .conciertos-recomendados-contenedor .flecha-derecha {
+        display: none;
+    }
+}
