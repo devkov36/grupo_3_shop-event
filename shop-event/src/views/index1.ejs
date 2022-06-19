@@ -17,135 +17,235 @@
             </div>
         </ul>
     </nav>
-    <main>
-        <section class="container">
+    <main> 
+        <section class="container">    
             <div class="main-article">
-                <input type="text" placeholder="Buscar Artista o Evento" />  
+              <input type="text" placeholder="Buscar Artista o Evento" />  
             </div>
         </section>
-        <section class="conciertos-home">
-                <div class="conciertos-recomendados-contenedor">
-                    <script> 
-                                            
-                        let fila = document.querySelector(contenedor-carrousel);
-                        let conciertos= document.querySelectorAll(evento-home);
-                        let flechaIzquierda = document.getElementById(flecha-izquierda);
-                        let flechaDerecha = document.getElementById(flecha-derecha);
+        <div id="conteItemsCarrousel">
+            <div class="contenedor-home1-">
+                <div class="carrousel">
+                    <div class="conteCarrousel">
 
-                        /*event listen para felcha derecha*/
-
-                        flechaDerecha.addEventListener('click',() => {
-                            fila.scroleft += fila.offsetWidth;   
-
-
-                        const indicadorActivo = document.querySelector(indicadores .activo);
-                        if(indicadorActivo.nextSibling){
-                            indicadorActivo.nextSibling.classList.add(activo);
-                            indicadorActivo.classList.remove(activo);
-                        }
-                        });
-                        /* ----- ----- Event Listener para la flecha izquierda. ----- -----*/
-
-                        flechaIzquierda.addEventListener ( 'clic' ,  ( )  =>  {
-                            fila.scrollLeft  -=  fila.offsetWidth ;
-
-
-                            const indicadorActivo = document.querySelector(indicadores .activo);
-                            if(indicadorActivo.previousSibling){
-                                indicadorActivo.previousSibling.classList.add(activo);
-                                indicadorActivo.classList.remove(activo);
-                            }
-                        })
-
-
-                        /*Paginacion*/
-
-                        const numeroPaginas = math.ceil(conciertos.length / 5);
-
-                        for(let i = 0; i < numeroPaginas; i++){
-                            const indicador = document.createElement(button);
-
-                            if(i === 0){
-                                indicador.classList.add('activo');
-                            }
-
-                            document.querySelector(indicadores).appendChild(indicador);
-                            indicador.addEventListener('click', (e) => {
-                                fila.scrollLeft = i * fila.offsetWidth;
-
-                                document.querySelector(indicadores .activo).classList.remove('activo');
-                                e.target.classList.add('activo');
-                            });
-                        }
-
-                        // ? ----- ----- Hover ----- -----
-                        conciertos.forEach((conciertos) => {
-                            conciertos.addEventListener('mouseenter', (e) => {
-                                const elemento = e.currentTarget;
-                                setTimeout(() => {
-                                    conciertos.forEach(concierto => concierto.classList.remove(hover));
-                                    elemento.classList.add(hover);
-                                }, 300);
-                            });
-                        });
-
-                        fila.addEventListener('mouseleave', () => {
-                            conciertoss.forEach(concierto => concierto.classList.remove(hover));
-                        });
-                    </script>                    
-                    <div class="carrousel-titulo-controlador">
-                        <h2>Conciertos Recomedados</h2>
-                        <div class="indicadores"></div>
-                    </div>
-                    <div class="contenedor-principal">
-                        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
-                            "fa fa-angle-left" aria-hidden="true"></i></button>
-
-                        <div class="contendor-carrousel">
-                            <div class="carrousel">
+                        <div class="itemCarrousel" id="itemCarrousel-1">
+                            <div class="itemCarrouselTarjeta">
                                 <div class="evento-home">
-                                    <img src="/images/duki.jpeg" alt="duki" class="product_img-carrito">
+                                    <img src="/images/duki.jpeg" alt="duki" class="product_img-carrousel">
                                 </div>
-
-                                <div class="evento-home">
-                                    <img src="/images/rosalia.jpeg" alt="rosalia" class="product_img-carrito">
-                                </div>
-
-                                <div class="evento-home">
-                                    <img src="/images/yatra.jpeg" alt="yatra" class="product_img-carrito">
-                                </div>
-
-                                <div class="evento-home">
-                                    <p><img src="/images/tacuba2.jpg" alt="CafeTacuba" class="product_img-carrito">
-                                </div>
-
-                                <div class="evento-home">
-                                    <p><img src="/images/primavera-sound.jpeg" alt="Primavera" class="product_img-carrito">
-                                </div>
-
-                                <div class="evento-home">
-                                    <img src="/images/angeles-azules.jpeg" alt="Los-angeles-azules" class="product_img-carrito">
-                                </div>
-
-                                <div class="evento-home">
-                                    <p><img src="/images/babasonicos.jpeg" alt="babasonicos" class="product_img-carrito">
-                                </div>
-
-                                <div class="evento-home">
-                                    <p><img src="/images/bad-bunny.jpeg" alt="bad-bunny" class="product_img-carrito">
-                                </div>
-
-                                <div class="evento-home">
-                                    <p><img src="/images/coldplay.jpeg" alt="coldplay" class="product_img-carrito">
-                                </div>
-
-                                <div class="evento-home">
-                                    <p><img src="/images/diego-torres.jpeg" alt="diego-torres" class="product_img-carrito">
-                                </div>
-                            </div>                
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-10">
+                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                                        "fa fa-angle-left" aria-hidden="true"></i></button>
+                                </a>
+                                <a href="#itemCarrousel-2">
+                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class=
+                                        "fa fa-angle-right" aria-hidden="true"></i></button>
+                                </a>
+                            </div>
                         </div>
+
+                        <div class="itemCarrousel" id="itemCarrousel-2">
+                            <div class="itemCarrouselTarjeta">
+                                
+                                <div class="evento-home">
+                                    <img src="/images/rosalia.jpeg" alt="rosalia" class="product_img-carrousel">
+                                </div>
+   
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-1">
+                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                            "fa fa-angle-left" aria-hidden="true"></i></button>
+                                </a>
+                                <a href="#itemCarrousel-3">
+                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class=
+                            "fa fa-angle-right" aria-hidden="true"></i></button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="itemCarrousel" id="itemCarrousel-3">
+                            <div class="itemCarrouselTarjeta">
+                                
+                                <div class="evento-home">
+                                    <img src="/images/yatra.jpeg" alt="yatra" class="product_img-carrousel">
+                                </div>
+
+                                
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-2">
+                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                            "fa fa-angle-left" aria-hidden="true"></i></button>
+                                </a>
+                                <a href="#itemCarrousel-4">
+                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class=
+                            "fa fa-angle-right" aria-hidden="true"></i></button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="itemCarrousel" id="itemCarrousel-4">
+                            <div class="itemCarrouselTarjeta">
+                                <div class="evento-home">
+                                    <img src="/images/tacuba2.jpg" alt="CafeTacuba" class="product_img-carrousel">
+                                </div>                                
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-3">
+                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                            "fa fa-angle-left" aria-hidden="true"></i></button>
+                                </a>
+                                <a href="#itemCarrousel-5">
+                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class=
+                            "fa fa-angle-right" aria-hidden="true"></i></button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="itemCarrousel" id="itemCarrousel-5">
+                            <div class="itemCarrouselTarjeta">
+                                <div class="evento-home">
+                                    <img src="/images/primavera-sound.jpeg" alt="Primavera" class="product_img-carrousel">
+                                </div>                                 
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-4">
+                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                            "fa fa-angle-left" aria-hidden="true"></i></button>
+                                </a>
+                                <a href="#itemCarrousel-6">
+                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class=
+                            "fa fa-angle-right" aria-hidden="true"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-6">
+                            <div class="itemCarrouselTarjeta">
+                                <div class="evento-home">
+                                    <img src="/images/angeles-azules.jpeg" alt="Los-angeles-azules" class="product_img-carrousel">
+                                </div>
+                                                            
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-5">
+                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                            "fa fa-angle-left" aria-hidden="true"></i></button>
+                                </a>
+                                <a href="#itemCarrousel-7">
+                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class=
+                            "fa fa-angle-right" aria-hidden="true"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-7">
+                            <div class="itemCarrouselTarjeta">
+                                <div class="evento-home">
+                                    <img src="/images/babasonicos.jpeg" alt="babasonicos" class="product_img-carrousel">
+                                </div>
+                               
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-6">
+                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                            "fa fa-angle-left" aria-hidden="true"></i></button>
+                                </a>
+                                <a href="#itemCarrousel-8">
+                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class=
+                            "fa fa-angle-right" aria-hidden="true"></i></button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="itemCarrousel" id="itemCarrousel-8">
+                            <div class="itemCarrouselTarjeta">
+                                <div class="evento-home">
+                                    <img src="/images/bad-bunny.jpeg" alt="bad-bunny" class="product_img-carrousel">
+                                </div>                                
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-7">
+                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                            "fa fa-angle-left" aria-hidden="true"></i></button>
+                                </a>
+                                <a href="#itemCarrousel-9">
+                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class=
+                            "fa fa-angle-right" aria-hidden="true"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-9">
+                            <div class="itemCarrouselTarjeta">
+                                <div class="evento-home">
+                                    <img src="/images/coldplay.jpeg" alt="coldplay" class="product_img-carrousel">
+                                </div>    
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-8">
+                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                            "fa fa-angle-left" aria-hidden="true"></i></button>
+                                </a>
+                                <a href="#itemCarrousel-10">
+                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class=
+                            "fa fa-angle-right" aria-hidden="true"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-10">
+                            <div class="itemCarrouselTarjeta">
+                                <div class="evento-home">
+                                    <img src="/images/la-delio-valdez.jpeg" alt="la-delio-valdez" class="product_img-carrousel">
+                                </div>
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-9">
+                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                            "fa fa-angle-left" aria-hidden="true"></i></button>
+                                </a>
+                                <a href="#itemCarrousel-11">
+                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class=
+                            "fa fa-angle-right" aria-hidden="true"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemCarrousel" id="itemCarrousel-11">
+                            <div class="itemCarrouselTarjeta">
+                                <div class="evento-home">                            
+                                    <img src="/images/lali.jpeg" alt="lali" class="product_img-carrousel">
+                                </div>
+                            </div>
+                            <div class="itemCarrouselArrows">
+                                <a href="#itemCarrousel-10">
+                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class=
+                            "fa fa-angle-left" aria-hidden="true"></i></button>
+                                </a>
+                                <a href="#itemCarrousel-1">
+                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class=
+                            "fa fa-angle-right" aria-hidden="true"></i></button>
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
+                    <div class="conteCarrouselController">
+                        <a href="#itemCarrousel-1">•</a>
+                        <a href="#itemCarrousel-2">•</a>
+                        <a href="#itemCarrousel-3">•</a>
+                        <a href="#itemCarrousel-4">•</a>
+                        <a href="#itemCarrousel-5">•</a>
+                        <a href="#itemCarrousel-6">•</a>
+                        <a href="#itemCarrousel-7">•</a>
+                        <a href="#itemCarrousel-8">•</a>
+                        <a href="#itemCarrousel-9">•</a>
+                        <a href="#itemCarrousel-10">•</a>
+                        <a href="#itemCarrousel-11">•</a>
+
+                    </div>
+                
                 </div>
+              
             <div class="productos">
                     <article class="contenedor-articulo-carrito">
                         <img src="/images/duki.jpeg" alt="duki" class="product_img-carrito">
@@ -160,7 +260,7 @@
                         </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <img src="/images/rosalia.jpeg" alt="rosalia" class="product_img-carrito">
+                            <img src="/images/rosalia.jpeg" alt="rosalia" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
@@ -172,7 +272,7 @@
                         </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <img src="/images/yatra.jpeg" alt="yatra" class="product_img-carrito">
+                            <img src="/images/yatra.jpeg" alt="yatra" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
@@ -184,7 +284,7 @@
                         </div>
                     </article>                
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/tacuba2.jpg" alt="CafeTacuba" class="product_img-carrito">
+                            <img src="/images/tacuba2.jpg" alt="CafeTacuba" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
@@ -196,7 +296,7 @@
                         </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/primavera-sound.jpeg" alt="Primavera" class="product_img-carrito">
+                            <img src="/images/primavera-sound.jpeg" alt="Primavera" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
@@ -220,7 +320,7 @@
                         </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/babasonicos.jpeg" alt="babasonicos" class="product_img-carrito">
+                        <img src="/images/babasonicos.jpeg" alt="babasonicos" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
@@ -232,7 +332,7 @@
                         </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/bad-bunny.jpeg" alt="bad-bunny" class="product_img-carrito">
+                        <img src="/images/bad-bunny.jpeg" alt="bad-bunny" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
@@ -244,7 +344,7 @@
                         </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/coldplay.jpeg" alt="coldplay" class="product_img-carrito">
+                        <img src="/images/coldplay.jpeg" alt="coldplay" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
@@ -256,7 +356,7 @@
                         </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/diego-torres.jpeg" alt="diego-torres" class="product_img-carrito">
+                        <img src="/images/diego-torres.jpeg" alt="diego-torres" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
@@ -268,7 +368,7 @@
                         </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/divididos.jpeg" alt="divididos" class="product_img-carrito">
+                        <img src="/images/divididos.jpeg" alt="divididos" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
@@ -280,7 +380,7 @@
                         </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/dua-lipa.jpeg" alt="dua-lipa" class="product_img-carrito">
+                        <img src="/images/dua-lipa.jpeg" alt="dua-lipa" class="product_img-carrito">
                         <div class="main-article">
                             <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
@@ -292,7 +392,7 @@
                         </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/guns.jpeg" alt="guns" class="product_img-carrito">
+                        <img src="/images/guns.jpeg" alt="guns" class="product_img-carrito">
                             <div class="main-article">
                                 <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                                 <div class="datos-concierto-carrito">
@@ -304,7 +404,7 @@
                             </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                            <p><img src="/images/harry-styles.jpeg" alt="harry-styles" class="product_img-carrito">
+                            <img src="/images/harry-styles.jpeg" alt="harry-styles" class="product_img-carrito">
                                 <div class="main-article">
                                     <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                                     <div class="datos-concierto-carrito">
@@ -317,7 +417,7 @@
                         </article>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/joss-stone.jpeg" alt="joss-stone" class="product_img-carrito">
+                        <img src="/images/joss-stone.jpeg" alt="joss-stone" class="product_img-carrito">
                             <div class="main-article">
                                 <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                                 <div class="datos-concierto-carrito">
@@ -329,7 +429,7 @@
                             </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/justin-bieber.jpeg" alt="justin-bieber" class="product_img-carrito">
+                        <img src="/images/justin-bieber.jpeg" alt="justin-bieber" class="product_img-carrito">
                             <div class="main-article">
                                 <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                                 <div class="datos-concierto-carrito">
@@ -341,7 +441,7 @@
                             </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/karol-g.jpeg" alt="karol-g" class="product_img-carrito">
+                        <img src="/images/karol-g.jpeg" alt="karol-g" class="product_img-carrito">
                             <div class="main-article">
                                 <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                                 <div class="datos-concierto-carrito">
@@ -353,7 +453,7 @@
                             </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/la-delio-valdez.jpeg" alt="la-delio-valdez" class="product_img-carrito">
+                        <img src="/images/la-delio-valdez.jpeg" alt="la-delio-valdez" class="product_img-carrito">
                             <div class="main-article">
                                 <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                                 <div class="datos-concierto-carrito">
@@ -365,7 +465,7 @@
                             </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/lali.jpeg" alt="lali" class="product_img-carrito">
+                        <img src="/images/lali.jpeg" alt="lali" class="product_img-carrito">
                             <div class="main-article">
                                 <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                                 <div class="datos-concierto-carrito">
@@ -377,7 +477,7 @@
                             </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/louis.jpeg" alt="louis" class="product_img-carrito">
+                        <img src="/images/louis.jpeg" alt="louis" class="product_img-carrito">
                             <div class="main-article">
                                 <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                                 <div class="datos-concierto-carrito">
@@ -389,7 +489,7 @@
                             </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/luis-fonsi.jpeg" alt="luis-fonsi" class="product_img-carrito">
+                        <img src="/images/luis-fonsi.jpeg" alt="luis-fonsi" class="product_img-carrito">
                             <div class="main-article">
                                 <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                                 <div class="datos-concierto-carrito">
@@ -401,7 +501,7 @@
                             </div>
                     </article>
                     <article class="contenedor-articulo-carrito">
-                        <p><img src="/images/ricardo-arjona.jpeg" alt="ricardo-arjona" class="product_img-carrito">
+                        <img src="/images/ricardo-arjona.jpeg" alt="ricardo-arjona" class="product_img-carrito">
                             <div class="main-article">
                                 <i class="fa-solid fa-bag-shopping"><a class="compra-carrito"> Comprá tu entrada! </a> </i>
                                 <div class="datos-concierto-carrito">

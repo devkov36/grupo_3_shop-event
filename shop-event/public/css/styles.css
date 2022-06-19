@@ -589,9 +589,127 @@ form .form-content button:hover{
     }
   }
 
+ 
+
+.carrousel {
+    width: 100%;
+}
+
+.conteCarrousel{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselArrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.itemCarrouselArrows > i:hover {
+    cursor: pointer;
+}
+
+#itemCarrousel-1{
+    background-color: rgb(226, 50, 50);
+}
+
+#itemCarrousel-2{
+    background-color: rgb(50, 200, 226);
+}
+
+#itemCarrousel-3{
+    background-color: rgb(200, 226, 50);
+}
 
 
-  /*------>contenedor titulo  y controles ------------*/
+a {
+    text-decoration: none;
+}
+.conteCarrouselController{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 2em;
+    color: grey;
+}
+
+.itemCarrouselArrows > a > i{
+    color: white;
+}
+
+button#flecha-izquierda , 
+button#flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    font-size: 20px;
+    height: 50%;
+    top: calc(50% - 25%); 
+    line-height: 40px;
+    width: 40px;
+    color: coral;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2 ease all;
+
+}
+
+button#flecha-izquierda:hover , 
+button#flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+button#flecha-izquierda{
+    left: 0
+}
+
+button#flecha-derecha{
+    right: 0
+}
+
+.product_img-carrousel {
+    width: 100%;;
+    position: absolute;
+    height: 100%;
+}
+
+
+
+
+
+@media (min-width: 800px ) {
+
+    button#flecha-derecha , button#flecha-izquierda  {
+        display: none;
+    }
+}
+
+/*------>contenedor titulo  y controles ----------/
 
 .carrousel-titulo-controlador{
 
@@ -620,7 +738,7 @@ form .form-content button:hover{
     background: #ca4b40;}
 
    
-/*----->carrousel ------------*/
+/*----->carrousel ----------
 
 .conciertos-recomendados-contenedor .contenedor-carrousel{
     width: 100%;
@@ -635,25 +753,8 @@ form .form-content button:hover{
     flex-wrap: nowrap;
 }
 
-.conciertos-recomendados-contenedor .contenedor-carousel .carousel .evento-home {
-    min-width: 20%;
-    transition: .3s ease all;
-    box-shadow: 5px 5px 10px rgba(0,0,0, .3);
-}
 
-.conciertos-recomendados-contenedor .contenedor-carousel .carrousel .evento-home.hover{
-    transform: scale(1.2);
-    transform-origin: center;
-
-}
-
-.conciertos-recomendados-contenedor .contenedor-carrousel .carrousel .evento-home img {
-
-    width: 100%;
-    vertical-align: top;
-}
-
-/*----->contenedor principal y flechas ------------*/
+/*----->contenedor principal y flechas ------------
 .conciertos-recomendados-contenedor{
     margin-bottom: 70px;
 
@@ -666,39 +767,11 @@ form .form-content button:hover{
     
 }
 
-.conciertos-recomendados-contenedor .contenedor-principal .flecha-izquierda , 
-.conciertos-recomendados-contenedor .contenedor-principal .flecha-derecha {
-    position: absolute;
-    border: none;
-    background: rgba(0,0,0,0.3);
-    font-size: 20px;
-    height: 50%;
-    top: calc(50% - 25%); 
-    line-height: 40px;
-    width: 40px;
-    color: coral;
-    cursor: pointer;
-    z-index: 500;
-    transition: .2 ease all;
-
-}
-
-.conciertos-recomendados-contenedor .contenedor-principal .flecha-izquierda:hover , 
-.conciertos-recomendados-contenedor .contenedor-principal .flecha-derecha:hover {
-    background: rgba(0, 0, 0, .9);
-}
-
-.conciertos-recomendados-contenedor .contenedor-principal .flecha-izquierda{
-    left: 0
-}
-
-.conciertos-recomendados-contenedor .contenedor-principal .flecha-derecha{
-    right: 0
-}
 
 
 
-/* ---- ----- ----- Media Queries ----- ----- ----- */
+
+/* ---- ----- ----- Media Queries ----- ----- ----/
 @media screen and (max-width: 800px) {
 
     .conciertos-recomendados-contenedor .contenedor-carousel {
@@ -716,4 +789,5 @@ form .form-content button:hover{
     .conciertos-recomendados-contenedor .flecha-derecha {
         display: none;
     }
-}
+} --->
+*/
