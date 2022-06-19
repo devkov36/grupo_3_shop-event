@@ -7,3 +7,10 @@ En la semana vamos a organizar el proyecto con el MVC, la restrospectiva con el 
 Buscamos modelos de inspiracion para el panel de administrador.
 Realizamos wireframes del perfil administrador. 
 Unificamos el CCS.
+
+Semana del 13 de Junio a 17 de Junio:
+Nos juntamos para resolver las observaciones del sprint 2.
+Cada uno trabajo en sus tareas asignadas, revisamos las tareas pendientes y las redistribuimos.
+Impedimento en la semana: Detectamos algunas inasistencias las cuales nos retrasaron en algunos contenidos.
+Fortaleza en la semana: Tuvimos comunicación constante mediante whatsapp y nos ayudamos en las tareas que teníamos dificultades. Nos reunimos para realizar tareas en conjunto.
+Generamos criticas constructivas sobre el diseño de la web de cada uno y las recibimos de buen modo, considerando que es una manera de mejorar.
