@@ -9,6 +9,8 @@ router.get('/detail', productsController.detail);
 
 router.get ('/index1', productsController.index1);
 
+router.get ('/error404', productsController.error404);
+
 
 module.exports = router;
 

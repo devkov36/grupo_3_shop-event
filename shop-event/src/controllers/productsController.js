@@ -9,6 +9,9 @@ const productController = {
     },
     index1: (req, res) => {
         res.render('index1');
+    },
+    error404: (req,res)=> {
+        res.render ('error404');
     }
 
 }
