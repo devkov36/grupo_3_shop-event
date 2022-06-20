@@ -192,6 +192,21 @@ div .main-article {
     padding-left: 10px;
 }
 
+div .main-article-home {
+    display: grid;
+    color: #ca4b40;
+    font-size: x-large;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 10px;
+    background-color: #ffff;
+    width: 50%;
+    text-align: center;
+    align-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 481px) {
     .contenedor-articulo-carrito {
         display: flex;
@@ -207,6 +222,12 @@ div .main-article {
     }
 
     div .main-article {
+        width: 100%;
+        padding-left: 0px;
+        margin: 0px;
+    }
+
+    div .main-article-home {
         width: 100%;
         padding-left: 0px;
         margin: 0px;
@@ -610,6 +631,7 @@ form .form-content button:hover{
 .itemCarrouselTarjeta{
     width: 100%;
     height: 100%;
+
 }
 
 .itemCarrouselArrows{
@@ -628,24 +650,15 @@ form .form-content button:hover{
 
 .itemCarrouselArrows > i:hover {
     cursor: pointer;
-}
+    background: #4c9e9e;
 
-#itemCarrousel-1{
-    background-color: rgb(226, 50, 50);
-}
-
-#itemCarrousel-2{
-    background-color: rgb(50, 200, 226);
-}
-
-#itemCarrousel-3{
-    background-color: rgb(200, 226, 50);
 }
 
 
 a {
     text-decoration: none;
 }
+
 .conteCarrouselController{
     width: 100%;
     display: flex;
@@ -654,12 +667,24 @@ a {
 
 .conteCarrouselController > a{
     text-decoration: none;
-    font-size: 2em;
-    color: grey;
+    font-size: 3em;
+    color: #e7b698;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+}
+
+.conteCarrouselController > a:hover, .conteCarrouselController > a.activo {
+    text-decoration: none;
+    font-size: 3em;
+    color: #4c9e9e;
+    font:bold;
+
 }
 
 .itemCarrouselArrows > a > i{
     color: white;
+
 }
 
 button#flecha-izquierda , 
@@ -705,9 +730,52 @@ button#flecha-derecha{
 @media (min-width: 800px ) {
 
     button#flecha-derecha , button#flecha-izquierda  {
+        display: none}
+    
+    .conteCarrousel{
+            width: 100%;
+            height: 400px
+            
+        }
+
+    .product_img-carrito {
+        width: 100%;
+        display: flex;
+        /* min-width: 20%; */
+        /* transition: .3s ease all; */
+        box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;}
+
+    .carrousel {
         display: none;
     }
+
+    div .main-article-home {
+        display: none;
+    }
+    
+    .contenedor-articulo-carrito {
+        display: flex;
+        margin: 10px;
+        box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+        transition: .3s ease all;
+    }
+    .contenedor-articulo-carrito:hover{ 
+
+        transform: scale(1.2);
+        transform-origin: center;
+        background-color: #4c9e9e;
+        
+        
+
+    }
 }
+
 
 /*------>contenedor titulo  y controles ----------/
 
@@ -743,8 +811,7 @@ button#flecha-derecha{
 .conciertos-recomendados-contenedor .contenedor-carrousel{
     width: 100%;
     padding: 20px 0;
-    overflow: hidden;
-    scroll-behavior: smooth;
+
     
 }
 
@@ -772,17 +839,7 @@ button#flecha-derecha{
 
 
 /* ---- ----- ----- Media Queries ----- ----- ----/
-@media screen and (max-width: 800px) {
 
-    .conciertos-recomendados-contenedor .contenedor-carousel {
-        overflow: visible;
-    }
-
-    .conciertos-recomendados-contenedor .contenedor-carousel .carousel {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
 
     .conciertos-recomendados-contenedor .flecha-izquierda,
     .conciertos-recomendados-contenedor .indicadores,
