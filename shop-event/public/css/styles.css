@@ -9,7 +9,7 @@ body{
     min-height: 100vh;
     background-color: #162D50;
     font-family: 'Roboto', sans-serif;
-    /* padding-bottom: 300px; */
+    padding-bottom: 300px;
 }
 
 header {
@@ -293,8 +293,6 @@ article.contenedor-articulo-carrito-home{
 .container {
     background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1)), url('../images/music.jpg');
     background-size: cover;
-
-
 }
 
 .container .main-article {
@@ -530,7 +528,7 @@ form .form-content button:hover{
     width: 100%;
 }
 
-/* 404 Design */
+/* 404 DISEÑO INICIO*/
 .error-body{
     background-color: #080200;
     display: flex;
@@ -581,7 +579,68 @@ form .form-content button:hover{
     display: block;
     margin-bottom: 20px;
 }
+/* 404 DISEÑO FIN*/
 
+/* CREACION DE PRODUCTOS INICIO */
+.events-wrapper {
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.events-title {
+    font-size: 2.4em;
+    font-weight: 400;
+    color: white;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.form-container{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.event-detail {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.form-label {
+    display: inline-block;
+    font-size: 1.6em;
+    margin: 10px 0;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px black;
+    padding: 0 15px;
+}
+
+.save-button {
+    background-color: #ca4b40;
+    font-size: 1.6em;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    margin: 15px auto;
+}
+
+
+/* CREACION DE PRODUCTOS FIN */
 @media (min-width: 481px) {
 
     .container-login .image-container{
