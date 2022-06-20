@@ -9,6 +9,7 @@ body{
     min-height: 100vh;
     background-color: #162D50;
     font-family: 'Roboto', sans-serif;
+    padding-bottom: 300px;
 }
 
 header {
@@ -46,6 +47,7 @@ footer {
     justify-content: space-between;
     background-color: #080200;
     padding: 20px 20px;
+    position: absolute;
 }
 
 footer img {
@@ -200,11 +202,18 @@ div .main-article-home {
     padding: 0px;
     padding-left: 10px;
     background-color: #ffff;
-    width: 50%;
+    width: 100%;
     text-align: center;
     align-content: space-evenly;
     justify-content: center;
     align-items: center;
+}
+img.product_img-carrito-home {
+    width: 100%;
+}
+
+article.contenedor-articulo-carrito-home{
+    margin: 5%;
 }
 
 @media (max-width: 481px) {
@@ -216,11 +225,20 @@ div .main-article-home {
         margin: 10px;
     }
 
+    .contenedor-articulo-carrito-home {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin: auto;
+        margin: 10px;
+    }
+
     .product_img-carrito {
         width: 100%;
         display: flex;
     }
-
+    
+   
     div .main-article {
         width: 100%;
         padding-left: 0px;
@@ -331,7 +349,7 @@ div .main-article-home {
   
   
 
-  doby{
+  body{
     font-family:sans-serif;
  }
  
@@ -571,6 +589,7 @@ form .form-content button:hover{
 @media (min-width: 769px) {
     footer{
         flex-direction: row;
+        position: absolute;
     }
 }
 
@@ -738,15 +757,13 @@ button#flecha-derecha{
             
         }
 
-    .product_img-carrito {
+    .product_img-carrito-home{
         width: 100%;
         display: flex;
-        /* min-width: 20%; */
-        /* transition: .3s ease all; */
         box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
     }
 
-    .productos {
+    .productos-home {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;}
@@ -759,20 +776,24 @@ button#flecha-derecha{
         display: none;
     }
     
-    .contenedor-articulo-carrito {
+    .contenedor-articulo-carrito-home {
         display: flex;
         margin: 10px;
         box-shadow: 5px 5px 10px rgba(0,0,0, .3);
         transition: .3s ease all;
     }
-    .contenedor-articulo-carrito:hover{ 
+
+    .contenedor-articulo-carrito-home:hover{ 
 
         transform: scale(1.2);
         transform-origin: center;
         background-color: #4c9e9e;
-        
-        
+        padding: 5px;
+    }
 
+    .contenedor-home1- {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
