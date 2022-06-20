@@ -9,7 +9,7 @@ body{
     min-height: 100vh;
     background-color: #162D50;
     font-family: 'Roboto', sans-serif;
-    padding-bottom: 300px;
+    /* padding-bottom: 300px; */
 }
 
 header {
@@ -250,6 +250,10 @@ article.contenedor-articulo-carrito-home{
         padding-left: 0px;
         margin: 0px;
     }
+
+    .error-image img{
+        margin-bottom: 0px;
+    }
 }
 
 .navbar {
@@ -346,12 +350,6 @@ article.contenedor-articulo-carrito-home{
     display: table;
     clear: both;
   }
-  
-  
-
-  body{
-    font-family:sans-serif;
- }
  
  .description-detail
     {
@@ -530,6 +528,58 @@ form .form-content button:hover{
 .form-content .signup-form,
 .form-content .image-container{
     width: 100%;
+}
+
+/* 404 Design */
+.error-body{
+    background-color: #080200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-container{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-message{
+    flex: 1;
+    color: #a8518a;
+    z-index: 1;
+    margin-top: -5em;
+    padding-left: 2em;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-container button{
+    width: 50%;
+    background-color: #00778a;
+    padding: 10px 24px;
+    border-radius: 12px;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.error-container button:hover{
+    background-color: #008599;
+}
+
+.error-image img{
+    flex: 1;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 20px;
 }
 
 @media (min-width: 481px) {
@@ -794,6 +844,10 @@ button#flecha-derecha{
     .contenedor-home1- {
         margin-left: 20px;
         margin-right: 20px;
+    }
+
+    .error-container{
+        flex-direction: row;
     }
 }
 
