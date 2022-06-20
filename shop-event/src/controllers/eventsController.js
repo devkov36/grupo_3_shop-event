@@ -10,11 +10,6 @@ const eventController = {
     create: (req, res) => {
 		res.render('event-create-form')
 	},
-    index1: (req, res) => {
-        res.render('index1');
-    },
-
-
 }
 
 module.exports = eventController;
