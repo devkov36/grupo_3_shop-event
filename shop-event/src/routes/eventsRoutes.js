@@ -10,8 +10,9 @@ router.get('/detail', eventsController.detail);
 // CREAR UN PRODUCTO
 router.get('/create', eventsController.create); 
 
-// EDITAR
-router.get('/edit/:id/', eventsController.edit);
+// EDITAR UN EVENTO
+router.get('/edit/:id', eventsController.edit);
+router.put('/edit/:id', eventsController.update);
 
 module.exports = router;
 
