@@ -349,6 +349,8 @@ article.contenedor-articulo-carrito-home{
     clear: both;
   }
  
+  /* DETAILS*/
+
  .description-detail
     {
     background-color:#e7b698;
@@ -357,17 +359,77 @@ article.contenedor-articulo-carrito-home{
     justify-content:space-around;
     align-items:center;
     text-align: center;
+    font:  15px;
 
      }
+
+     .contenedor-producto-detail {
+        width: 50%;
+        padding: 15px 30px;
+        font-size: x-large;
+        border: 1px solid lightgray;
+        border-radius: 4px;
+        background-color: #ECECEC;
+        opacity: 0.85;
+        box-sizing: border-box;
+        position: relative;
+        font-family: 'Roboto';
+        margin-right:auto ;
+        font-size: 10px;
+  }    
+
+  .recinto-details{
+    width: 50%;
+    padding: 20px 30px;
+        font-size: x-large;
+        border: 1px solid lightgray;
+        border-radius: 4px;
+        background-color: #ececec;
+        opacity: 0.85;
+        box-sizing: border-box;
+        position: absolute;
+        right: 0px;
+        font-family: 'Roboto';
+        margin-right:auto ;
+        font-size: 10px;
+    }
+
+  
+
+
+
+  .texto-descripcion{
+    width: 80%;
+    padding: 15px 30px;
+    font-size: x-large;
+    border: 5px solid lightgray;
+    border-radius: 2px;
+    background-color: #ECECEC;
+    box-sizing: border-box;
+    position: relative;
+    top: 10px;
+    left: 125px;
+    font-family: 'Roboto';
+    font-size: 10px;
+    align-items:center;
+    text-align: center;
+
+  }
+   
      /*body details descripcion*/
     p {font-family: 'Roboto', sans-serif;
      color: black;
-     background-color: white
+     background-color: white;
+     font-size:15px;
    }
    #titulo {color: #ca4b40;
-    background-color:#e7b698
+   
+    font-size:20px;
     
   } 
+  {
+
+  }
   .promo h4{
     position: center;
 
@@ -395,8 +457,10 @@ article.contenedor-articulo-carrito-home{
     flex-flow: column;
     align-items: center;
     background-color: ca4b40;
-    background-color: #ca4b40;
+    color: #00778a;
+    position: relative;
     font-size: 20px;
+    text-align:center
 }
 .comprar {
     font-size: 20px;
@@ -405,11 +469,18 @@ article.contenedor-articulo-carrito-home{
     background: #00778A;
     border-radius: 10px;
     padding: 5px 0;
-    width: 100%;
+    width: 50%;
     transition: background 50ms;
-      
+    position: relative; 
+    top: 3px;
+   
+
 
 }
+
+
+
+
 
 .conciertos-recomendados {
     padding-bottom: 300px;

@@ -8,8 +8,11 @@ const eventController = {
         res.render('productDetail');
     },
     create: (req, res) => {
-		res.render('event-create-form')
+		res.render('event-create-form');
 	},
+    edit: (req, res) => {
+        res.render('event-edit-form');
+    }
 }
 
 module.exports = eventController;
