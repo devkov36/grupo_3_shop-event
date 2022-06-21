@@ -13,11 +13,15 @@
 		</div>
 		<br>
 		<div class="form-container">
-			<form action="/event/edit/<%= eventToEdit.id %>?_method=PUT" method="POST">
+			<form action="/event/edit/<%= eventToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 				<div class="event-detail">
 					<div class="form-field">
 						<label for="title" class="form-label">Nombre del evento:</label>
 						<input type="text" id="title" name="title" value="<%=  eventToEdit.title %>" class="form-input">
+					</div>
+					<div class="form-field">
+						<label for="main_img" class="form-label">Imagén principal del evento:</label>
+						<input type="file" id="main_img" name="main_img" value="<%=  eventToEdit.title %>" class="form-input">
 					</div>
 					<div class="form-field">
 						<label for="date" class="form-label">Fecha del Evento:</label>
