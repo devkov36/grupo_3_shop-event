@@ -1,100 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Include Head -->
-  <%- include('partials/head', {title: 'Producto'}) %>
-<body>
-    <nav>
-        <ul>
-      <!-- Header -->
-      <%- include('partials/header') %>
-      <!-- Header -->
+    <!-- Include Head -->
+    <%- include('partials/head', {title: 'Producto'}) %>
+    <body>
+        <nav>
+            <ul>
+        <!-- Header -->
+        <%- include('partials/header') %>
+        <!-- Header -->
+                        
+            </ul>
+        </nav>   
+        <main>
+            <article class="main-detail">
+                <article class="contenedor-producto-detail-principal">
+                    <div class="contenedor-producto-detail">
+                        <img src="/images/angeles-azules.jpeg" alt="Angeles" class="product_img-detail">       
+                            <h2 class="description-detail">Los Angeles Azules 
+                                <br>  Nueva fecha </br>                 
+                                <br>  6 de Junio - 20:00 hs. </br>
+                            </h2>
+                    </div>
+                    <div class="texto-descripcion">
                     
-        </ul>
-    </nav>   
-    
-    <article>
-        <div class="recinto-details"
-            <p align= "center"><img src="/images/global/recintos/luna park.jpg2.jpg" alt="Informacion" class="recinto_img-detail" </p>
-            
-             <h2 class="description-detail"> <br>
-                <article>
-                    <h3  id = "titulo" align="center">Recinto</h3> 
-                    <br>
-                    <p align="center">Luna Park.<br>
-                        Direccion <br>
-                        Av. Eduardo Madero 470, C1106 CABA </p>
+                        <h2 class="txt-description">Tickets  a la venta a traves de Shop Event</h2>
                     
-                    </article>     
+                    
+                        <p class="info-concierto"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur perspiciatis explicabo consectetur, eligendi vero maxime dicta possimus nisi voluptas natus at repellat sit dolorem porro molestiae harum ratione neque necessitatibus!<br>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque unde quaerat culpa in aspernatur voluptatibus iusto quae nam inventore rem, error, voluptas amet placeat fugit officia! Obcaecati quo ipsum esse.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit aliquid in obcaecati culpa assumenda quam nobis repellendus, ratione mollitia iusto nemo saepe molestias. Adipisci ex eveniet velit porro nesciunt! Maiores? 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae esse illo cumque, rem nostrum reiciendis enim? Totam similique et placeat iste libero assumenda, eligendi repellendus voluptatem, accusantium cupiditate deleniti sapiente. 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt illum optio vitae amet et debitis ex. Aliquam velit, architecto minus recusandae, officiis sed ex blanditiis unde incidunt nihil commodi? Culpa!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore nam unde ab aperiam cum vero facilis laudantium tempora. Laudantium distinctio eligendi repudiandae odio placeat eius incidunt laboriosam non nemo.  
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, deserunt placeat aspernatur et fugit corrupti, unde nam officiis dicta cupiditate quo nemo ullam optio repellendus, consequatur nesciunt hic nobis nostrum! 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab culpa nisi quas iure. Qui fugit laudantium harum provident aliquam magnam doloremque, perspiciatis sit, id soluta laborum similique quas non pariatur
+                        </p>
+                    </div>    
+                    <div class="recinto-details">
+                        <img src="/images/global/recintos/luna park.jpg2.jpg" alt="Informacion" class="recinto_img-detail" >            
+                        <h2 class="description-detail"> <br>
+                        <article>
+                            <h3  class = "titulo">Recinto</h3> 
+                            <br>
+                            <p class="luna-park">Luna Park.
+                                <br>Direccion </br>
+                                <br>Av. Eduardo Madero 470, C1106 CABA</br>
+                            </p>                    
+                        </article> 
+                        <div class="medio-de-pago">      
+                            <h4 class="cuotas"> Cuotas sin interés </h4>        
+                            <nav>
+                                <ul>
+                                    <li><a href="#"> Ver promociones bancarias <i class="fa-solid fa-credit-card"></i></a></li>
+                                </ul>
+                                <br>
+                            </nav>
+                            <div class= "contenedor-boton details">
+                                <button class= "comprar"><span>Comprar</span></button>
+                            </div>            
+                        </div>
+                    </div>  
+                </article>
+            </article>
 
-
-
-        </div>
-    </article>
-
-
-    <article>
-        <div class="contenedor-producto-detail"
-            <p align= "center"><img src="/images/angeles-azules.jpeg" alt="Angeles" class="product_img-detail" </p>
-       
-                <h2 class="description-detail">Los Angeles Azules <br>
-                    <br/>
-                        Nueva fecha <BR>
-                    <br/>
-                6 de Junio - 20:00 hs. </h2>
-        </div>
-        <div class="medio-de-pago">      
-            <br/>
-            <br>
-            <h4 align="center"> Cuotas sin interés </h4>        
-            <nav>
-               
-                <ul>
-                    <li><a href="#"> Ver promociones bancarias <i class="fa-solid fa-credit-card"></i></a></li>
-                </ul>
-                <br>
-            </nav>
-    
-            <div class= "contenedor-boton details">
-            <button class= "comprar"><span>Comprar</span></button>
-            
-        </div>
-        <br>
-        <br>
-    </article>
+        </main>          
         
 
-     
-    <article>
-        <div class="texto-descripcion">
-            
-        <h2 id = "titulo" align ="center">Tickets  a la venta a traves de Shop Event</h2>
-        <br/>
-       
-        <p > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur perspiciatis explicabo consectetur, eligendi vero maxime dicta possimus nisi voluptas natus at repellat sit dolorem porro molestiae harum ratione neque necessitatibus!<br>
-         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque unde quaerat culpa in aspernatur voluptatibus iusto quae nam inventore rem, error, voluptas amet placeat fugit officia! Obcaecati quo ipsum esse.<br>
-         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit aliquid in obcaecati culpa assumenda quam nobis repellendus, ratione mollitia iusto nemo saepe molestias. Adipisci ex eveniet velit porro nesciunt! Maiores? <br>
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae esse illo cumque, rem nostrum reiciendis enim? Totam similique et placeat iste libero assumenda, eligendi repellendus voluptatem, accusantium cupiditate deleniti sapiente. <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt illum optio vitae amet et debitis ex. Aliquam velit, architecto minus recusandae, officiis sed ex blanditiis unde incidunt nihil commodi? Culpa!</p>
-        
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore nam unde ab aperiam cum vero facilis laudantium tempora. Laudantium distinctio eligendi repudiandae odio placeat eius incidunt laboriosam non nemo.  <br>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, deserunt placeat aspernatur et fugit corrupti, unde nam officiis dicta cupiditate quo nemo ullam optio repellendus, consequatur nesciunt hic nobis nostrum! <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab culpa nisi quas iure. Qui fugit laudantium harum provident aliquam magnam doloremque, perspiciatis sit, id soluta laborum similique quas non pariatur!/p>
-        
-    </div>
-<br>
-<br>
-<br>
-<br>
-</article>
-    <br/>
-    <br/>
-      
-
-                    </body>
-                            </section>
-       
         <!-- Footer -->
         <%- include('partials/footer') %>
-        <!-- Footer -->
-
+            
+        <!-- Footer -->     
+    </body>
 </html>
