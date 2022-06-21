@@ -383,6 +383,10 @@ article.contenedor-articulo-carrito-home{
 
 .product_img-detail{
     width: 100%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+    padding-top: 10%;
+    padding-right: 10%;
 }
 
 .medio-de-pago {
