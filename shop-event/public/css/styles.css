@@ -380,11 +380,11 @@ article.contenedor-articulo-carrito-home{
 
   .recinto-details{
     width: 50%;
-        padding: 15px 30px;
+    padding: 15px 30px;
         font-size: x-large;
         border: 1px solid lightgray;
         border-radius: 4px;
-        background-color: #ECECEC;
+        background-color: #ececec;
         opacity: 0.85;
         box-sizing: border-box;
         position: absolute;
@@ -392,8 +392,12 @@ article.contenedor-articulo-carrito-home{
         font-family: 'Roboto';
         margin-right:auto ;
         font-size: 10px;
+    }
 
-  }
+  
+
+
+
   .texto-descripcion{
     width: 80%;
     padding: 15px 30px;
