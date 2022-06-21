@@ -33,8 +33,22 @@ const eventController = {
         // const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
 
         const id = +req.params.id;
-        console.log(req.body);
+        let main_img = "banner.jpeg";
+        let section_img="banner.jpeg";
 
+        let {title, date, cost, ubication, category, description} = req.body;
+        let editEvent = {
+            id, title, date, cost, ubication, category, description, main_img, section_img
+        }
+
+        for (let i in events){
+            if( events[i].id === id ){
+                events[i] = editEvent;
+                break;
+            }
+        }
+
+        fs.writeFileSync( eventsFilePath, JSON.stringify(events), { encoding: 'utf-8'} );
         res.redirect('/');
     }
 }
