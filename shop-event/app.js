@@ -4,7 +4,7 @@ const path = require ('path');
 const port = 3000
 
 const mainRoutes = require('./src/routes/mainRoutes');
-const productsRoutes = require('./src/routes/productsRoutes');
+const eventsRoutes = require('./src/routes/eventsRoutes');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/src/views'));
@@ -17,7 +17,7 @@ app.listen ( port , () => {
 
 app.use('/', mainRoutes);
 
-app.use('/product', productsRoutes);
+app.use('/event', eventsRoutes);
 
 app.use((req, res, next) => {
     res.status(404).render('404');
