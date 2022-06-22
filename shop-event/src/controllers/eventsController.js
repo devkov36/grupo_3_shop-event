@@ -9,7 +9,13 @@ const eventController = {
         res.render('productCart');
     },
     detail: (req, res) => {
-        res.render('productDetail');
+        const id = +req.params.id;
+        
+        let event = events.find( (event) => {
+            return event.id === id;
+        })
+
+        res.render('productDetail', {event : event});
     },
     create: (req, res) => {
 		res.render('event-create-form');

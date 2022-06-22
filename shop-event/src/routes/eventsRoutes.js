@@ -19,7 +19,6 @@ const router = express.Router();
 
 router.get('/cart', eventsController.cart);
 
-router.get('/detail', eventsController.detail);
 
 // CREAR UN PRODUCTO
 router.get('/create', eventsController.create); 
@@ -27,6 +26,12 @@ router.get('/create', eventsController.create);
 // EDITAR UN EVENTO
 router.get('/edit/:id', eventsController.edit);
 router.put('/edit/:id', upload.single('main_img'), eventsController.update);
+
+//OBTIENE UN EVENTO
+
+router.get('/detail/:id', eventsController.detail);
+
+
 
 module.exports = router;
 
