@@ -14,3 +14,4 @@ Cada uno trabajo en sus tareas asignadas, revisamos las tareas pendientes y las 
 Impedimento en la semana: Detectamos algunas inasistencias las cuales nos retrasaron en algunos contenidos.
 Fortaleza en la semana: Tuvimos comunicación constante mediante whatsapp y nos ayudamos en las tareas que teníamos dificultades. Nos reunimos para realizar tareas en conjunto.
 Generamos criticas constructivas sobre el diseño de la web de cada uno y las recibimos de buen modo, considerando que es una manera de mejorar.
+

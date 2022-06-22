@@ -17,3 +17,6 @@ El sprint pasado fue corto y no detectamos como equipo un área para realizar me
 ### Dejar de hacer:
 
 Al menos en este sprint no detectamos algo que dejar de hacer, ya que como equipo detectamos que todo fluyo de manera correcta.
+
+## 20 de Junio
+

@@ -50,6 +50,30 @@ const eventController = {
 
         fs.writeFileSync( eventsFilePath, JSON.stringify(events), { encoding: 'utf-8'} );
         res.redirect('/');
+    },
+
+    // SAVE para crear Eventos
+    save: (req, res) => {
+
+        // const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
+
+        //const id = +req.params.id;
+        let main_img = "banner.jpeg";
+        let section_img="banner.jpeg";
+
+        let {title, date, cost, ubication, category, description} = req.body;
+        let id=0;
+        for (let i in events){            
+            if( events[i].id >id ){
+                id=events[i].id;                
+            }
+        }
+        let addEvent = {
+            id, title, date, cost, ubication, category, description, main_img, section_img
+        }
+                
+        fs.writeFileSync( eventsFilePath, JSON.stringify(events), { encoding: 'utf-8'} );
+        res.redirect('/');
     }
 }
 
