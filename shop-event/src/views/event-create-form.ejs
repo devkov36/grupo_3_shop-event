@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Formulario de creación'}) %>
+<%- include('partials/head', {title: 'Editar ' + title}) %>
 <body>
 	<!-- Header -->
 	<%- include('partials/header') %>
@@ -13,32 +13,41 @@
 		</div>
 		<br>
 		<div class="form-container">
-			<form action="/events/create" method="POST">
+			<form action="/event/save/?_method=PUT" method="POST" enctype="multipart/form-data">
 				<div class="event-detail">
 					<div class="form-field">
-						<label for="name" class="form-label">Nombre del evento:</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Concierto Babasonicos" class="form-input">
+						<label for="title" class="form-label">Nombre del evento:</label>
+						<input type="text" id="title" name="title" value="" class="form-input" required>
 					</div>
 					<div class="form-field">
-						<label for="price" class="form-label">Precio del evento:</label>
-						<input type="text" id="price" name="price" placeholder="Ej: 1000" class="form-input">
+						<label for="main_img" class="form-label">Imagén principal del evento:</label>
+						<input type="file" id="main_img" name="main_img" value="" class="form-input" >
 					</div>
 					<div class="form-field">
-						<label for="discount" class="form-label">Descuento:</label>
-						<input type="text" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
+						<label for="date" class="form-label">Fecha del Evento:</label>
+						<input type="date" id="date" name="date" value="" class="form-input"  required>
+					</div>
+					<div class="form-field">
+						<label for="cost" class="form-label">Precio del evento:</label>
+						<input type="text" id="cost" name="cost" value="" class="form-input"  required>
+					</div>
+					<div class="form-field">
+						<label for="ubication" class="form-label">Ubicación:</label>
+						<input type="text" id="ubication" name="ubication" value="" class="form-input"  required>
 					</div>
 					<div class="form-field">
 						<label for="category" class="form-label">Categoría:</label>
-						<select name="category" id="category" class="form-input">
+						<select name="category" id="category" class="form-input"  required>
 							<option value="">Elegí</option>
-							<option value="music">Música</option>
-							<option value="cine">Cine</option>
-							<option value="cine">Teatro</option>
+							
+								<option value="cine">Cine</option>
+								<option value="music">Música</option>						
+							
 						</select>
 					</div>
 					<div class="form-field">
 						<label for="description" class="form-label">Descipción:</label>
-						<textarea name="description" id="description" class="form-input"></textarea>
+						<input type="text" name="description" id="description" class="form-input" value=""  required></input>
 					</div>
 					<div class="button-field">
 						<button type="submit" class="save-button">Guardar producto</button>
