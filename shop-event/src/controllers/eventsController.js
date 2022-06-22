@@ -68,6 +68,7 @@ const eventController = {
                 id=events[i].id;                
             }
         }
+        id=id+1;
         let addEvent = {
             id, title, date, cost, ubication, category, description, main_img, section_img
         }
