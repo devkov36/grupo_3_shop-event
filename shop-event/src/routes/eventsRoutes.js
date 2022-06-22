@@ -23,7 +23,7 @@ router.get('/detail', eventsController.detail);
 
 // CREAR UN PRODUCTO
 router.get('/create', eventsController.create); 
-router.put('/save/', upload.single('main_img'), eventsController.save);
+router.post('/create/', upload.single('main_img'), eventsController.save);
 
 // EDITAR UN EVENTO
 router.get('/edit/:id', eventsController.edit);

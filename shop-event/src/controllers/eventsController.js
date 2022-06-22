@@ -55,7 +55,7 @@ const eventController = {
     // SAVE para crear Eventos
     save: (req, res) => {
 
-        // const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
+        const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
 
         //const id = +req.params.id;
         let main_img = "banner.jpeg";
@@ -72,7 +72,7 @@ const eventController = {
         let addEvent = {
             id, title, date, cost, ubication, category, description, main_img, section_img
         }
-                
+        events.push(addEvent);
         fs.writeFileSync( eventsFilePath, JSON.stringify(events), { encoding: 'utf-8'} );
         res.redirect('/');
     }

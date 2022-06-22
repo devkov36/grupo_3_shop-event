@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Editar ' + title}) %>
+<%- include('partials/head', {title: 'Crear evento'}) %>
 <body>
 	<!-- Header -->
 	<%- include('partials/header') %>
@@ -13,7 +13,7 @@
 		</div>
 		<br>
 		<div class="form-container">
-			<form action="/event/save/?_method=PUT" method="POST" enctype="multipart/form-data">
+			<form action="/event/create/" method="POST" enctype="multipart/form-data">
 				<div class="event-detail">
 					<div class="form-field">
 						<label for="title" class="form-label">Nombre del evento:</label>
@@ -50,7 +50,7 @@
 						<input type="text" name="description" id="description" class="form-input" value=""  required></input>
 					</div>
 					<div class="button-field">
-						<button type="submit" class="save-button">Guardar producto</button>
+						<button type="submit" class="save-button">Guardar evento</button>
 					</div>
 				</div>
 			</form>
