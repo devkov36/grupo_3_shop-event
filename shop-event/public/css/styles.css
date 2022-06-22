@@ -341,7 +341,7 @@ article.contenedor-articulo-carrito-home{
 }
   
   /* Remove extra left and right margins, due to padding */
-  .eventos-cercanos .row {margin: 0 -5px;}
+.eventos-cercanos .row {margin: 0 -5px;}
   
   /* Clear floats after the columns */
   .eventos-cercanos .row:after {
@@ -479,10 +479,6 @@ article.contenedor-articulo-carrito-home{
 
 
 }
-
-
-
-
 
 .conciertos-recomendados {
     padding-bottom: 300px;
