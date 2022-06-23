@@ -36,10 +36,12 @@ const eventController = {
     // UPDATE para actualizar Eventos
     update: (req, res) => {
 
-        // const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
+        const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
+
+        console.log(req.file);
 
         const id = +req.params.id;
-        let main_img = "banner.jpeg";
+        let main_img = req.file.filename;
         let section_img="banner.jpeg";
 
         let {title, date, cost, ubication, category, description} = req.body;
@@ -63,9 +65,8 @@ const eventController = {
 
         const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
 
-        //const id = +req.params.id;
-        let main_img = "banner.jpeg";
-        let section_img="banner.jpeg";
+        let main_img = req.file.filename;
+        let section_img = "banner.jpeg";
 
         let {title, date, cost, ubication, category, description} = req.body;
         let id=0;

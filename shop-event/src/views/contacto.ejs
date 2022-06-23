@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-
-    <%- include('./partials/head.ejs')-%>
-    <body>
-        <%- include('./partials/header.ejs')-%>
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Crear evento'}) %>
+<body>
+    <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
 
 <div class="sub-header">
     <h2>CONTACTO</h2>
@@ -44,9 +46,9 @@
     </section>
 </div> 
 
-
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
 </body>
-
-<%- include('./partials/footer')-%>
 </html>
 

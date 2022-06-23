@@ -13,6 +13,12 @@ const mainController = {
     register: (req, res) => {
         res.render('register');
     },
+    contact: (req, res) => {
+        res.render('contacto');
+    },
+    about_us: (req, res) => {
+        res.render('acercaDeNosotros');
+    }
     
 }
 

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-
-    <%- include('./partials/head.ejs')-%>
-    <body>
-        <%- include('./partials/header.ejs')-%>
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Crear evento'}) %>
+<body>
+    <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
         <div class="sub-header">
             <h2> Nosotros </h2>
         </div>
@@ -14,11 +16,7 @@
                 </div>
 
                 <div class="box-img-about">
-                    <img src="/images/generic-image.jpg" alt="Banner Nosotros" class="img-about">
-                </div>
-
-                <div class="box-img-about">
-                    <img src="/images/generic-image.jpg" alt="Banner Nosotros" class="img-about">
+                    <img src="/images/banner.jpg" alt="Banner Nosotros" class="img-about">
                 </div>
 
                 <div class="box-text-about">
@@ -31,33 +29,34 @@
 
             <section class="box-content-about2">
                 <div class="estilos-imagenes">
-                    <a href="#"><img src="/images/.jpg" alt="KAREN" class="imagen-socio"></a>
+                    <a href="#"><img src="/images/banner.jpeg" alt="Ramón de Jesús" class="imagen-socio"></a>
                     <h3 class="titulo-socio">  </h3>
                 </div>
 
                 <div class="estilos-imagenes">
-                    <a href="#"><img src="/images/.jpg" alt="YURIANA" class="imagen-socio"></a>
+                    <a href="#"><img src="/images/banner.jpeg" alt="Lorena Cabrera" class="imagen-socio"></a>
                     <h3 class="titulo-socio"> </h3>
                 </div>
 
                 <div class="estilos-imagenes">
-                    <a href="#"><img src="/images/.jpg" alt="ANDRES" class="imagen-socio"></a>
+                    <a href="#"><img src="/images/banner.jpeg" alt="Janneth Cadima" class="imagen-socio"></a>
                     <h3 class="titulo-socio"> </h3>
                 </div>
                 
                 <div class="estilos-imagenes">
-                    <a href="#"><img src="/g" alt="JAN" class="imagen-socio"></a>
+                    <a href="#"><img src="/images/banner.jpeg" alt="Yakov Castañeda" class="imagen-socio"></a>
                     <h3 class="titulo-socio"></h3>
                 </div>
 
                 <div class="estilos-imagenes">
-                    <a href="#"><img src="/images/.jpg" alt="" class="imagen-socio"></a>
+                    <a href="#"><img src="/images/banner.jpeg" alt="" class="imagen-socio"></a>
                     <h3 class="titulo-socio"></h3>
                 </div>
 
             </section>
 
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
             </body>
-
-            <%- include('./partials/footer')-%>
         </html>

@@ -26,7 +26,7 @@
                             <div class="itemCarrousel" id="itemCarrousel-1">
                                 <div class="itemCarrouselTarjeta">
                                     <div class="evento-home">
-                                        <img src="/images/<%=event.main_img%>" alt="duki" class="product_img-carrousel">
+                                        <img src="/images/eventos/<%=event.main_img%>" alt="duki" class="product_img-carrousel">
                                     </div>
                                 </div>
                                 <div class="itemCarrouselArrows">
@@ -250,7 +250,7 @@
                 <% events.forEach( ( event )=>  {   %>
                     <article class="contenedor-articulo-carrito-home">
                         <a href="/event/detail/<%= event.id %>">
-                            <img src="/images/<%= event.main_img%>" alt="duki" class="product_img-carrito-home">
+                            <img src="/images/eventos/<%= event.main_img%>" alt="evento imagen" class="product_img-carrito-home">
                         </a>
                         <div class="main-article-home">
                             <i class="fa-solid fa-bag-shopping"><a href="/product/error404" class="compra-carrito">

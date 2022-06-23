@@ -403,7 +403,7 @@ article.contenedor-articulo-carrito-home{
     background-color: #ececec;
     opacity: 0.85;
     box-sizing: border-box;
-    position: absolute;
+    /* position: absolute; */
     right: 0px;
     font-family: 'Roboto';
     margin-right:auto ;
