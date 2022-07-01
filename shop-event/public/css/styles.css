@@ -712,6 +712,22 @@ form .form-content button:hover{
     margin: 15px auto;
 }
 
+.del-button {
+    background-color: red;
+    font-size: 1.6em;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    margin: 15px auto;
+}
+.button-group {
+    display:flex;
+    flex-direction: row;
+}
 
 /* CREACION DE PRODUCTOS FIN */
 @media (min-width: 481px) {
