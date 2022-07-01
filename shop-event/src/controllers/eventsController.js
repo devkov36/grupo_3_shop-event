@@ -18,7 +18,7 @@ const eventController = {
         res.render('productDetail', {event : event});
     },
     create: (req, res) => {
-		res.render('event-create-form');
+		res.render('event-create-form',{mensaje:''});
 	},
 
     // GET para Actualizar Eventos
@@ -96,11 +96,8 @@ const eventController = {
         console.log(filteredEvents);
         fs.writeFileSync( eventsFilePath, JSON.stringify(filteredEvents), { encoding: 'utf-8'} );
         
-        let eventDetail = events.find( (event) => {
-            return event.id === id;
-        });
-
-        res.render('event-edit-form', {title: eventDetail.title, eventToEdit: eventDetail});
+        
+        res.render('event-create-form',{mensaje:'Evento eliminado correctamente'});
     }
 }
 
