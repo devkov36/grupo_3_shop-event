@@ -3,7 +3,7 @@
 "date":"2022-06-06",
 "description":"Los Angeles Azules",
 "id":1,
-"main_img":"angles-azules.jpeg",
+"main_img":"angeles-azules.jpeg",
 "section_img":"angeles-azules.jpeg",
 "title":"Los angeles AzulesDe Itzapalapa para el Mundo",
 "ubication":"Estadio Luna Park"
@@ -226,8 +226,8 @@
 "date":"2021-11-13",
 "description":"Cafe Tacuba",
 "id":23,
-"main_img":"tacuba.jpeg",
-"section_img":"tacuba.jpeg",
+"main_img":"tacuba2.jpg",
+"section_img":"tacuba2.jpg",
 "title":"Cafe Tacuba",
 "ubication":"Estadio Velez Sarsfield"
 },
