@@ -20,7 +20,7 @@ const router = express.Router();
 router.get('/cart', eventsController.cart);
 
 
-// CREAR UN PRODUCTO
+// CREAR UN EVENTO
 router.get('/create', eventsController.create); 
 router.post('/create/', upload.single('main_img'), eventsController.save);
 
@@ -32,6 +32,8 @@ router.put('/edit/:id', upload.single('main_img'), eventsController.update);
 
 router.get('/detail/:id', eventsController.detail);
 
+// ELIMINAR UN EVENTO
+router.post('/delete/:id', eventsController.delete);
 
 
 module.exports = router;

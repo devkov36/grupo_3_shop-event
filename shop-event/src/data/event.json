@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [{"category":"music",
 "cost":"$2350",
 "date":"2022-06-06",
@@ -26,7 +27,7 @@
 "id":3,
 "main_img":"bad-bunny.jpeg",
 "section_img":"bad-bunny.jpeg",
-"title":"Bad Bunny World´s Hottest Tour",
+"title":"Bad Bunny World s Hottest Tour",
 "ubication":"Estadio Velez Sarsfield"
 },
 {"category":"music",
@@ -242,3 +243,4 @@
 "ubication":"Estadio Movistar Arena"
 },
 ]
+=======

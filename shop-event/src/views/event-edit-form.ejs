@@ -8,12 +8,15 @@
 	<!-- /Header -->
 
 	<div class="events-wrapper">
+		
 		<div class="event-title">
 			<h2 class="events-title">Formulario de creación de Eventos</h2>
 		</div>
 		<br>
 		<div class="form-container">
-			<form action="/event/edit/<%= eventToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+			<form action="/event/edit/<%= eventToEdit.id %>?_method=PUT" method="POST" 
+				id="form_edit"
+				enctype="multipart/form-data">
 				<div class="event-detail">
 					<div class="form-field">
 						<label for="title" class="form-label">Nombre del evento:</label>
@@ -52,8 +55,10 @@
 						<label for="description" class="form-label">Descipción:</label>
 						<input type="text" name="description" id="description" class="form-input" value="<%=  eventToEdit.description %>"  required></input>
 					</div>
-					<div class="button-field">
+					<div class="button-field button-group">
 						<button type="submit" class="save-button">Guardar evento</button>
+					
+						<button type="button" class="del-button" onclick="elimina_evento()">Elimina evento</button>
 					</div>
 				</div>
 			</form>
@@ -66,4 +71,11 @@
 	<%- include('partials/footer') %>
 	<!-- /footer -->
 </body>	
+<script>
+	function elimina_evento(){
+		document.getElementById("form_edit").action = "/event/delete/<%= eventToEdit.id %>";
+		document.getElementById("form_edit").submit();
+	}
+	
+</script>
 </html>

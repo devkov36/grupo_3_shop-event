@@ -18,7 +18,7 @@ const eventController = {
         res.render('productDetail', {event : event});
     },
     create: (req, res) => {
-		res.render('event-create-form');
+		res.render('event-create-form',{mensaje:''});
 	},
 
     // GET para Actualizar Eventos
@@ -82,6 +82,22 @@ const eventController = {
         events.push(addEvent);
         fs.writeFileSync( eventsFilePath, JSON.stringify(events), { encoding: 'utf-8'} );
         res.redirect('/');
+    },
+    // SAVE para crear Eventos
+    delete: (req, res) => {
+
+        const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
+        const id = +req.params.id;
+        console.log('ID '+id);
+        var filteredEvents = events.filter(function(event){ 
+            console.log("en filtered "+event.id+ " id a buscar "+id);
+            return event.id !== id;
+        });
+        console.log(filteredEvents);
+        fs.writeFileSync( eventsFilePath, JSON.stringify(filteredEvents), { encoding: 'utf-8'} );
+        
+        
+        res.render('event-create-form',{mensaje:'Evento eliminado correctamente'});
     }
 }
 
