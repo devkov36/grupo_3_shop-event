@@ -5,10 +5,6 @@ const router = express.Router();
 
 router.get('/', mainController.home);
 
-router.get('/login', mainController.login);
-
-router.get('/register', mainController.register);
-
 router.get('/contact', mainController.contact);
 
 router.get('/about-us', mainController.about_us);
