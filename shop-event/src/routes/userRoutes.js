@@ -26,7 +26,6 @@ const validations = [
 router.get('/login', usersController.login);
 
 // Formulario de Registro
-
 router.get('/register', usersController.register);
 
 // Procesar el Registro
