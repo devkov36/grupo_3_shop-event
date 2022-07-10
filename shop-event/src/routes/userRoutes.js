@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const session = require ('express-session');
+
 
 const path = require('path');
 const multer = require('multer');
@@ -27,18 +29,18 @@ const validations = [
     body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
 ];
 
-const valiadarionsLogin = [
-    check ('email')
+const valiadationsLogin = [
+    body ('email')
         .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
         .isEmail().withMessage('Debes escribir un formato de correo válido'),
-    check ('password').notEmpty().withMessage('Tienes que escribir una contraseña')
+    body ('password').notEmpty().withMessage('Tienes que escribir una contraseña')
 ];
 
 let guestMiddlewares = require ('../middlewares/guestMiddlewares')
 let authtMiddlewares = require ('../middlewares/authMiddlewares')
 
 // Formulario de Login
-router.get('/login', valiadarionsLogin, usersController.processLogin);
+router.get('/login', valiadationsLogin, usersController.processLogin);
 
 router.get ('/check', function (req, res){
     if (req.session.usuarioLogueado == undefined)
