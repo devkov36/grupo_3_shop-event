@@ -529,6 +529,10 @@ article.contenedor-articulo-carrito-home{
     justify-content: space-between;
 }
 
+.container-sigup .text-danger{
+    color: red;
+}
+
 
 form h3{
     font-size: 24;

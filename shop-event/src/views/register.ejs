@@ -8,11 +8,8 @@
     <!-- Header -->
     <section class="register-section">
         <div class="container-signup">
-            <form method="POST" action="/user/register" enctype="multipart/form-data">
+            <form method="POST" action="/user/register/" enctype="multipart/form-data">
                 <div class="form-content">
-                    <div class="signup-f">
-                        
-                    </div>
                     <a href="/">
                         <div class="image-container">
                         </div>
@@ -26,24 +23,41 @@
                                     type="text"
                                     name="name"  
                                     placeholder="Enter your name" 
+                                    value = "<%= locals.oldData ? oldData.name : null %>"
                                 >
                             </div>
+                            <% if (locals.errors && errors.name) { %>
+                                <div class="text-danger">
+                                    <%= errors.name.msg %> 
+                                </div>
+                            <% } %>
                             <div class="input-box">
                                 <i class="fas fa-envelope"></i>
                                 <input 
-                                    type="text"
+                                    type="email"
                                     name="email" 
                                     placeholder="Enter your email" 
+                                    value = "<%= locals.oldData ? oldData.email : null %>"
                                 >
                             </div>
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %> 
+                                </div>
+                            <% } %>
                             <div class="input-box">
                                 <i class="fa-solid fa-lock"></i>
                                 <input 
-                                    type="text" 
+                                    type="password" 
                                     name="password"
                                     placeholder="Enter your password" 
                                 >
                             </div>
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="text-danger">
+                                    <%= errors.password.msg %> 
+                                </div>
+                            <% } %>
                             <label>Imagen de perfil:</label>
                             <div class="input-box">
                                 <i class="fa-solid fa-image"></i>

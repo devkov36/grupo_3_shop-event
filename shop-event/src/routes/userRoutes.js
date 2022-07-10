@@ -20,17 +20,20 @@ const uploadFile = multer({ storage });
 const usersController = require('../controllers/usersController');
 
 const validations = [
-
+    body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
+    body('email')
+        .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
+        .isEmail().withMessage('Debes escribir un formato de correo válido'),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
 ];
 // Formulario de Login
 router.get('/login', usersController.login);
 
 // Formulario de Registro
-
 router.get('/register', usersController.register);
 
 // Procesar el Registro
-router.post('/register', usersController.processRegister );
+router.post('/register', uploadFile.single('avatar'), validations, usersController.processRegister );
 
 // Perfil de Usuario
 
