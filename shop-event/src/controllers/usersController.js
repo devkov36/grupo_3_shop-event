@@ -6,14 +6,48 @@ const usersFilePath = path.join(__dirname, '../data/user.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const { validationResult } = require('express-validator');
+const { use } = require('../routes/userRoutes');
 
 const usersController = {
     login: (req, res) => {
         res.render('login');
     },
+    processLogin: (req, res) => {
+        let errors = validationResult (req);
+
+        if (errors.isEmpty()){
+            let userJSON = fs.readlinkSync ('user.Json', {})
+                let users;
+                if (userJSON == ""){
+                    users = []
+                } else { users= JSON.parse(userJSON) }
+
+                for (let i=0; i<users.length; i++){
+                    if (users[i].email == req.body.email){
+                        if (bcryptjs.compareSync (res.body.password, users[i].password))
+                        {
+                        let usuarioALoguearse = users [i];
+                        break;
+                        }
+                }
+                
+                if (usuarioALoguearse == undefined){
+                    return res.render ('login', {errors: [{msg:'Credecinciales invalidas'}]})
+                }
+                res.session.usuarioLogueado = usuarioALoguearse,
+                res.render ('ususario loguedo!')
+                } 
+            }
+        else {                  
+                    return res.render('login', {errors: errors.errors });  
+        }
+    },
+
+
     register: (req, res) => {
         res.render('register');
     },
+
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
         const users = JSON.parse(fs.readFileSync(usersFilePath));

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Include Head -->
+  <%- include('partials/head', {title: 'Register'}) %>
+<body>
+    <!-- Header -->
+    <%- include('partials/header') %>
+    <!-- Header -->
+    <section class="register-section">
+        <div class="container-signup">
+            <form method="POST" action="/user/register" enctype="multipart/form-data">
+                <div class="form-content">
+                    <div class="signup-f">
+                        
+                    </div>
+                    <a href="/">
+                        <div class="image-container">
+                        </div>
+                    </a>
+                    <div class="signup-form">
+                        <div class="input-boxes">
+                            <h3 class="title">Sign up</h3>
+                            <div class="input-box">
+                                <i class="fa-solid fa-user-astronaut"></i>
+                                <input 
+                                    type="text"
+                                    name="name"  
+                                    placeholder="Enter your name" 
+                                >
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                <input 
+                                    type="text"
+                                    name="email" 
+                                    placeholder="Enter your email" 
+                                >
+                            </div>
+                            <div class="input-box">
+                                <i class="fa-solid fa-lock"></i>
+                                <input 
+                                    type="text" 
+                                    name="password"
+                                    placeholder="Enter your password" 
+                                >
+                            </div>
+                            <label>Imagen de perfil:</label>
+                            <div class="input-box">
+                                <i class="fa-solid fa-image"></i>
+                                <input 
+                                    type="file"
+                                    name="avatar" 
+                                >
+                            </div>
+                            <button type="submit">Sign up</button>
+                            <div class="text">Already have an account? 
+                                <a href="/user/login">Login now</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+    <!-- Footer -->
+</body>
+</html>

@@ -26,11 +26,31 @@ const validations = [
         .isEmail().withMessage('Debes escribir un formato de correo válido'),
     body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
 ];
+
+const valiadarionsLogin = [
+    check ('email')
+        .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
+        .isEmail().withMessage('Debes escribir un formato de correo válido'),
+    check ('password').notEmpty().withMessage('Tienes que escribir una contraseña')
+];
+
+let guestMiddlewares = require ('../middlewares/guestMiddlewares')
+let authtMiddlewares = require ('../middlewares/authMiddlewares')
+
 // Formulario de Login
-router.get('/login', usersController.login);
+router.get('/login', valiadarionsLogin, usersController.processLogin);
+
+router.get ('/check', function (req, res){
+    if (req.session.usuarioLogueado == undefined)
+    { 'No Estas Logueado'}
+    else{
+        res.send ('El usuario Logueado es:'+ req.session.usuarioLogueado.email)
+    }
+})
+
 
 // Formulario de Registro
-router.get('/register', usersController.register);
+router.get('/register', authtMiddlewares ,usersController.register);
 
 // Procesar el Registro
 router.post('/register', uploadFile.single('avatar'), validations, usersController.processRegister );

@@ -15,3 +15,11 @@ Impedimento en la semana: Detectamos algunas inasistencias las cuales nos retras
 Fortaleza en la semana: Tuvimos comunicación constante mediante whatsapp y nos ayudamos en las tareas que teníamos dificultades. Nos reunimos para realizar tareas en conjunto.
 Generamos criticas constructivas sobre el diseño de la web de cada uno y las recibimos de buen modo, considerando que es una manera de mejorar.
 
+Semana del 18 de Junio a 24 de Junio:
+
+Semana de 25 de Junio al 2 de Julio:
+Terminamos todo el Sprint 4.
+Impedimento en la semana: Estuvimos un poco desconectados, porque estuvimos ocupados con otras cuestiones, pero pudimos ponernos de acuerdo en el trabajo individual 
+Fortaleza en la semana: Nos apoyamos en las dificultades
+
+Semana del 2 de Julio al 9 de Julio:
