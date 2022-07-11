@@ -10,7 +10,7 @@ const { use } = require('../routes/userRoutes');
 
 const usersController = {
     login: (req, res) => {
-        res.render('login');
+        res.render('users/login');
     },
     processLogin: (req, res) => {
         let errors = validationResult (req);
@@ -45,15 +45,16 @@ const usersController = {
 
 
     register: (req, res) => {
-        res.render('register');
+        res.render('users/register');
     },
 
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
+        console.log(resultValidation);
         const users = JSON.parse(fs.readFileSync(usersFilePath));
 
         if(resultValidation.errors.length > 0){
-            return res.render('register', {
+            return res.render('users/register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body,
             });
@@ -62,7 +63,7 @@ const usersController = {
         let userFound = users.find(oneUser => oneUser['email'] === req.body.email) 
         
         if(userFound){
-            return res.render('register', {
+            return res.render('users/register', {
 				errors: {
 					email: {
 						msg: 'Este email ya está registrado'

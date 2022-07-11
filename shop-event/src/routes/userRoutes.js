@@ -39,8 +39,11 @@ const valiadationsLogin = [
 let guestMiddlewares = require ('../middlewares/guestMiddlewares')
 let authtMiddlewares = require ('../middlewares/authMiddlewares')
 
-// Formulario de Login
-router.get('/login', valiadationsLogin, usersController.processLogin);
+// Obtiene el formulario de Login
+router.get('/login', valiadationsLogin, usersController.login);
+
+// Procesa el login
+// NECESITA HABER UN router.post
 
 router.get ('/check', function (req, res){
     if (req.session.usuarioLogueado == undefined)
@@ -52,10 +55,11 @@ router.get ('/check', function (req, res){
 
 
 // Formulario de Registro
-router.get('/register', authtMiddlewares ,usersController.register);
+// VOY A COMENTAR EL AUTH MIDDLEWARE YA QUE NO ESTA FUNCIONANDO
+router.get('/register',usersController.register);
 
 // Procesar el Registro
-router.post('/register', uploadFile.single('avatar'), validations, usersController.processRegister );
+router.post('/register', validations, uploadFile.single('avatar'), usersController.processRegister );
 
 // Perfil de Usuario
 

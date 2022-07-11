@@ -1,4 +1,4 @@
- function authtMiddlewares (res,res,next) {
+ function authtMiddlewares (res,req,next) {
 if (req.session.usuarioLogueado != undefined) {
       next ()
  } 
