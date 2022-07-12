@@ -16,18 +16,37 @@
                             <h3 class="title">Login</h3>
                             <div class="input-box">
                                 <i class="fas fa-envelope"></i>
-                                <input type="text" placeholder="Enter your email" required>
+                                <input 
+                                    type="text" 
+                                    placeholder="Enter your email" 
+                                    name="email"
+                                    value = "<%= locals.oldData ? oldData.email : null %>"
+                                >
                             </div>
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %> 
+                                </div>
+                            <% } %>
                             <div class="input-box">
                                 <i class="fa-solid fa-lock"></i>
-                                <input type="text" placeholder="Enter your password" required>
+                                <input 
+                                    type="password" 
+                                    placeholder="Enter your password"
+                                    name="password"
+                                >
                             </div>
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="text-danger">
+                                    <%= errors.password.msg %> 
+                                </div>
+                            <% } %>
                             <div class="text">
                                 <a href="#">Forgot password?</a>
                             </div>
                             <button class="login-button" type="submit">Login</button>
                             <div class="text">Don't have an account? 
-                                <a href="/register">Signup now</a>
+                                <a href="/user/register">Signup now</a>
                             </div>
                         </div>
                     </div>
