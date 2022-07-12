@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Include Head -->
-    <%- include('partials/head', {title: 'Producto'}) %>
-    <body>
-        <nav>
-            <ul>
-        <!-- Header -->
-        <%- include('partials/header') %>
-        <!-- Header -->
-                        
-            </ul>
-        </nav>   
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Producto'}) %>
+<body>
+    <!-- Header -->
+    <%- include('partials/header') %>
+    <!-- Header -->
         <main>
             <article class="main-detail">
+                <div class="portada-detail-img">
+                    <img src="/images/eventos/<%= event.main_img %>" alt="Angeles" class="product_img-detail">       
+                </div>
                 <article class="contenedor-producto-detail-principal">
-                    <div class="contenedor-producto-detail">
-                        <img src="/images/eventos/<%= event.main_img %>" alt="Angeles" class="product_img-detail">       
-                            <h2 class="description-detail"> <%= event.title %>
-                                <br> <%= event.date %> </br>                 
-                                <br>  <%= event.ubication %> </br>
-                            </h2>
-                    </div>
+                    <h2 class="description-detail"> <%= event.title %>
+                        <br> <%= event.date %> </br>                 
+                        <br>  <%= event.ubication %> </br>
+                    </h2>
                     <div class="texto-descripcion">
                     
                         <h2 class="txt-description">Tickets  a la venta a traves de Shop Event</h2>
@@ -31,16 +26,15 @@
                         </p>
                     </div>    
                     <div class="recinto-details">
-                        <img src="/images/recintos/luna park.jpg2.jpg" alt="Informacion" class="recinto_img-detail" >            
-                        <h2 class="description-detail"> <br>
+                        <img src="/images/recintos/luna park.jpg2.jpg" alt="Informacion" class="recinto-img-detail" >            
                         <article>
-                            <h3  class = "titulo">Recinto</h3> 
+                            <h3  class="titulo">Recinto</h3> 
                             <br>
                             <p class="luna-park"><%= event.ubication %>.
                                 <br>Direccion </br>
                                 <br>Av. Eduardo Madero 470, C1106 CABA</br>
                             </p>                    
-                        </article> 
+                        </article>
                         <div class="medio-de-pago"> 
                             <p class="valor-entrada">
                                 <br>entradas desde <%= event.cost %> </br>
@@ -58,14 +52,10 @@
                         </div>
                     </div>  
                 </article>
-            </article>
-
-        </main>          
-        
-
+            </article> 
+        </main>        
         <!-- Footer -->
         <%- include('partials/footer') %>
-            
-        <!-- Footer -->     
+        <!-- Footer -->      
     </body>
 </html>
