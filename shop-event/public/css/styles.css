@@ -357,24 +357,32 @@ article.contenedor-articulo-carrito-home{
     position: absolute;
 }
 
+.contenedor-producto-detail-principal{
+    width: 80%;
+    margin: auto;
+}
+
 .description-detail{
-    padding: 0 5%;
-    background-color:#e7b698;
-    height: 15vh;
+    padding: 20px;
+    background-color:#ECECEC;
     flex-direction: center;
     justify-content:space-around;
     align-items:center;
-    text-align: center;   
-    flex-direction: center;
     font: 15px;
     font-size: xx-large;
-    text-shadow: blueviolet;
+    border: 5px solid lightgray;
+    border-radius: 2px;
 }
 
 .product_img-detail{
     width: 100%;
-    padding-bottom: 5%;
     display: flex;
+    z-index: 3;
+}
+
+.product-img-portada{
+    width: 100%;
+    z-index: 2;
 }
 
 .portada-detail-img {
@@ -384,6 +392,29 @@ article.contenedor-articulo-carrito-home{
     box-sizing: border-box;
     margin-right:auto ;
 }    
+
+.img-product-portada{
+    height: 300px;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+}
+
+
+.product-img-detail-portada{
+    max-height: 200px;
+    display: none;
+    width: 100%;
+    top: -10%;
+    left: -5%;
+    filter: blur(30px);
+}
+
+.medio-de-pago i {
+    display: inline;
+}
+
+
 
 .recinto-details{
     width: 100%;
@@ -409,7 +440,6 @@ article.contenedor-articulo-carrito-home{
 .texto-descripcion{
     margin: auto;
     margin-top: 2%;
-    width: 95%;
     margin-bottom: 3%;
     font-size: x-large;
     border: 5px solid lightgray;
@@ -417,7 +447,7 @@ article.contenedor-articulo-carrito-home{
     background-color: #ECECEC;
     box-sizing: border-box;
     position: relative;
-      
+    padding: 20px
 }
    
      /*body details descripcion*/
@@ -436,20 +466,14 @@ article.contenedor-articulo-carrito-home{
 .promo h4{
     position: center;
 
-} 
-  /*.contenedor-boton details{
-   
-    margin-left: auto;
-    margin-right: auto;
-    
-   
-  }*/
+}
 
-
-
+.contenedor-boton{
+    margin-top: 20px;
+}
 
 .medio-de-pago {
-    /*display: flex;*/
+    margin-bottom: 20px;
     flex-wrap: flex;
     flex-flow: column;
     align-items: center;
@@ -791,7 +815,7 @@ form .form-content button:hover{
 
     .product_img-detail{
         margin: auto;
-        max-width: 700px;
+        max-width: 65%;
         
     }
 
@@ -799,6 +823,13 @@ form .form-content button:hover{
         padding-top: 20px;
     }
 
+    .product-img-detail-portada{
+        display: block;
+    }
+
+    .contenedor-producto-detail-principal{
+        width: 65%;
+    }
 
 }
 

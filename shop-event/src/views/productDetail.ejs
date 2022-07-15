@@ -9,13 +9,17 @@
         <main>
             <article class="main-detail">
                 <div class="portada-detail-img">
+                    <div class="img-product-portada">
+                        <img src="/images/eventos/<%= event.main_img %>" alt="Angeles" class="product-img-detail-portada"> 
+                    </div>
                     <img src="/images/eventos/<%= event.main_img %>" alt="Angeles" class="product_img-detail">       
                 </div>
                 <article class="contenedor-producto-detail-principal">
-                    <h2 class="description-detail"> <%= event.title %>
-                        <br> <%= event.date %> </br>                 
-                        <br>  <%= event.ubication %> </br>
-                    </h2>
+                    <div class="description-detail">
+                        <h2> <%= event.title %></h2>
+                        <p><%= event.date %>                 
+                        <br>  <%= event.ubication %> </br></p>
+                    </div>
                     <div class="texto-descripcion">
                     
                         <h2 class="txt-description">Tickets  a la venta a traves de Shop Event</h2>
@@ -40,12 +44,7 @@
                                 <br>entradas desde <%= event.cost %> </br>
                             </p>     
                             <h4 class="cuotas"> Cuotas sin interés </h4>        
-                            <nav>
-                                <ul>
-                                    <li><a href="#"> Ver promociones bancarias <i class="fa-solid fa-credit-card"></i></a></li>
-                                </ul>
-                                <br>
-                            </nav>
+                            <a href="#"> Ver promociones bancarias <i class="fa-solid fa-credit-card"></i></a>
                             <div class= "contenedor-boton details">
                                 <button class= "comprar"><span>Comprar</span></button>
                             </div>            
