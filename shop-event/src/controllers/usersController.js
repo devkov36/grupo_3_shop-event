@@ -24,6 +24,9 @@ const usersController = {
                 oldData: req.body,
             });
         }
+        else{
+            console.log(req.body);
+        }
     },
 
     // processLogin: (req, res) => {
@@ -64,7 +67,7 @@ const usersController = {
 
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
-        const users = JSON.parse(fs.readFileSync(usersFilePath));+
+        const users = JSON.parse(fs.readFileSync(usersFilePath));
 
         console.log(resultValidation);
         console.log(req.body);
