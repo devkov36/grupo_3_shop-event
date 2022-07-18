@@ -8,7 +8,7 @@
     <!-- Header -->
     <section class="register-section">
         <div class="container-signup">
-            <form method="POST" action="/user/register/">
+            <form method="POST" action="/user/register/" enctype="multipart/form-data">
                 <div class="form-content">
                     <a href="/">
                         <div class="image-container">
@@ -21,14 +21,28 @@
                                 <i class="fa-solid fa-user-astronaut"></i>
                                 <input 
                                     type="text"
-                                    name="name"  
-                                    placeholder="Enter your name" 
-                                    value = "<%= locals.oldData ? oldData.name : null %>"
+                                    name="first_name"  
+                                    placeholder="Enter your first name" 
+                                    value = "<%= locals.oldData ? oldData.first_name : null %>"
                                 >
                             </div>
-                            <% if (locals.errors && errors.name) { %>
+                            <% if (locals.errors && errors.first_name) { %>
                                 <div class="text-danger">
-                                    <%= errors.name.msg %> 
+                                    <%= errors.first_name.msg %> 
+                                </div>
+                            <% } %>
+                            <div class="input-box">
+                                <i class="fa-solid fa-child-reaching"></i>
+                                <input 
+                                    type="text"
+                                    name="last_name"  
+                                    placeholder="Enter your last name" 
+                                    value = "<%= locals.oldData ? oldData.last_name : null %>"
+                                >
+                            </div>
+                            <% if (locals.errors && errors.last_name) { %>
+                                <div class="text-danger">
+                                    <%= errors.last_name.msg %> 
                                 </div>
                             <% } %>
                             <div class="input-box">

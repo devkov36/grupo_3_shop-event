@@ -69,9 +69,6 @@ const usersController = {
         const resultValidation = validationResult(req);
         const users = JSON.parse(fs.readFileSync(usersFilePath));
 
-        console.log(resultValidation);
-        console.log(req.body);
-
         if(resultValidation.errors.length > 0){
             return res.render('users/register', {
                 errors: resultValidation.mapped(),
@@ -79,22 +76,27 @@ const usersController = {
             });
         }
 
-        let userFound = users.find(oneUser => oneUser['email'] === req.body.email) 
+        let userFound = users.find(oneUser => oneUser['email'] === req.body.email); 
         
         if(userFound){
             return res.render('users/register', {
 				errors: {
 					email: {
 						msg: 'Este email ya está registrado'
-					}
+					},
 				},
 				oldData: req.body
 			});
         }
 
+        // NOTA: EL ID ESTA MAL ASIGNADO, PERO POR EL MOMENTO CUMPLE LA FUNCION
+
         let userToCreate = {
+            id: users.length + 1,
             ...req.body,
+            category: "user",
             password: bcryptjs.hashSync(req.body.password, 10),
+            avatar: req.file.filename
         }
 
         users.push(userToCreate);

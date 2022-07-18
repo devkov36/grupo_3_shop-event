@@ -2,9 +2,8 @@
     {
       "id": 1,
       "first_name": "Kelsi",
-      "last_name" : "Bolson",
+      "last_name": "Bolson",
       "email": "kgonnel0@elegantthemes.com",
-      "username": "kgonnel0",
       "password": "123456",
       "category": "user",
       "avatar": "img-url"
@@ -12,9 +11,8 @@
     {
       "id": 2,
       "first_name": "Barby",
-      "last_name" : "Bolson",
+      "last_name": "Bolson",
       "email": "bpieter1@shutterfly.com",
-      "username": "bpieter1",
       "password": "KpoMbM1Is",
       "category": "user",
       "avatar": "img-url"
@@ -22,9 +20,8 @@
     {
       "id": 3,
       "first_name": "Reg",
-      "last_name" : "Bolson",
+      "last_name": "Bolson",
       "email": "rtuite2@timesonline.co.uk",
-      "username": "rtuite2",
       "password": "WMx4QJ",
       "category": "user",
       "avatar": "img-url"
@@ -32,9 +29,8 @@
     {
       "id": 4,
       "first_name": "Fons",
-      "last_name" : "Bolson",
+      "last_name": "Bolson",
       "email": "fkellard3@mapy.cz",
-      "username": "fkellard3",
       "password": "5uWrH6H",
       "category": "user",
       "avatar": "img-url"
@@ -42,9 +38,8 @@
     {
       "id": 5,
       "first_name": "Cordy",
-      "last_name" : "Bolson",
+      "last_name": "Bolson",
       "email": "chanhardt4@blogtalkradio.com",
-      "username": "chanhardt4",
       "password": "yv25Tj",
       "category": "user",
       "avatar": "img-url"
@@ -52,9 +47,8 @@
     {
       "id": 6,
       "first_name": "Rosella",
-      "last_name" : "Bolson",
+      "last_name": "Bolson",
       "email": "rlethbrig5@squarespace.com",
-      "username": "rlethbrig5",
       "password": "gwS4sYELgx",
       "category": "user",
       "avatar": "img-url"
@@ -62,9 +56,8 @@
     {
       "id": 7,
       "first_name": "Jud",
-      "last_name" : "Bolson",
+      "last_name": "Bolson",
       "email": "jgomery6@zimbio.com",
-      "username": "jgomery6",
       "password": "SqkjNKeVM4",
       "category": "user",
       "avatar": "img-url"
@@ -72,11 +65,26 @@
     {
       "id": 8,
       "first_name": "Johna",
-      "last_name" : "Bolson",
+      "last_name": "Bolson",
       "email": "jwynrahame7@telegraph.co.uk",
-      "username": "jwynrahame7",
       "password": "CdLU3lIuaJdr",
       "category": "user",
       "avatar": "img-url"
+    },
+    {
+      "first_name": "Ramon",
+      "last_name": "Ortega",
+      "email": "ramortega1594@gmail.com",
+      "password": "$2a$10$Z.v3/pBVFrFe.pfz0fK/5eN4YpP0kcpHuh3Jdj7kFDB7wmERxylDy",
+      "avatar": "WhatsApp Image 2021-08-15 at 9.10.29 AM.jpeg"
+    },
+    {
+      "id": 10,
+      "first_name": "Ramón de Jesús",
+      "last_name": "Ortega",
+      "email": "jesus@test.com",
+      "password": "$2a$10$iawYH0AIBoe6N/JR.pWI1eOA6seA5M4IqKj4763KJ55XIdGoN5AHy",
+      "category": "user",
+      "avatar": "1658166130829_img.jpg"
     }
   ]

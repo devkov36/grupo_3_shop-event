@@ -22,7 +22,7 @@ router.post('/login', validationLogin, usersController.processLogin);
 router.get('/register', usersController.register);
 
 // Procesar el Registro
-router.post('/register', validationsRegister, usersController.processRegister );
+router.post('/register/', uploadFile.single('avatar'), validationsRegister, usersController.processRegister );
 
 // Perfil de Usuario
 
