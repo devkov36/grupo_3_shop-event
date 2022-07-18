@@ -16,7 +16,8 @@ const usersController = {
     },
 
     processLogin: (req, res) => {
-        const resultValidation = validationResult(req);
+        let userFound = users.find(oneUser => oneUser['email'] === req.body.email); 
+        const resultValidation = validationResult(req);        
 
         if(resultValidation.errors.length > 0){
             return res.render('users/login', {
@@ -25,7 +26,33 @@ const usersController = {
             });
         }
         else{
-            console.log(req.body);
+            if(userFound){
+                let isOkThePassword = bcryptjs.compareSync(req.body.password, userFound.password);
+
+                if(isOkThePassword){
+                    console.log("Contraseña correcta");
+                }
+                else{
+                    return res.render('users/login', {
+                        errors: {
+                            validation: {
+                                msg: "Credenciales inválidas"
+                            }
+                        },
+                        oldData: req.body
+                    })
+                }
+            }
+            else{
+                return res.render('users/login',{
+                    errors: {
+                        email: {
+                            msg: "Este email no esta registrado"
+                        }
+                    },
+                    oldData: req.body,
+                });
+            }
         }
     },
 

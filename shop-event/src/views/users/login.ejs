@@ -41,6 +41,11 @@
                                     <%= errors.password.msg %> 
                                 </div>
                             <% } %>
+                            <% if (locals.errors && errors.validation) { %>
+                                <div class="text-danger">
+                                    <%= errors.validation.msg %> 
+                                </div>
+                            <% } %>
                             <div class="text">
                                 <a href="#">Forgot password?</a>
                             </div>
