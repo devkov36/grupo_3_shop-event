@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Include Head -->
+  <%- include('../partials/head', {title: 'ACCESO A ORGANIZADORES'}) %>
+<body>
+ <!-- Header -->
+ <%- include('../partials/header') %>
+ <!-- Header -->
+
+    <section class="acceso-section">
+        <div class="container-acceso">
+            <form action="/user/user method= "POST>
+                <div class="form-content">
+                    <div class="acceso-form">
+                        <div class="input-boxes">
+                            <h3 class="title"> ACCESO A ORGANIZADORES </h3>
+                            <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                <input 
+                                    type="text" 
+                                    placeholder="Enter your email" 
+                                    name="email"
+                                    value = "<%= locals.oldData ? oldData.email : null %>"
+                                >
+                            </div>
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %> 
+                                </div>
+                            <% } %>
+                            <div class="input-box">
+                                <i class="fa-solid fa-lock"></i>
+                                <input 
+                                    type="password" 
+                                    placeholder="Enter your password"
+                                    name="password"
+                                >
+                            </div>
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="text-danger">
+                                    <%= errors.password.msg %> 
+                                </div>
+                            <% } %>
+                            <% if (locals.errors && errors.validation) { %>
+                                <div class="text-danger">
+                                    <%= errors.validation.msg %> 
+                                </div>
+                            <% } %>
+                            <div class="text">
+                                <a href="#">Forgot password?</a>
+                            </div>
+                            <button class="ingresar-button" type="submit">ingresar</button>
+                            <div class="text">Don't have an account? 
+                                <a href="/user/register">Signup now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/">
+                        <div class="image-accesso-de-organizador.jpeg">
+                        </div>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <%- include('../partials/footer') %>
+    <!-- Footer -->
+</body>
+</html>

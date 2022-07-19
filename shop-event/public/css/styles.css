@@ -1045,7 +1045,7 @@ button#flecha-derecha{
     position: relative;
     text-align: center  ;
     display: block;
-    background-color: #435ba973;
+    background-color: lightgray;
     color:#020303;
     font-family: sans-serif;
     font-size: 20px;
@@ -1080,7 +1080,7 @@ button#flecha-derecha{
     height: 375px;
    width: 1200px;
    border-radius: 5px;
-   background-color: #435ba973;
+   background-color: lightgray;
    transform: translateY(-10px);
    box-shadow: -10px -10px 15px rgba(1, 27, 29, 0.836),
    10px 10px 15px rgba(70, 70, 70, 0.12);
