@@ -4,7 +4,6 @@ const path = require ('path');
 const methodOverride = require('method-override');
 const port = 3000
 const session = require ('express-session');
-const validator = require ('express-validator')
 
 
 const mainRoutes = require('./src/routes/mainRoutes');
@@ -16,6 +15,7 @@ app.use (session({
     resave: false,
     saveUninitialized: false,
 }));
+
 app.set('views', path.join(__dirname, '/src/views'));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));

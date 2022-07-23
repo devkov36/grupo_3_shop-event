@@ -25,14 +25,9 @@ router.get('/register', usersController.register);
 router.post('/register/', uploadFile.single('avatar'), validationsRegister, usersController.processRegister );
 
 // Perfil de Usuario
+router.get('/profile', authtMiddlewares, usersController.profile);
 
 // Checa si el usuario esta autenticado
-router.get ('/check', function (req, res){
-    if (req.session.usuarioLogueado == undefined)
-    { 'No Estas Logueado'}
-    else{
-        res.send ('El usuario Logueado es:'+ req.session.usuarioLogueado.email)
-    }
-});
+router.get ('/check', usersController.check);
 
 module.exports = router;
