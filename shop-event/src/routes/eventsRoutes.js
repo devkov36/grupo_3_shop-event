@@ -13,11 +13,13 @@ const storage = multer.diskStorage({
     } 
 });
 
+const authtMiddlewares = require ('../middlewares/authMiddlewares');
+
 const upload = multer({ storage });
 
 const router = express.Router();
 
-router.get('/cart', eventsController.cart);
+router.get('/cart', authtMiddlewares, eventsController.cart);
 
 
 // CREAR UN EVENTO

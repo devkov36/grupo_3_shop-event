@@ -29,7 +29,13 @@ const usersController = {
                 let isOkThePassword = bcryptjs.compareSync(req.body.password, userFound.password);
 
                 if(isOkThePassword){
-                    req.session.usuarioLogueado = userFound
+                    req.session.usuarioLogueado = userFound;
+
+                    console.log(`ESTAMOS AQUI ${req.body.remember_user}`);
+
+                    if(req.body.remember_user){
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) *60 });
+                    }
 
                     res.redirect("/");
                 }
@@ -114,6 +120,12 @@ const usersController = {
         else{
             res.send ('El usuario Logueado es:'+ req.session.usuarioLogueado.email)
         }
+    },
+
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
     }
 }
 

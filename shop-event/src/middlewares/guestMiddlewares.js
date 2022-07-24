@@ -3,7 +3,7 @@ function guestMiddlewares (req,res,next) {
         next();
     } 
     else {
-        res.send ("Esta pagina es solo para usuarios Logueados")
+        res.redirect('/');
     }
 };
 

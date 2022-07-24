@@ -1,14 +1,19 @@
 const express = require ('express');
-const app = express ();
 const path = require ('path');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+
+const app = express ();
+
 const port = 3000
-const session = require ('express-session');
 
 
 const mainRoutes = require('./src/routes/mainRoutes');
 const eventsRoutes = require('./src/routes/eventsRoutes');
 const usersRoutes = require ('./src/routes/userRoutes');
+
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
 app.use (session({
     secret: "Secreto!",
@@ -16,11 +21,13 @@ app.use (session({
     saveUninitialized: false,
 }));
 
+app.use(cookies());
 app.set('views', path.join(__dirname, '/src/views'));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join (__dirname, 'public')));
+app.use(userLoggedMiddleware);
 
 app.listen ( port , () => {
     console.log (`Servidor corriendo en el puerto ${port}`);
