@@ -17,9 +17,26 @@ Generamos criticas constructivas sobre el diseño de la web de cada uno y las re
 
 Semana del 18 de Junio a 24 de Junio:
 
+Continuamos comunicandonos de manrea cosntante y distribuyendonos tareas, comentando y ayudandonos si alguno estaba mas adelantando.
+
 Semana de 25 de Junio al 2 de Julio:
 Terminamos todo el Sprint 4.
 Impedimento en la semana: Estuvimos un poco desconectados, porque estuvimos ocupados con otras cuestiones, pero pudimos ponernos de acuerdo en el trabajo individual 
 Fortaleza en la semana: Nos apoyamos en las dificultades
 
 Semana del 2 de Julio al 9 de Julio:
+Comenzamos a trabajar con el Spritn 5, actualizamos el Trello y nos mantuvimos en contacto por WhattsApp.
+repartimos tareas para realizar el Sprint 5.
+
+Semanda del 10 de Julio al 17 de Julio:
+
+Estuvimos un poco ocupados con otros temas, pero ya teniamos los temas repartidos, seguimos hablanco por whattApp.
+Hicimos el Login y Register.
+Terminamos el Acerca de Nosotros y le dimos un diseño mejorado con CSS.
+
+
+Semana del 18 al 25 de Julio:
+
+hicimos la retro de l Srpint 5.
+Concectamos el Login con vistas y el express validator.
+
