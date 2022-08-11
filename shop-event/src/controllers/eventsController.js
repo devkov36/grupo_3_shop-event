@@ -1,5 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
+
 
 const eventsFilePath = path.join(__dirname, '../data/event.json');
 const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
@@ -98,7 +102,14 @@ const eventController = {
         
         
         res.render('event-create-form',{mensaje:'Evento eliminado correctamente'});
-    }
+    },
+
+    // pruebaDB: (req, res) => {
+    //     db.Event.findAll()
+    //         .then( events => {
+    //             console.log(events);
+    //         });
+    // }
 }
 
 module.exports = eventController;

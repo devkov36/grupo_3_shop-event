@@ -37,6 +37,8 @@ router.get('/detail/:id', eventsController.detail);
 // ELIMINAR UN EVENTO
 router.post('/delete/:id', eventsController.delete);
 
+// router.get('/prueba', eventsController.pruebaDB);
+
 
 module.exports = router;
 
