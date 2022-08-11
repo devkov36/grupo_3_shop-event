@@ -104,12 +104,12 @@ const eventController = {
         res.render('event-create-form',{mensaje:'Evento eliminado correctamente'});
     },
 
-    // pruebaDB: (req, res) => {
-    //     db.Event.findAll()
-    //         .then( events => {
-    //             console.log(events);
-    //         });
-    // }
+    pruebaDB: (req, res) => {
+        db.Event.findAll()
+            .then((events)=>{
+                console.log(events);
+            });
+    }
 }
 
 module.exports = eventController;

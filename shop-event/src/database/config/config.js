@@ -1,8 +1,10 @@
+require('dotenv').config();
+
 module.exports = {
   "development": {
     "username": "root",
-    "password": "RO020794",
-    "database": "movies_db",
+    "password":  process.env.PASSWORD_DB || '',
+    "database": "shop_event_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
