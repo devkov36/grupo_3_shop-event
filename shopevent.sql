@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-08-2022 a las 03:10:15
+-- Tiempo de generación: 19-08-2022 a las 03:13:50
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 7.4.21
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `shopevent`
 --
+CREATE DATABASE IF NOT EXISTS `shopevent` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `shopevent`;
 
 -- --------------------------------------------------------
 
@@ -27,6 +29,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `carrito`
 --
 
+DROP TABLE IF EXISTS `carrito`;
 CREATE TABLE `carrito` (
   `id_carrito` int(11) NOT NULL,
   `id_evento` int(11) NOT NULL,
@@ -45,6 +48,7 @@ CREATE TABLE `carrito` (
 -- Estructura de tabla para la tabla `cat_categorias`
 --
 
+DROP TABLE IF EXISTS `cat_categorias`;
 CREATE TABLE `cat_categorias` (
   `id_categoria` int(11) NOT NULL,
   `descripcion` varchar(200) NOT NULL
@@ -56,6 +60,7 @@ CREATE TABLE `cat_categorias` (
 -- Estructura de tabla para la tabla `eventos`
 --
 
+DROP TABLE IF EXISTS `eventos`;
 CREATE TABLE `eventos` (
   `id_event` int(11) NOT NULL,
   `category` varchar(300) NOT NULL,
@@ -76,6 +81,7 @@ CREATE TABLE `eventos` (
 -- Estructura de tabla para la tabla `locations`
 --
 
+DROP TABLE IF EXISTS `locations`;
 CREATE TABLE `locations` (
   `id_location` int(11) NOT NULL,
   `name` varchar(500) NOT NULL,
@@ -92,6 +98,7 @@ CREATE TABLE `locations` (
 -- Estructura de tabla para la tabla `usuarios`
 --
 
+DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `first_name` varchar(200) NOT NULL,
@@ -109,6 +116,7 @@ CREATE TABLE `usuarios` (
 -- Estructura de tabla para la tabla `usuarios_categorias`
 --
 
+DROP TABLE IF EXISTS `usuarios_categorias`;
 CREATE TABLE `usuarios_categorias` (
   `id_categoria` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL
