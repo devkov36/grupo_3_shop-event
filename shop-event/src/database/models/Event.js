@@ -1,50 +1,61 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = 'Event';
+    let alias = 'eventos';
     let cols = {
-        id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+        id_event: {
+            type: dataTypes.INT(11).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
-            type: dataTypes.STRING(100),
-            allowNull: false
-        },
-        main_img: {
-            type: dataTypes.STRING(160),
-            allowNull: true
-        },
-        start_date: {
-            type: dataTypes.DATE,
-            allowNull: false
-        },
-        end_date: {
-            type: dataTypes.DATE,
-            allowNull: false
-        },
         category: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(300),
             allowNull: true
         },
         cost: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.FLOAT(11,2),
+            allowNull: false
+        },
+        event_date: {
+            type: dataTypes.DATETIM,
+            allowNull: false
+        },
+        event_end_date: {
+            type: dataTypes.DATE,
+            allowNull: false
+        },
+        created_at: {
+            type: dataTypes.DATE,
+            allowNull: false
+        },
+        id_usuario: {
+            type: dataTypes.INT(11).UNSIGNED
+            
+            
+        },        
+        title: {
+            type: dataTypes.STRING(200),
             allowNull: false
         },
         description: {
             type: dataTypes.TEXT,
             allowNull: true
         },
-        location: {
-            type: dataTypes.STRING(120),
-            allowNull: false
-        }
+        
+        id_location: {
+            type: dataTypes.INT(11).UNSIGNED            
+        },
+        tickets: {
+            type: dataTypes.INT(11).UNSIGNED            
+            
+        },
+                
+        
+        
     };
     let config = {
         timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        tableName: 'events'
+        createdAt: 'created_at',        
+        tableName: 'eventos'
     }
     const Event = sequelize.define(alias, cols, config);
 

@@ -40,3 +40,11 @@ Semana del 18 al 25 de Julio:
 hicimos la retro de l Srpint 5.
 Concectamos el Login con vistas y el express validator.
 
+Semana del 26 de Julio al 2 de Agosto:
+Repartimos actividades del Sprint 6, y diseños de paginas que nos quedaban por decorar y poner en funcion
+
+Semana del 2 de Agosto  al 9 de Agosto:
+Realizamos la confeccion de Tablas
+
+Semanda del 10 de Agosto al 17 de Agosto:
+Terminamos de definir lastablas y seguimos realizando las tareas asignadas para terminar con el Sprint 6
