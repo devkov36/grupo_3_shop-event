@@ -3,7 +3,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'eventos';
     let cols = {
         id_event: {
-            type: dataTypes.INT(11).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
@@ -16,9 +16,10 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         event_date: {
-            type: dataTypes.DATETIM,
+            type: dataTypes.DATE,
             allowNull: false
         },
+        
         event_end_date: {
             type: dataTypes.DATE,
             allowNull: false
@@ -28,9 +29,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         id_usuario: {
-            type: dataTypes.INT(11).UNSIGNED
-            
-            
+            type: dataTypes.INTEGER  
         },        
         title: {
             type: dataTypes.STRING(200),
@@ -40,17 +39,13 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TEXT,
             allowNull: true
         },
-        
         id_location: {
-            type: dataTypes.INT(11).UNSIGNED            
+            type: dataTypes.INTEGER            
         },
         tickets: {
-            type: dataTypes.INT(11).UNSIGNED            
+            type: dataTypes.INTEGER            
             
-        },
-                
-        
-        
+        },         
     };
     let config = {
         timestamps: true,
@@ -60,4 +55,4 @@ module.exports = (sequelize, dataTypes) => {
     const Event = sequelize.define(alias, cols, config);
 
     return Event;
-};
+}; 
