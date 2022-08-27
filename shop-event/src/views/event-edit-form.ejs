@@ -27,8 +27,12 @@
 						<input type="file" id="main_img" name="main_img" value="<%=  eventToEdit.title %>" class="form-input">
 					</div>
 					<div class="form-field">
-						<label for="date" class="form-label">Fecha del Evento:</label>
-						<input type="date" id="date" name="date" value="<%= eventToEdit.date %>"" class="form-input"  required>
+						<label for="date" class="form-label">Fecha de inicio del Evento:</label>
+						<input type="date" id="date" name="event_start_date" value="<%= eventToEdit.date %>"" class="form-input"  required>
+					</div>
+					<div class="form-field">
+						<label for="date" class="form-label">Fecha de fin del Evento:</label>
+						<input type="date" id="date" name="event_end_date" value="<%= eventToEdit.date %>"" class="form-input"  required>
 					</div>
 					<div class="form-field">
 						<label for="cost" class="form-label">Precio del evento:</label>

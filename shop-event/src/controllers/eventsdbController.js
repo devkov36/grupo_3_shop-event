@@ -27,10 +27,14 @@ const eventdbController = {
     update: (req, res) => {
         let eventId = +req.params.id;
 
+        console.log(req.body);
+
         db.Event.update(
             {
                 title: req.body.title,
                 cost: req.body.cost,
+                event_date: req.body.event_start_date,
+                event_end_date: req.body.event_end_date,
                 category: req.body.category,
                 description: req.body.description
             },
