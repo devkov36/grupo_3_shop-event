@@ -42,15 +42,21 @@ const eventController = {
 
         const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
 
-        console.log(req.file);
+        // console.log(req.file);
+
+        console.log(`BODY ${req.body.title}`);
 
         const id = +req.params.id;
         let main_img = req.file.filename;
         let section_img="banner.jpeg";
 
         let {title, date, cost, ubication, category, description} = req.body;
+
+        console.log(title, date, cost, ubication, category, description);
+
         let editEvent = {
-            id, title, date, cost, ubication, category, description, main_img, section_img
+            id, title, date, cost, ubication, category, description, 
+            main_img, section_img
         }
 
         for (let i in events){
@@ -102,13 +108,6 @@ const eventController = {
         
         
         res.render('event-create-form',{mensaje:'Evento eliminado correctamente'});
-    },
-
-    pruebaDB: (req, res) => {
-        db.Event.findAll()
-            .then((events)=>{
-                console.log(events);
-            });
     }
 }
 

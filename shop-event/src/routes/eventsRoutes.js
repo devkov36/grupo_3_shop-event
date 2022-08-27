@@ -1,5 +1,6 @@
 const express = require('express');
 const eventsController = require('../controllers/eventsController');
+const eventsdbController = require('../controllers/eventsdbController');
 const path = require('path');
 const multer = require('multer');
 
@@ -27,8 +28,10 @@ router.get('/create', eventsController.create);
 router.post('/create/', upload.single('main_img'), eventsController.save);
 
 // EDITAR UN EVENTO
-router.get('/edit/:id', eventsController.edit);
-router.put('/edit/:id', upload.single('main_img'), eventsController.update);
+router.get('/edit/:id', eventsdbController.edit);
+router.put('/edit/:id',
+    // upload.single('main_img'), 
+eventsdbController.update);
 
 //OBTIENE UN EVENTO
 
@@ -37,7 +40,7 @@ router.get('/detail/:id', eventsController.detail);
 // ELIMINAR UN EVENTO
 router.post('/delete/:id', eventsController.delete);
 
-router.get('/prueba', eventsController.pruebaDB);
+router.get('/prueba', eventsdbController.pruebaDB);
 
 
 module.exports = router;
