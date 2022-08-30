@@ -44,6 +44,17 @@ const eventdbController = {
             console.log(error);
         })   
     }
+    // DELETE de eventos 
+    
+        //delete: function (req,res){
+        //       db.events.destroy({
+        //       where:{
+        //        id: req.params.id
+        //       }
+        //       })
+        //       res.redirect ("/events")
+        //
+
 }
 
 module.exports = eventdbController;
