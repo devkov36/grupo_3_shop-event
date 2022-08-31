@@ -109,6 +109,8 @@ const eventController = {
         
         res.render('event-create-form',{mensaje:'Evento eliminado correctamente'});
     }
+
+
 }
 
 module.exports = eventController;
