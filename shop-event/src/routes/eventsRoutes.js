@@ -42,6 +42,8 @@ router.post('/delete/:id', eventsController.delete);
 
 router.get('/prueba', eventsdbController.pruebaDB);
 
+router.get('/listar', eventsdbController.listar);
+
 
 module.exports = router;
 

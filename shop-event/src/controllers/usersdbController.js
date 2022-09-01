@@ -1,7 +1,7 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
-const eventdbController = {
+const usersdbController = {
     pruebaDB: (req, res) => {
         db.Event.findAll()
             .then(movies => {
@@ -9,7 +9,7 @@ const eventdbController = {
             });
     },
 
-    // GET para Actualizar Eventos
+    // GET para Actualizar Usuarios
     edit: (req, res) => {
         const id = +req.params.id;
 
@@ -22,7 +22,7 @@ const eventdbController = {
             });
     },
 
-    // UPDATE para actualizar Eventos
+    // UPDATE para actualizar Usuarios
 
     update: (req, res) => {
         let eventId = +req.params.id;
@@ -43,7 +43,7 @@ const eventdbController = {
         .catch((error)=>{
             console.log(error);
         })   
-    },
+    }
     // DELETE de eventos 
     
         //delete: function (req,res){
@@ -55,23 +55,28 @@ const eventdbController = {
         //       res.redirect ("/events")
         //
 
-
+}
  // LISTAR elementos
-   listar:(req, res) => {
-    console.log("entre aca")
-        db.Event.findAll( )     
-        .then(movies => {
-            console.log(movies)
-         res.render("index", 
-         {
-            events: movies
-         }
-         
-         )})
-        .catch((error)=>{
-         console.log(error);
-      })
+    listar: (req, res) => {
+    let eventId = +req.params.id
 
+     db.Event.listar(
+    {
+        title: req.body.title,
+        cost: req.body.cost,
+        category: req.body.category,
+        description: req.body.description
+    },
+    {
+        where: {id: eventId}
+    })
+.then(()=>{
+    return res.redirect('/')
+})
+.catch((error)=>{
+    console.log(error);
+})   
 }
-}
+
+
 module.exports = eventdbController;
