@@ -33,4 +33,8 @@ router.get ('/check', usersController.check);
 // Logout
 router.get('/logout/', usersController.logout);
 
+// Create user
+
+router.get ("/create", userControllers.create);
+
 module.exports = router;
