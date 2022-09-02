@@ -65,6 +65,18 @@ const usersdbController = {
 .catch((error)=>{
     console.log(error);
 })   
+
+
+
+// CREATE user
+ //   let userController= {
+ //   create: function (req,res) {;
+ //   db.user.findAll ();
+ //   .then (function (user);
+  //  return res.render ("listadoUser",{ user:user });
+  //  )
+  //  }}
+
 }
 
 
