@@ -38,7 +38,7 @@ eventsdbController.update);
 router.get('/detail/:id', eventsController.detail);
 
 // ELIMINAR UN EVENTO
-router.post('/delete/:id', eventsController.delete);
+router.post('/delete/:id', eventsdbController.delete);
 
 router.get('/prueba', eventsdbController.pruebaDB);
 

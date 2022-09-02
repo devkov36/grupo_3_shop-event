@@ -9,25 +9,14 @@ const usersdbController = {
             });
     },
 
-    // GET para Actualizar Usuarios
-    edit: (req, res) => {
-        const id = +req.params.id;
-
-        db.Event.findByPk(id)
-            .then((event)=>{
-                res.render('event-edit-form', {title: event.title, eventToEdit: event});
-            })
-            .catch((error)=>{
-                console.log(error);
-            });
-    },
+   
 
     // UPDATE para actualizar Usuarios
 
     update: (req, res) => {
         let eventId = +req.params.id;
 
-        db.Event.update(
+        db.User.update(
             {
                 title: req.body.title,
                 cost: req.body.cost,
@@ -76,6 +65,18 @@ const usersdbController = {
 .catch((error)=>{
     console.log(error);
 })   
+
+
+
+// CREATE user
+ //   let userController= {
+ //   create: function (req,res) {;
+ //   db.user.findAll ();
+ //   .then (function (user);
+  //  return res.render ("listadoUser",{ user:user });
+  //  )
+  //  }}
+
 }
 
 

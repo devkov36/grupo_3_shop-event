@@ -50,14 +50,26 @@ const eventdbController = {
     },
     // DELETE de eventos 
     
-        //delete: function (req,res){
-        //       db.events.destroy({
-        //       where:{
-        //        id: req.params.id
-        //       }
-        //       })
-        //       res.redirect ("/events")
-        //
+    delete: (req,res)=>{
+        let eventId = +req.params.id;
+        console.log("estos emilindando")
+        
+
+         db.Event.destroy ({
+        where:{
+            id: req.params.id
+     }     })
+     .then(movies => {
+        console.log(movies)
+    })
+    .catch((error)=>{
+     console.log(error);
+  })
+         
+
+        
+
+    },
 
 
  // LISTAR elementos
