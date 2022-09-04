@@ -56,7 +56,7 @@ const eventdbController = {
             id: req.params.id
      }     })
      .then(movies => {
-        console.log(movies)
+        res.redirect ("/")
     })
     .catch((error)=>{
      console.log(error);
