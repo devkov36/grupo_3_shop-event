@@ -37,7 +37,15 @@ module.exports = (sequelize, dataTypes) => {
         tickets: {
             type: dataTypes.INTEGER            
             
-        },       
+        }, 
+        ubication: {
+            type: dataTypes.STRING(300),
+            allowNull: true
+        },
+        banner_img: {
+            type: dataTypes.STRING(300),
+            allowNull: true          
+        },      
     };
     let config = {
         timestamps: true,

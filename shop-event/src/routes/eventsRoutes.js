@@ -40,10 +40,5 @@ router.get('/detail/:id', eventsController.detail);
 // ELIMINAR UN EVENTO
 router.get('/delete/:id', eventsdbController.delete);
 
-router.get('/prueba', eventsdbController.pruebaDB);
-
-router.get('/listar', eventsdbController.listar);
-
-
 module.exports = router;
 

@@ -9,8 +9,6 @@ const usersdbController = {
             });
     },
 
-   
-
     // UPDATE para actualizar Usuarios
 
     update: (req, res) => {

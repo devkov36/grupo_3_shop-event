@@ -18,13 +18,14 @@
             </div>
         </section>
         <div id="conteItemsCarrousel">
-            <div class="contenedor-home1-">
+<!--             <div class="contenedor-home1-">
                 <div class="carrousel">
                     <div class="conteCarrousel">
 
-                        <% events.forEach( ( event )=>  {   %>
+                        <% events.forEach( ( event, index ) =>  { %>
                             <div class="itemCarrousel" id="itemCarrousel-1">
                                 <div class="itemCarrouselTarjeta">
+                                    <%= index %>
                                     <div class="evento-home">
                                         <img src="/images/eventos/<%=event.main_img%>" alt="angeles-azules" class="product_img-carrousel">
                                     </div>
@@ -251,6 +252,9 @@
                         <% } ) %>
 
                     </div>
+
+
+
                     <div class="conteCarrouselController">
                         <a href="#itemCarrousel-1">•</a>
                         <a href="#itemCarrousel-2">•</a>
@@ -263,31 +267,29 @@
                         <a href="#itemCarrousel-9">•</a>
                         <a href="#itemCarrousel-10">•</a>
                         <a href="#itemCarrousel-11">•</a>
-
                     </div>
                 
                 </div>
+            </div> -->
               
             <div class="productos-home">
-
                 <% events.forEach( ( event )=>  {   %>
                     <article class="contenedor-articulo-carrito-home">
                         <a href="/event/detail/<%= event.id %>">
-                            <img src="/images/eventos/<%= event.main_img%>" alt="evento imagen" class="product_img-carrito-home">
+                            <img src="/images/eventos/<%=event.banner_img%>" alt="<%=event.banner_img%>" class="product_img-carrito-home">
                         </a>
                         <div class="main-article-home">
-                            <i class="fa-solid fa-bag-shopping"><a href="/product/error404" class="compra-carrito">
+                            <i class="fa-solid fa-bag-shopping"><a href="/event/detail/<%= event.id %>" class="compra-carrito">
                                  Comprá tu entrada! </a> </i>
                             <div class="datos-concierto-carrito">
-                                <h4 class="description">Duki</h4>
-                                <h5 class="fecha"> 24 de Junio </h5>
-                                <h5 class="hora"> 22:00 hs.</h5>
-                                <h5 class="lugar"> Estadio Luna Park</h5>
+                                <h4 class="description"><%=event.title%></h4>
+                                <h5 class="fecha"> <%=event.event_date%> </h5>
+                                <h5 class="lugar"> <%=event.ubication%></h5>
                             </div>
                         </div>
                     </article>
                 <% } ) %>
-                </div>
+            </div>
         </section>                                   
     </main>
     <!-- Footer -->

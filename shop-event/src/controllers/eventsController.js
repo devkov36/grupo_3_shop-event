@@ -3,8 +3,6 @@ const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
-
-
 const eventsFilePath = path.join(__dirname, '../data/event.json');
 const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
 

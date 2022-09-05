@@ -2,13 +2,6 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 
 const eventdbController = {
-    pruebaDB: (req, res) => {
-        db.Event.findAll()
-            .then(movies => {
-                console.log(movies);
-            });
-    },
-
     // GET para Actualizar Eventos
     edit: (req, res) => {
         const id = +req.params.id;
@@ -65,29 +58,6 @@ const eventdbController = {
     .catch((error)=>{
      console.log(error);
   })
-         
-
-        
-
     },
-
-
- // LISTAR elementos
-   listar:(req, res) => {
-    console.log("entre aca")
-        db.Event.findAll( )     
-        .then(movies => {
-            console.log(movies)
-         res.render("index", 
-         {
-            events: movies
-         }
-         
-         )})
-        .catch((error)=>{
-         console.log(error);
-      })
-
-}
 }
 module.exports = eventdbController;

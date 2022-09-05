@@ -1,11 +1,14 @@
-const path = require('path');
-const fs= require ('fs');
-const eventsFilePath = path.join(__dirname, '../data/event.json');
-const events = JSON.parse(fs.readFileSync(eventsFilePath, 'utf-8'));
+const db = require('../database/models');
 
 const mainController = {
     home: (req, res) => {
-        res.render('index',{events :events } );     
+        db.Event.findAll()
+        .then(events => {
+            res.render('index', {events} );
+        })
+        .catch(error => {
+            console.log(error);
+        });
     },
     contact: (req, res) => {
         res.render('contacto');
@@ -15,6 +18,5 @@ const mainController = {
     }
     
 }
-
 
 module.exports = mainController;
