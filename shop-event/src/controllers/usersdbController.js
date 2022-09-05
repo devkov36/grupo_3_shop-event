@@ -32,19 +32,20 @@ const usersdbController = {
         .catch((error)=>{
             console.log(error);
         })   
-    }
+    },
     // DELETE de eventos 
     
-        //delete: function (req,res){
-        //       db.events.destroy({
-        //       where:{
-        //        id: req.params.id
-        //       }
-        //       })
-        //       res.redirect ("/events")
-        //
+        delete: function (req,res){
+        db.events.destroy({
+         where:{
+         id: req.params.id
+         }
+         }).then ( function (){ 
+         res.redirect ("/events")
+        })
+        
 
-}
+},
  // LISTAR elementos
     listar: (req, res) => {
     let eventId = +req.params.id
@@ -65,19 +66,16 @@ const usersdbController = {
 .catch((error)=>{
     console.log(error);
 })   
-
-
-
-// CREATE user
- //   let userController= {
- //   create: function (req,res) {;
- //   db.user.findAll ();
- //   .then (function (user);
-  //  return res.render ("listadoUser",{ user:user });
-  //  )
-  //  }}
-
-}
+} }
+ //CREATE user
+//let userController= {
+//create: function (req,res) {;
+//db.user.findAll ();
+//.then (function (user);
+//return res.render ("listadoUser",{ user:user });
+// )
+//}}
+//}
 
 
 module.exports = eventdbController;
