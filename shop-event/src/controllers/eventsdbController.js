@@ -2,17 +2,30 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 
 const eventdbController = {
+
+    detail: (req, res) => {
+        const id = +req.params.id;
+
+        db.Event.findByPk(id)
+        .then(event => {
+            res.render('productDetail', {event});
+        })
+        .catch(error =>{
+            console.log(error);
+        });
+    },
+
     // GET para Actualizar Eventos
     edit: (req, res) => {
         const id = +req.params.id;
 
         db.Event.findByPk(id)
-            .then((event)=>{
-                res.render('event-edit-form', {title: event.title, eventToEdit: event});
-            })
-            .catch((error)=>{
-                console.log(error);
-            });
+        .then((event)=>{
+            res.render('event-edit-form', {title: event.title, eventToEdit: event});
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
     },
 
     // UPDATE para actualizar Eventos

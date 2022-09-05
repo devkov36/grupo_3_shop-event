@@ -35,7 +35,7 @@ eventsdbController.update);
 
 //OBTIENE UN EVENTO
 
-router.get('/detail/:id', eventsController.detail);
+router.get('/detail/:id', eventsdbController.detail);
 
 // ELIMINAR UN EVENTO
 router.get('/delete/:id', eventsdbController.delete);

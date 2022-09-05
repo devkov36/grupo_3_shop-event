@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Producto'}) %>
+<%- include('partials/head', {title: 'Evento'}) %>
 <body>
     <!-- Header -->
     <%- include('partials/header') %>
@@ -10,15 +10,16 @@
             <article class="main-detail">
                 <div class="portada-detail-img">
                     <div class="img-product-portada">
-                        <img src="/images/eventos/<%= event.main_img %>" alt="Angeles" class="product-img-detail-portada"> 
+                        <img src="/images/eventos/<%= event.banner_img %>" alt="<%=event.banner_img%>" class="product-img-detail-portada"> 
                     </div>
-                    <img src="/images/eventos/<%= event.main_img %>" alt="Angeles" class="product_img-detail">       
+                    <img src="/images/eventos/<%= event.banner_img %>" alt="<%=event.banner_img%>" class="product_img-detail">       
                 </div>
                 <article class="contenedor-producto-detail-principal">
                     <div class="description-detail">
-                        <h2> <%= event.title %></h2>
-                        <p><%= event.date %>                 
-                        <br>  <%= event.ubication %> </br></p>
+                        <h2><%= event.title %></h2>
+                        <p> <%= event.event_date %>                 
+                        <br><%= event.ubication %> </br>
+                        </p>
                     </div>
                     <div class="texto-descripcion">
                     

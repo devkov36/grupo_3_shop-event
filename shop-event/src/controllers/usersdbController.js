@@ -2,13 +2,6 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 
 const usersdbController = {
-    pruebaDB: (req, res) => {
-        db.Event.findAll()
-            .then(movies => {
-                console.log(movies);
-            });
-    },
-
     // UPDATE para actualizar Usuarios
 
     update: (req, res) => {
