@@ -3,6 +3,10 @@ const sequelize = db.sequelize;
 
 const eventdbController = {
 
+    cart: (req, res) => {
+        res.render('productCart');
+    },
+
     detail: (req, res) => {
         const id = +req.params.id;
 
@@ -13,6 +17,33 @@ const eventdbController = {
         .catch(error =>{
             console.log(error);
         });
+    },
+
+    create: (req, res) => {
+        res.render('event-create-form',{mensaje:''});
+    },
+
+    save: (req, res) => {
+
+        db.Event.create({
+            title: req.body.title,
+            event_date: req.body.date,
+            cost: req.body.cost,
+            ubication: req.body.ubication,
+            category: req.body.category,
+            description: req.body.description,
+            banner_img: req.file.filename,
+            event_end_date: req.body.date,
+            id_usuario: 1,
+            tickets: 20,
+        })
+        .then(result => {
+            console.log(result);
+        }).catch(error=>{
+            console.log(error);
+        });
+
+        res.redirect('/');
     },
 
     // GET para Actualizar Eventos
@@ -58,19 +89,20 @@ const eventdbController = {
     
     delete: (req,res)=>{
         let eventId = +req.params.id;
-        console.log("estos emilindando")
-        
 
-         db.Event.destroy ({
-        where:{
-            id: req.params.id
-     }     })
-     .then(movies => {
-        res.redirect ("/")
-    })
-    .catch((error)=>{
-     console.log(error);
-  })
+        db.Event.destroy ({
+            where:{
+                id: eventId
+            }     
+        })
+        .then(movie => {
+            console.log(movie);
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
+
+        res.redirect("/");
     },
 }
 module.exports = eventdbController;
