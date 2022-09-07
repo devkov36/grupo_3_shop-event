@@ -4,6 +4,7 @@ const session = require ('express-session');
 
 // Controller
 const usersController = require('../controllers/usersController');
+const usersdbController = require('../controllers/usersdbController');
 
 // Middlewares
 const validationsRegister = require('../middlewares/validateRegisterMiddleware');
@@ -12,17 +13,19 @@ const guestMiddlewares = require ('../middlewares/guestMiddlewares');
 const authtMiddlewares = require ('../middlewares/authMiddlewares');
 const uploadFile = require('../middlewares/multerRegisterMiddleware');
 
+
+
 // Obtiene el formulario de Login
 router.get('/login', guestMiddlewares, usersController.login);
 
 // Procesa el login
 router.post('/login', validationLogin, usersController.processLogin);
 
-// Formulario de Registro
-router.get('/register', guestMiddlewares, usersController.register);
+// USER DB
+router.get('/register', guestMiddlewares, usersdbController.register);
+router.post('/register/', uploadFile.single('avatar'), validationsRegister, usersdbController.processRegister );
+// AQUI ESTAMOS TRABAJANDO ARRIBA
 
-// Procesar el Registro
-router.post('/register/', uploadFile.single('avatar'), validationsRegister, usersController.processRegister );
 
 // Perfil de Usuario
 router.get('/profile', authtMiddlewares, usersController.profile);

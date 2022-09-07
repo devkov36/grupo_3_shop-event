@@ -1,7 +1,64 @@
 const db = require('../database/models');
-const sequelize = db.sequelize;
+const bcryptjs = require('bcryptjs');
+const { validationResult } = require('express-validator');
 
 const usersdbController = {
+
+    login: (req, res) => {
+        res.render('users/login');
+    },
+
+    register: (req, res) => {
+        res.render('users/register');
+    },
+
+    processRegister: (req, res) => {
+        const resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length > 0){
+            return res.render('users/register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            });
+        }
+
+        db.User.findOne({
+            where: {
+                email: req.body.email
+            }
+        }).then(user => {
+            console.log(`USSSEEEER ${user}`);
+            if(user){
+                return res.render('users/register', {
+                    errors: {
+                        email: {
+                            msg: 'Este email ya está registrado'
+                        },
+                    },
+                    oldData: req.body
+                });
+            }
+        }).catch(error => {
+            console.log(error);
+        });
+
+        db.User.create({
+            first_name : req.body.first_name,
+            last_name : req.body.last_name,
+            username : req.body.email,
+            email: req.body.email,
+            password : bcryptjs.hashSync(req.body.password, 10),
+            avatar: "avatar.com",
+            category: "user"
+        })
+        .then(result => {
+            console.log(result);
+            res.redirect('/');
+        }).catch(error=>{
+            console.log(error);
+        });
+    },
+
     // UPDATE para actualizar Usuarios
 
     update: (req, res) => {
@@ -36,37 +93,8 @@ const usersdbController = {
         })
         
 
-},
- // LISTAR elementos
-    listar: (req, res) => {
-    let eventId = +req.params.id
-
-     db.Event.listar(
-    {
-        title: req.body.title,
-        cost: req.body.cost,
-        category: req.body.category,
-        description: req.body.description
     },
-    {
-        where: {id: eventId}
-    })
-.then(()=>{
-    return res.redirect('/')
-})
-.catch((error)=>{
-    console.log(error);
-})   
-} }
- //CREATE user
-//let userController= {
-//create: function (req,res) {;
-//db.user.findAll ();
-//.then (function (user);
-//return res.render ("listadoUser",{ user:user });
-// )
-//}}
-//}
+}
 
 
-module.exports = eventdbController;
+module.exports = usersdbController;
