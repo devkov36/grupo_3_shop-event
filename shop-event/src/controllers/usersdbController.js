@@ -8,6 +8,64 @@ const usersdbController = {
         res.render('users/login');
     },
 
+    processLogin: (req, res) => {
+        db.User.findOne({
+            where: {
+                email: req.body.email
+            }
+        }).then(user => {
+            console.log(user);
+            if(resultValidation.errors.length > 0){
+                return res.render('users/login', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                });
+            } else {
+                if(user){
+                    console.log(`USER ${user.password}`);
+                    let isOkThePassword = bcryptjs.compareSync(req.body.password, user.password);
+                    console.log(isOkThePassword);
+
+                    if(isOkThePassword){
+                        req.session.usuarioLogueado = user;
+    
+                        console.log(`ESTAMOS AQUI ${req.body.remember_user}`);
+    
+                        if(req.body.remember_user){
+                            res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) *60 });
+                        }
+    
+                        res.redirect("/");
+                    }
+                    else{
+                        return res.render('users/login', {
+                            errors: {
+                                validation: {
+                                    msg: "Credenciales inválidas"
+                                }
+                            },
+                            oldData: req.body
+                        })
+                    }
+                }
+                else{
+                    return res.render('users/login',{
+                        errors: {
+                            email: {
+                                msg: "Este email no esta registrado"
+                            }
+                        },
+                        oldData: req.body,
+                    });
+                }
+            }
+        }).catch(error => {
+            console.log(error);
+        });
+
+        const resultValidation = validationResult(req);        
+    },
+
     register: (req, res) => {
         res.render('users/register');
     },
@@ -27,7 +85,6 @@ const usersdbController = {
                 email: req.body.email
             }
         }).then(user => {
-            console.log(`USSSEEEER ${user}`);
             if(user){
                 return res.render('users/register', {
                     errors: {
@@ -48,7 +105,7 @@ const usersdbController = {
             username : req.body.email,
             email: req.body.email,
             password : bcryptjs.hashSync(req.body.password, 10),
-            avatar: "avatar.com",
+            avatar: req.file.filename,
             category: "user"
         })
         .then(result => {
@@ -57,43 +114,21 @@ const usersdbController = {
         }).catch(error=>{
             console.log(error);
         });
+
+        res.redirect('/user/login');
     },
 
-    // UPDATE para actualizar Usuarios
-
-    update: (req, res) => {
-        let eventId = +req.params.id;
-
-        db.User.update(
-            {
-                title: req.body.title,
-                cost: req.body.cost,
-                category: req.body.category,
-                description: req.body.description
-            },
-            {
-                where: {id: eventId}
-            })
-        .then(()=>{
-            return res.redirect('/')
-        })
-        .catch((error)=>{
-            console.log(error);
-        })   
+    profile: (req, res) => {
+        res.render("users/profile", {
+            user: req.session.usuarioLogueado
+        });
     },
-    // DELETE de eventos 
-    
-        delete: function (req,res){
-        db.events.destroy({
-         where:{
-         id: req.params.id
-         }
-         }).then ( function (){ 
-         res.redirect ("/events")
-        })
-        
 
-    },
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    }
 }
 
 

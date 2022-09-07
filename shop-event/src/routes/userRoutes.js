@@ -13,13 +13,8 @@ const guestMiddlewares = require ('../middlewares/guestMiddlewares');
 const authtMiddlewares = require ('../middlewares/authMiddlewares');
 const uploadFile = require('../middlewares/multerRegisterMiddleware');
 
-
-
-// Obtiene el formulario de Login
-router.get('/login', guestMiddlewares, usersController.login);
-
-// Procesa el login
-router.post('/login', validationLogin, usersController.processLogin);
+router.get('/login', guestMiddlewares, usersdbController.login);
+router.post('/login', validationLogin, usersdbController.processLogin);
 
 // USER DB
 router.get('/register', guestMiddlewares, usersdbController.register);
@@ -28,7 +23,7 @@ router.post('/register/', uploadFile.single('avatar'), validationsRegister, user
 
 
 // Perfil de Usuario
-router.get('/profile', authtMiddlewares, usersController.profile);
+router.get('/profile', authtMiddlewares, usersdbController.profile);
 
 // Checa si el usuario esta autenticado
 router.get ('/check', usersController.check);
