@@ -38,3 +38,6 @@ https://trello.com/b/IXE7shrD/grupo3-digitalhouse
 ♥ El trabajo en equipo y la comunicación, si alguno tiene problemas me parece perfecto que entre todos tratamos de sacar adelante el problema.
 
 ♥ Cuestiones tecnicas. Quizas no avanzamos tanto el proyecto ya que las herramientas se nos dan por clases y quisimos avanzar referencia a la clase.
+
+### DIAGRAMA ENTIDAD RELACION
+![SHOPEVENT DB](https://user-images.githubusercontent.com/46424945/189017088-80069123-591b-4bdf-9417-f840a70e724f.png)
