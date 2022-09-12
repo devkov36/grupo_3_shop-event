@@ -14,7 +14,6 @@ const usersdbController = {
                 email: req.body.email
             }
         }).then(user => {
-            console.log(user);
             if(resultValidation.errors.length > 0){
                 return res.render('users/login', {
                     errors: resultValidation.mapped(),
@@ -22,7 +21,6 @@ const usersdbController = {
                 });
             } else {
                 if(user){
-                    console.log(`USER ${user.password}`);
                     let isOkThePassword = bcryptjs.compareSync(req.body.password, user.password);
                     console.log(isOkThePassword);
 
@@ -95,27 +93,28 @@ const usersdbController = {
                     oldData: req.body
                 });
             }
+            else {
+                db.User.create({
+                    first_name : req.body.first_name,
+                    last_name : req.body.last_name,
+                    username : req.body.email,
+                    email: req.body.email,
+                    password : bcryptjs.hashSync(req.body.password, 10),
+                    avatar: req.file.filename,
+                    category: "user"
+                })
+                .then(result => {
+                    console.log(result);
+                    res.redirect('/');
+                }).catch(error=>{
+                    console.log(error);
+                });
+        
+                res.redirect('/user/login');
+            }
         }).catch(error => {
             console.log(error);
         });
-
-        db.User.create({
-            first_name : req.body.first_name,
-            last_name : req.body.last_name,
-            username : req.body.email,
-            email: req.body.email,
-            password : bcryptjs.hashSync(req.body.password, 10),
-            avatar: req.file.filename,
-            category: "user"
-        })
-        .then(result => {
-            console.log(result);
-            res.redirect('/');
-        }).catch(error=>{
-            console.log(error);
-        });
-
-        res.redirect('/user/login');
     },
 
     profile: (req, res) => {
