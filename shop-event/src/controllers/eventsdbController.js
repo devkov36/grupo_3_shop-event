@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const { validationResult } = require('express-validator');
 
 const eventdbController = {
 
@@ -23,6 +24,16 @@ const eventdbController = {
     },
 
     save: (req, res) => {
+
+        const resultValidation = validationResult(req);   
+
+        if(resultValidation.errors.length > 0){
+            console.log(resultValidation.errors);
+            return res.render('event-create-form', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            }
+        )}
 
         db.Event.create({
             title: req.body.title,

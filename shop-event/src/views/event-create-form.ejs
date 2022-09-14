@@ -17,11 +17,16 @@
 			<form action="/event/create/" method="POST" enctype="multipart/form-data">
 
 				<div class="event-detail">
-					<strong><%=  mensaje %></strong>
+					
 					<div class="form-field">
 						<label for="title" class="form-label">Nombre del evento:</label>
-						<input type="text" id="title" name="title" value="" class="form-input" required>
+						<input type="text" id="title" name="title" value="" class="form-input">
 					</div>
+					<% if (locals.errors && errors.title) { %>
+						<div class="text-danger">
+							<%= errors.title.msg %> 
+						</div>
+					<% } %>
 					<div class="form-field">
 						<label for="main_img" class="form-label">Imagén principal del evento:</label>
 						<input type="file" id="main_img" name="main_img" value="" class="form-input" >
@@ -32,8 +37,13 @@
 					</div>
 					<div class="form-field">
 						<label for="cost" class="form-label">Precio del evento:</label>
-						<input type="text" id="cost" name="cost" value="" class="form-input"  required>
+						<input type="text" id="cost" name="cost" value="" class="form-input">
 					</div>
+					<% if (locals.errors && errors.cost) { %>
+						<div class="text-danger">
+							<%= errors.cost.msg %> 
+						</div>
+					<% } %>
 					<div class="form-field">
 						<label for="ubication" class="form-label">Ubicación:</label>
 						<input type="text" id="ubication" name="ubication" value="" class="form-input"  required>
@@ -52,6 +62,11 @@
 						<label for="description" class="form-label">Descipción:</label>
 						<input type="text" name="description" id="description" class="form-input" value=""  required></input>
 					</div>
+					<% if (locals.errors && errors.description) { %>
+						<div class="text-danger">
+							<%= errors.description.msg %> 
+						</div>
+					<% } %>
 					<div class="button-field">
 						<button type="submit" class="save-button">Crear Evento</button>
 					</div>

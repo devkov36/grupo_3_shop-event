@@ -14,6 +14,7 @@ const storage = multer.diskStorage({
 });
 
 const authtMiddlewares = require ('../middlewares/authMiddlewares');
+const eventCreateMiddleware = require('../middlewares/eventCreateMiddleware');
 
 const upload = multer({ storage });
 
@@ -24,7 +25,7 @@ router.get('/cart', authtMiddlewares, eventsdbController.cart);
 
 // CREAR UN EVENTO
 router.get('/create', eventsdbController.create); 
-router.post('/create/', upload.single('main_img'), eventsdbController.save);
+router.post('/create/', upload.single('main_img'), eventCreateMiddleware, eventsdbController.save);
 
 // EDITAR UN EVENTO
 router.get('/edit/:id', eventsdbController.edit);

@@ -9,6 +9,8 @@ const usersdbController = {
     },
 
     processLogin: (req, res) => {
+        const resultValidation = validationResult(req);   
+        
         db.User.findOne({
             where: {
                 email: req.body.email
@@ -59,9 +61,7 @@ const usersdbController = {
             }
         }).catch(error => {
             console.log(error);
-        });
-
-        const resultValidation = validationResult(req);        
+        });     
     },
 
     register: (req, res) => {
