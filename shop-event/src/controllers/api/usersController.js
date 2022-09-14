@@ -13,6 +13,9 @@ const usersController = {
                     data: users
                 });
             });
+    },
+    'detail': (req, res) => {
+        db.User.findByPk(req.params.id)
     }
 }
 

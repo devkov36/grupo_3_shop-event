@@ -9,8 +9,8 @@ const usersdbController = {
     },
 
     processLogin: (req, res) => {
-        const resultValidation = validationResult(req);   
-        
+        const resultValidation = validationResult(req); 
+
         db.User.findOne({
             where: {
                 email: req.body.email
@@ -70,6 +70,17 @@ const usersdbController = {
 
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
+
+        if(!req.isValidImage){
+            let error = {
+                value: '',
+                msg: 'Tienes que mandar un archivo con formato válido, jpeg, jpg, png, gif',
+                param: 'img',
+                location: 'body'
+            }
+            resultValidation.errors.push(error);
+        }
+
 
         if(resultValidation.errors.length > 0){
             return res.render('users/register', {

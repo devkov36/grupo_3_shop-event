@@ -25,6 +25,8 @@ const eventdbController = {
 
     save: (req, res) => {
 
+        console.log("Aqui estamos", req.locals.isValidImage);
+
         const resultValidation = validationResult(req);   
 
         if(resultValidation.errors.length > 0){
