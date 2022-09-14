@@ -16,6 +16,8 @@ const mainController = {
     about_us: (req, res) => {
         res.render('acercaDeNosotros');
     }
+    
+    
 }
 
 module.exports = mainController;
