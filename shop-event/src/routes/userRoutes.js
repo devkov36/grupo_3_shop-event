@@ -3,7 +3,7 @@ const router = express.Router();
 const session = require ('express-session');
 
 // Controller
-const usersController = require('../controllers/usersController');
+const usersdbController = require('../controllers/usersdbController');
 
 // Middlewares
 const validationsRegister = require('../middlewares/validateRegisterMiddleware');
@@ -12,29 +12,17 @@ const guestMiddlewares = require ('../middlewares/guestMiddlewares');
 const authtMiddlewares = require ('../middlewares/authMiddlewares');
 const uploadFile = require('../middlewares/multerRegisterMiddleware');
 
-// Obtiene el formulario de Login
-router.get('/login', guestMiddlewares, usersController.login);
+router.get('/login', guestMiddlewares, usersdbController.login);
+router.post('/login', validationLogin, usersdbController.processLogin);
 
-// Procesa el login
-router.post('/login', validationLogin, usersController.processLogin);
-
-// Formulario de Registro
-router.get('/register', guestMiddlewares, usersController.register);
-
-// Procesar el Registro
-router.post('/register/', uploadFile.single('avatar'), validationsRegister, usersController.processRegister );
+router.get('/register', guestMiddlewares, usersdbController.register);
+router.post('/register', uploadFile.single('avatar'), validationsRegister, usersdbController.processRegister );
 
 // Perfil de Usuario
-router.get('/profile', authtMiddlewares, usersController.profile);
-
-// Checa si el usuario esta autenticado
-router.get ('/check', usersController.check);
+router.get('/profile', authtMiddlewares, usersdbController.profile);
 
 // Logout
-router.get('/logout/', usersController.logout);
+router.get('/logout', usersdbController.logout);
 
-// Create user
-
-//router.get ("/create", userControllers.create);
 
 module.exports = router;

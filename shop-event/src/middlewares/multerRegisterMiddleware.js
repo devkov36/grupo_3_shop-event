@@ -11,6 +11,26 @@ const storage = multer.diskStorage({
     }
 });
 
-const uploadFile = multer({ storage });
+const uploadFile = multer({ 
+    storage,
+    limits: {fileSize : 3000000},
+    fileFilter: function(req, file, cb){
+        checkTipeFyle(file, cb);
+    }
+});
+
+function checkTipeFyle(file, cb){
+    const filetypes = /jpeg|jpg|png|gif/;
+
+    const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+
+    const mimetype = filetypes.test(file.mimetype);
+
+    if(mimetype && extname){
+        return cb(null, true);
+    } else {
+        cb('Error: Sube un archivo valido, jpeg, jpg, png, gif');
+    }
+}
 
 module.exports = uploadFile;

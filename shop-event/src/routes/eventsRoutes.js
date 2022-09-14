@@ -1,5 +1,4 @@
 const express = require('express');
-const eventsController = require('../controllers/eventsController');
 const eventsdbController = require('../controllers/eventsdbController');
 const path = require('path');
 const multer = require('multer');
@@ -15,17 +14,18 @@ const storage = multer.diskStorage({
 });
 
 const authtMiddlewares = require ('../middlewares/authMiddlewares');
+const eventCreateMiddleware = require('../middlewares/eventCreateMiddleware');
 
 const upload = multer({ storage });
 
 const router = express.Router();
 
-router.get('/cart', authtMiddlewares, eventsController.cart);
+router.get('/cart', authtMiddlewares, eventsdbController.cart);
 
 
 // CREAR UN EVENTO
-router.get('/create', eventsController.create); 
-router.post('/create/', upload.single('main_img'), eventsController.save);
+router.get('/create', eventsdbController.create); 
+router.post('/create/', upload.single('main_img'), eventCreateMiddleware, eventsdbController.save);
 
 // EDITAR UN EVENTO
 router.get('/edit/:id', eventsdbController.edit);
@@ -38,7 +38,7 @@ eventsdbController.update);
 router.get('/detail/:id', eventsdbController.detail);
 
 // ELIMINAR UN EVENTO
-router.get('/delete/:id', eventsdbController.delete);
+router.post('/delete/:id', eventsdbController.delete);
 
 module.exports = router;
 
