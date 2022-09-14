@@ -17,6 +17,7 @@ const mainController = {
         res.render('acercaDeNosotros');
     }
     
+    
 }
 
 module.exports = mainController;
