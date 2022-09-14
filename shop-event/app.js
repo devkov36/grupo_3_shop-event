@@ -15,6 +15,7 @@ const usersRoutes = require ('./src/routes/userRoutes');
 
 // LLamado a las apis
 const apiUsersRoutes = require('./src/routes/api/usersRoutes');
+const apiEventsRoutes = require('./src/routes/api/eventsRoutes');
 
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
@@ -46,6 +47,7 @@ app.use('/user', usersRoutes);
 
 // API Routes
 app.use('/api', apiUsersRoutes);
+app.use('/api', apiEventsRoutes);
 
 app.use((req, res, next) => {
     res.status(404).render('404');
