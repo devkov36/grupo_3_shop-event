@@ -72,5 +72,5 @@ const eventdbController = {
      console.log(error);
   })
     },
-}
+ }
 module.exports = eventdbController;
