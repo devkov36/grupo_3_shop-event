@@ -13,6 +13,9 @@ const mainRoutes = require('./src/routes/mainRoutes');
 const eventsRoutes = require('./src/routes/eventsRoutes');
 const usersRoutes = require ('./src/routes/userRoutes');
 
+// LLamado a las apis
+const apiUsersRoutes = require('./src/routes/api/usersRoutes');
+
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
 app.use (session({
@@ -40,6 +43,9 @@ app.set('view engine', 'ejs');
 app.use('/', mainRoutes);
 app.use('/event', eventsRoutes);
 app.use('/user', usersRoutes);
+
+// API Routes
+app.use('/api', apiUsersRoutes);
 
 app.use((req, res, next) => {
     res.status(404).render('404');
