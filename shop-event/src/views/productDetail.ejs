@@ -40,14 +40,22 @@
                                 <br>Av. Eduardo Madero 470, C1106 CABA</br>
                             </p>                    
                         </article>
-                        <div class="medio-de-pago"> 
+                        <div class="medio-de-pago">
+                            <h2>Selecciona tus boletos</h2>
+                            <form action="">
+                                <span>-</span>
+                                <input type="number" value="0" max="10" min="1">
+                                <span>+</span>
+                            </form> 
                             <p class="valor-entrada">
                                 <br>entradas desde <%= event.cost %> </br>
                             </p>     
                             <h4 class="cuotas"> Cuotas sin interés </h4>        
                             <a href="#"> Ver promociones bancarias <i class="fa-solid fa-credit-card"></i></a>
                             <div class= "contenedor-boton details">
-                                <button class= "comprar"><span>Comprar</span></button>
+                                <a href="/order-detail">
+                                    <button class= "comprar"><span>Comprar</span></button>
+                                </a>
                             </div>            
                         </div>
                     </div>  

@@ -21,7 +21,9 @@ router.post('/register', uploadFile.single('avatar'), validationsRegister, users
 router.get('/profile', authtMiddlewares, usersdbController.profile);
 router.get('/profile/edit', authtMiddlewares, usersdbController.editProfile);
 router.put('/profile/edit', authtMiddlewares, usersdbController.processEditProfile);
+
 router.get('/profile/edit/password', authtMiddlewares, usersdbController.editPassword);
+router.put('/profile/edit/password', authtMiddlewares, usersdbController.processEditPassord);
 
 router.get('/logout', usersdbController.logout);
 

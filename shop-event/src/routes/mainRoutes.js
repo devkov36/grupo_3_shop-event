@@ -9,5 +9,8 @@ router.get('/contact', mainController.contact);
 
 router.get('/about-us', mainController.about_us);
 
+router.get('/order-detail', mainController.orderDetail);
+
+router.get('/pay', mainController.pay);
 
 module.exports = router;

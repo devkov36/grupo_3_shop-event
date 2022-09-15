@@ -183,6 +183,19 @@ const usersdbController = {
         res.render('users/editPassword');
     },
 
+    processEditPassord: (req, res)=>{
+        if(req.body.new_password === req.body.confirm_new_password){
+            console.log(req.body);
+        } else {
+            res.render('users/editPassword', {
+                oldData: req.body,
+            }); 
+        }
+        /* db.User.update({
+            password: req.body.password
+        }) */
+    },
+
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
