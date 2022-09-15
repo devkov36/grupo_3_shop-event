@@ -7,19 +7,33 @@
  <%- include('../partials/header') %>
  <!-- Header -->
 
-    <section class="login-section">
+    <section class="profile-section">
         <div class="container-login">
-            <h1>Mi perfil</h1>
-            <div>
-                <div>
-                    <img src="/images/users/<%= user.avatar %>" alt="Imagen de Usuario">
-                </div>
-                <div>
-                    <p><%= user.first_name %> <%= user.last_name %></p>
-                    <p><%= user.category %></p>
+            <div class="user-title">
+                <h1>Mi perfil</h1>
+                <a href="/user/profile/edit">Editar mi perfil</a>
+            </div>
+            <div class = "info-user-container">
+                <img class="imgUser" src="/images/users/<%= user.avatar %>" alt="Imagen de Usuario">
+                <div class = "data-user-container">
+                    <h2><%= user.first_name %> <%= user.last_name %></h2>
+                    <br>
                     <p><%= user.email %></p>
+                    <br>
+                    <p><%= user.username %></p>
+                    <br>
+                    <p><%= user.category %></p>
+                    <br>
+                    <br>
+                    <a href="/user/logout">Cerrar sesión</a>
                 </div>
             </div>
+        </div>
+        <div class="container-login">
+            <div class="user-title">
+                <h1>Mis compras</h1>
+            </div>
+            <p>Aqui van mis compras</p>
         </div>
     </section>
     <!-- Footer -->

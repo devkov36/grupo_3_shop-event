@@ -129,9 +129,58 @@ const usersdbController = {
     },
 
     profile: (req, res) => {
-        res.render("users/profile", {
-            user: req.session.usuarioLogueado
-        });
+        let user = req.session.usuarioLogueado;
+
+        db.User.findByPk(user.id)
+            .then(user=>{
+                res.render('users/profile', {
+                    user
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    },
+
+    editProfile: (req, res) => {
+
+        let user = req.session.usuarioLogueado;
+
+        db.User.findByPk(user.id)
+            .then(user=>{
+                res.render('users/editProfile', {
+                    user
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    },
+
+    processEditProfile: (req, res) => {
+        let user = req.session.usuarioLogueado;
+
+        console.log("AQUI", req.body);
+
+        db.User.update(
+            {
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                username: req.body.username
+            },
+            {
+                where: {id: user.id}
+            })
+        .then(()=>{
+            return res.redirect('/user/profile');
+        })
+        .catch((error)=>{
+            console.log(error);
+        });  
+    },
+
+    editPassword: (req, res) => {
+        res.render('users/editPassword');
     },
 
     logout: (req, res) => {

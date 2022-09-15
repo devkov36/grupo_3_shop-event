@@ -504,6 +504,7 @@ article.contenedor-articulo-carrito-home{
 /* CSS de Login y Register */
 
 .login-section,
+.profile-section,
 .register-section {
     align-items: center;
     justify-content: center;
@@ -513,6 +514,7 @@ article.contenedor-articulo-carrito-home{
 
 .container-login,
 .container-signup{
+    margin-bottom: 20px;
     position: relative;
     max-width: 860px;
     width: 100%;
@@ -1022,6 +1024,67 @@ button#flecha-derecha{
         flex-direction: row;
     }
 }
+
+/* CSS DE MI PERFIL */
+
+.imgUser{
+    width: 250px;
+    height: 250px;
+    border-radius: 160px;
+    border: 10px solid #666;
+    margin-right: 20px;
+}
+
+.user-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info-user-container{
+    border: 1px solid #666;
+    display: flex;
+    padding: 30px;
+    background-color: #F2F3F4;
+}
+
+.data-user-container h2{
+    margin-bottom: 20px;
+}
+
+.input-profile-container{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-profile-container input{
+    margin-right: 20px;
+}
+
+.input-profile-field{
+    width: 50%;
+}
+
+.container-img-edit-profile{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-img-edit{
+    display: flex;
+}
+
+.input-profile-img{
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+.profile-section{
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* css de panel quienes somos*/
 .PanelAcercaDeNosotros {
     position: relative;
