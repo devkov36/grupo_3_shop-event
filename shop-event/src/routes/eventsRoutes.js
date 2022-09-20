@@ -41,9 +41,9 @@ router.get('/detail/:id', eventsdbController.detail);
 router.post('/delete/:id', eventsdbController.delete);
 
 router.get('/detail/:id/order-detail', eventsdbController.orderDetail);
-router.post('/detail/:id/order-detail', eventsdbController.processOrderDetail);
+router.post('/detail/:id/order-detail', authtMiddlewares, eventsdbController.processOrderDetail);
 
-router.get('/pay', eventsdbController.pay);
+router.get('/detail/:id/order-detail/pay', eventsdbController.pay);
 
 module.exports = router;
 

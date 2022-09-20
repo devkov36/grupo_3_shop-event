@@ -145,7 +145,18 @@ const eventdbController = {
     },
 
     pay: (req, res) =>{
-        res.render('payPage');
+
+        let eventId = +req.params.id;
+
+        db.Event.findByPk(eventId)
+            .then(event => {
+                res.render('payPage', {
+                    event
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }
  }
 module.exports = eventdbController;

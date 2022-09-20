@@ -19,32 +19,58 @@
                         <div class="user-title">
                             <h1>Detalle de la orden</h1>
                         </div>
+                        <p>1x General</p>
+                            <p> $550</p>
                         <div>
-                            <form action="/user/profile/edit/password?_method=PUT" method= "POST">
+                            <br>
+                            <h1>Datos de los boletos</h1>
+                            <br>
+                            <form action="order-detail/pay" method= "POST">
                                 <div class="input-profile-container">
                                     <div class="input-profile-field">
-                                        <label for="new_password">Nueva Contraseña </label>
+                                        <label for="first_name">Nombre </label>
                                         <div class="input-box">
                                             <input 
                                                 type="text" 
-                                                placeholder="Ingresa la contraseña" 
-                                                name="new_password"
-                                                value = "<%= locals.oldData ? oldData.new_password : null %>"
+                                                placeholder="Enter your email" 
+                                                name="first_name"
                                             >
                                         </div>
                                     </div>
                                     <div class="input-profile-field">
-                                        <label for="confirm_new_password">Confirmación de la nueva contraseña </label>
+                                        <label for="last_name">Apellidos </label>
                                         <div class="input-box">
                                             <input 
                                                 type="text" 
-                                                placeholder="Confirma la contraseña" 
-                                                name="confirm_new_password"
+                                                placeholder="Ingresa tus apellidos" 
+                                                name="last_name"
                                             >
                                         </div>
                                     </div>
                                 </div>         
-                                <button class="login-button" type="submit">Guardar cambios</button>
+                                <div class="input-profile-container">
+                                    <div class="input-profile-field">
+                                        <label for="email">Correo electrónico </label>
+                                        <div class="input-box">
+                                            <input 
+                                                type="text" 
+                                                placeholder="Ingresa tu email" 
+                                                name="email"
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="input-profile-field">
+                                        <label for="email">Confirma tu email </label>
+                                        <div class="input-box">
+                                            <input 
+                                                type="text" 
+                                                placeholder="Ingresa tu email" 
+                                                name="email"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>    
+                                <button class="login-button" type="submit">Pagar Ahora</button>
                             </form>
                         </div>
                     </div>
