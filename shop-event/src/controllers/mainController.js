@@ -15,12 +15,6 @@ const mainController = {
     },
     about_us: (req, res) => {
         res.render('acercaDeNosotros');
-    },
-    orderDetail: (req, res) => {
-        res.render('orderDetail');
-    },
-    pay: (req, res) =>{
-        res.render('payPage');
     }
     
     

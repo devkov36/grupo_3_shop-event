@@ -40,5 +40,10 @@ router.get('/detail/:id', eventsdbController.detail);
 // ELIMINAR UN EVENTO
 router.post('/delete/:id', eventsdbController.delete);
 
+router.get('/detail/:id/order-detail', eventsdbController.orderDetail);
+router.post('/detail/:id/order-detail', eventsdbController.processOrderDetail);
+
+router.get('/pay', eventsdbController.pay);
+
 module.exports = router;
 

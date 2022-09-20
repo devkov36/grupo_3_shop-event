@@ -6,7 +6,18 @@ const cookies = require('cookie-parser');
 
 const app = express ();
 
-const port = 3000
+const port = 3001
+
+app.use( ( req, res, next ) => {
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    next();
+
+});
+
 
 
 const mainRoutes = require('./src/routes/mainRoutes');

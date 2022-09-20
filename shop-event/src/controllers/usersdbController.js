@@ -184,6 +184,8 @@ const usersdbController = {
     },
 
     processEditPassord: (req, res)=>{
+        let user = req.session.usuarioLogueado;
+        
         if(req.body.new_password === req.body.confirm_new_password){
             console.log(req.body);
         } else {

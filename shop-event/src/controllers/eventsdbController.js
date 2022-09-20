@@ -114,5 +114,38 @@ const eventdbController = {
 
         res.redirect("/");
     },
+
+    orderDetail: (req, res) => {
+        let eventId = +req.params.id;
+
+        db.Event.findByPk(eventId)
+            .then(event => {
+                res.render('orderDetail', {
+                    event
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    },
+
+    processOrderDetail: (req, res) => {
+
+        let eventId = +req.params.id;
+
+        db.Event.findByPk(eventId)
+            .then(event => {
+                res.render('orderDetail', {
+                    event
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    },
+
+    pay: (req, res) =>{
+        res.render('payPage');
+    }
  }
 module.exports = eventdbController;
