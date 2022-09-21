@@ -6,78 +6,101 @@
     <!-- Header -->
     <%- include('partials/header') %>
     <!-- Header -->
-    <section class="register-section">
-        <div class="container-signup">
-            <form method="POST" action="/user/register/" enctype="multipart/form-data">
-                <div class="form-content">
-                    <a href="/">
-                        <div class="image-container">
-                        </div>
-                    </a>
-                    <div class="signup-form">
-                        <div class="input-boxes">
-                            <h3 class="title">Sign up</h3>
-                            <div class="input-box">
-                                <i class="fa-solid fa-user-astronaut"></i>
-                                <input 
-                                    type="text"
-                                    name="name"  
-                                    placeholder="Enter your name" 
-                                    value = "<%= locals.oldData ? oldData.name : null %>"
-                                >
+        <section class="register-section">
+            <div class="container-signup">
+                <form method="POST" action="/user/register/" enctype="multipart/form-data">
+                    <div class="form-content">
+                        <a href="/">
+                            <div class="image-container">
                             </div>
-                            <% if (locals.errors && errors.name) { %>
-                                <div class="text-danger">
-                                    <%= errors.name.msg %> 
+                        </a>
+                        <div class="signup-form">
+                            <div class="input-boxes">
+                                <h3 class="title">Sign up</h3>
+                                <div class="input-box">
+                                    <i class="fa-solid fa-user-astronaut"></i>
+                                    <input 
+                                        id="name"
+                                        type="text"
+                                        name="name"  
+                                        placeholder="Enter your name" 
+                                        value = "<%= locals.oldData ? oldData.name : null %>"
+                                    >
                                 </div>
-                            <% } %>
-                            <div class="input-box">
-                                <i class="fas fa-envelope"></i>
-                                <input 
-                                    type="email"
-                                    name="email" 
-                                    placeholder="Enter your email" 
-                                    value = "<%= locals.oldData ? oldData.email : null %>"
-                                >
-                            </div>
-                            <% if (locals.errors && errors.email) { %>
-                                <div class="text-danger">
-                                    <%= errors.email.msg %> 
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="text-danger">
+                                        <%= errors.name.msg %> 
+                                    </div>
+                                <% } %>
+                                <div class="input-box">
+                                    <i class="fas fa-envelope"></i>
+                                    <input 
+                                        id= "email"
+                                        type="email"
+                                        name="email" 
+                                        placeholder="Enter your email" 
+                                        value = "<%= locals.oldData ? oldData.email : null %>"
+                                    >
                                 </div>
-                            <% } %>
-                            <div class="input-box">
-                                <i class="fa-solid fa-lock"></i>
-                                <input 
-                                    type="password" 
-                                    name="password"
-                                    placeholder="Enter your password" 
-                                >
-                            </div>
-                            <% if (locals.errors && errors.password) { %>
-                                <div class="text-danger">
-                                    <%= errors.password.msg %> 
+                                <% if (locals.errors && errors.email) { %>
+                                    <div class="text-danger">
+                                        <%= errors.email.msg %> 
+                                    </div>
+                                <% } %>
+                                <div class="input-box">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input 
+                                        id="password"type="password" name="password1" id="password1" class="form-control" aria-describedby="emailHelp" placeholder="Ingresa tu contraseña">
+                                        <label for="password-confirm">Confirmar contraseña</label>
+                                        <input type="password" name="password-confirm" id="password2" class="form-control" aria-describedby="emailHelp" placeholder="Confirma tu contraseña">
+                                        <div id="pswd_info">
+                                          <h4>La contraseña debe cumplir los siguientes requerimientos:</h4>
+                                          <ul>
+                                            <li id="letter" class="invalid">Al menos <strong>una letra</strong></li>
+                                            <li id="capital" class="invalid">Al menos <strong>una letra mayúscula</strong></li>
+                                            <li id="number" class="invalid">Al menos <strong>un número</strong></li>
+                                            <li id="length" class="invalid">Al menos <strong>8 carácteres</strong></li>
+                                            <li id="null" class="invalid">Debe <strong>confirmar la contraseña</strong></li>
+                                            <li id="match" class="invalid">Las contraseñas <strong>deben cohincidir</strong></li>
+                                            <li id="blank" class="invalid">Las contraseñas <strong>no deben tener espacios</strong></li>
+                                          </ul>
+                                        </div>
+                                    
                                 </div>
-                            <% } %>
-                            <label>Imagen de perfil:</label>
-                            <div class="input-box">
-                                <i class="fa-solid fa-image"></i>
-                                <input 
-                                    type="file"
-                                    name="avatar" 
-                                >
-                            </div>
-                            <button type="submit">Sign up</button>
-                            <div class="text">Already have an account? 
-                                <a href="/user/login">Login now</a> 
+                                <% if (locals.errors && errors.password) { %>
+                                    <div class="text-danger">
+                                        <%= errors.password.msg %> 
+                                    </div>
+                                <% } %>
+                                <label>Imagen de perfil:</label>
+                                <div class="input-box">
+                                    <i class="fa-solid fa-image"></i>
+                                    <input 
+                                        id="fichero"
+                                        type="file"
+                                        name="avatar" 
+                                         
+                                        <p id="texto"> </p><br/>   	
+                                        <img id="img" src="" />
+                                    
+                                </div>
+                                <button type="submit">Sign up</button>
+                                <div class="text">Already have an account? 
+                                    <a href="/user/login">Login now</a> 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
-        </div>
-    </section>
-    <!-- Footer -->
-    <%- include('partials/footer') %>
-    <!-- Footer -->
+                </form>
+            </div>
+        </section>
+        <!-- Footer -->
+        <%- include('partials/footer') %>
+        <!-- Footer -->
+
+    <script  type="text/javascript"
+        src="/grupo_3_shop-event/shop-event/public/js/validatorUser.js"> 
+    </script>
+    
 </body>
 </html>
