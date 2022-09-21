@@ -198,9 +198,7 @@ div .main-article-home {
     display: grid;
     color: #ca4b40;
     font-size: x-large;
-    margin: 0px;
-    padding: 0px;
-    padding-left: 10px;
+    padding: 20px;
     background-color: #ffff;
     width: 100%;
     text-align: center;
@@ -235,8 +233,6 @@ article.contenedor-articulo-carrito-home{
 
     div .main-article-home {
         width: 100%;
-        padding-left: 0px;
-        margin: 0px;
     }
 
     .error-image img{
