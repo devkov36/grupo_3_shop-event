@@ -61,6 +61,38 @@ const usersController = {
                     data: "Not found"
                 });
             });
+    },
+    'last_user_created': (req , res) => {
+        db.User.findAll()
+            .then(users => {
+                let listUsers = [];
+                users.forEach((user)=>{
+                    let data = {};
+                    data['id'] = user.id
+                    data['first_name'] = user.first_name
+                    data['last_name'] = user.last_name
+                    data['email'] = user.email
+                    data['username'] = user.username,
+                    data['avatar'] = user.avatar
+                    listUsers.push(data);
+                });
+                res.status(200).json({
+                    meta: {
+                        status: 200,
+                        url: "api/users",
+                    },
+                    data: listUsers.slice(-1)
+                });
+            })
+            .catch(error => {
+                res.status(404).json({
+                    meta: {
+                        status: 404,
+                        url: "api/users"
+                    },
+                    data: "Not found"
+                });
+            });
     }
 }
 

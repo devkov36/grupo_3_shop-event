@@ -43,7 +43,28 @@ const eventsController = {
                     data: "Not found"
                 });
             });
-    }
+    },
+    'last_event_create': (req, res) => {
+        db.Event.findAll()
+            .then(events => {
+                res.status(200).json({
+                    meta: {
+                        status: 200,
+                        url: "api/events",
+                    },
+                    data: events.slice(-1)
+                });
+            })
+            .catch(error => {
+                res.status(404).json({
+                    meta: {
+                        status: 404,
+                        url: "api/events"
+                    },
+                    data: "Not found"
+                });
+            });
+    },
 }
 
 module.exports = eventsController;
