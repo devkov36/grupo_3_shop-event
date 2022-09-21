@@ -6,12 +6,27 @@ const cookies = require('cookie-parser');
 
 const app = express ();
 
-const port = 3000
+const port = 3001
+
+app.use( ( req, res, next ) => {
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    next();
+
+});
+
 
 
 const mainRoutes = require('./src/routes/mainRoutes');
 const eventsRoutes = require('./src/routes/eventsRoutes');
 const usersRoutes = require ('./src/routes/userRoutes');
+
+// LLamado a las apis
+const apiUsersRoutes = require('./src/routes/api/usersRoutes');
+const apiEventsRoutes = require('./src/routes/api/eventsRoutes');
 
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
@@ -40,6 +55,10 @@ app.set('view engine', 'ejs');
 app.use('/', mainRoutes);
 app.use('/event', eventsRoutes);
 app.use('/user', usersRoutes);
+
+// API Routes
+app.use('/api', apiUsersRoutes);
+app.use('/api', apiEventsRoutes);
 
 app.use((req, res, next) => {
     res.status(404).render('404');

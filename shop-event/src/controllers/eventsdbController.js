@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const { validationResult } = require('express-validator');
 
 const eventdbController = {
 
@@ -23,6 +24,16 @@ const eventdbController = {
     },
 
     save: (req, res) => {
+
+        const resultValidation = validationResult(req);   
+
+        if(resultValidation.errors.length > 0){
+            console.log(resultValidation.errors);
+            return res.render('event-create-form', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            }
+        )}
 
         db.Event.create({
             title: req.body.title,
@@ -82,7 +93,7 @@ const eventdbController = {
         })
         .catch((error)=>{
             console.log(error);
-        })   
+        });   
     },
     // DELETE de eventos 
     
@@ -103,5 +114,49 @@ const eventdbController = {
 
         res.redirect("/");
     },
-}
+
+    orderDetail: (req, res) => {
+        let eventId = +req.params.id;
+
+        db.Event.findByPk(eventId)
+            .then(event => {
+                res.render('orderDetail', {
+                    event
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    },
+
+    processOrderDetail: (req, res) => {
+
+        let eventId = +req.params.id;
+
+        db.Event.findByPk(eventId)
+            .then(event => {
+                res.render('orderDetail', {
+                    event
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    },
+
+    pay: (req, res) =>{
+
+        let eventId = +req.params.id;
+
+        db.Event.findByPk(eventId)
+            .then(event => {
+                res.render('payPage', {
+                    event
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+ }
 module.exports = eventdbController;

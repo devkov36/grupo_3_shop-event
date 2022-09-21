@@ -15,11 +15,21 @@ const uploadFile = multer({
     storage,
     limits: {fileSize : 3000000},
     fileFilter: function(req, file, cb){
-        checkTipeFyle(file, cb);
+
+        let isValidImage = checkTipeFyle(file);
+
+        console.log("isValidImage", isValidImage);
+        console.log("locals", req.locals);
+        
+        req.isValidImage = isValidImage;
+        cb(null, isValidImage);
+        /* checkTipeFyle(file, cb); */
     }
 });
 
-function checkTipeFyle(file, cb){
+// Hacer return 
+
+function checkTipeFyle(file){
     const filetypes = /jpeg|jpg|png|gif/;
 
     const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
@@ -27,9 +37,11 @@ function checkTipeFyle(file, cb){
     const mimetype = filetypes.test(file.mimetype);
 
     if(mimetype && extname){
-        return cb(null, true);
+        return true;
+        /* return cb(null, true); */
     } else {
-        cb('Error: Sube un archivo valido, jpeg, jpg, png, gif');
+        return false;
+        /* cb('Error: Sube un archivo valido, jpeg, jpg, png, gif'); */
     }
 }
 

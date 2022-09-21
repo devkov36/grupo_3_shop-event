@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Evento'}) %>
+<body>
+    <!-- Header -->
+    <%- include('partials/header') %>
+    <!-- Header -->
+        <main>
+            <article class="main-detail">
+                <div class="portada-detail-img">
+                    <div class="img-product-portada">
+                        <img src="/images/eventos/<%= event.banner_img %>" alt="<%=event.banner_img%>" class="product-img-detail-portada"> 
+                    </div>
+                    <img src="/images/eventos/<%= event.banner_img %>" alt="<%=event.banner_img%>" class="product_img-detail">       
+                </div>
+                <section class="login-section">
+                    <div class="container-login">
+                        <div class="user-title">
+                            <h1>Detalle de la orden</h1>
+                        </div>
+                        <p>1x General</p>
+                            <p> $550</p>
+                        <div>
+                            <br>
+                            <h1>Datos de los boletos</h1>
+                            <br>
+                            <form action="order-detail/pay" method= "POST">
+                                <div class="input-profile-container">
+                                    <div class="input-profile-field">
+                                        <label for="first_name">Nombre </label>
+                                        <div class="input-box">
+                                            <input 
+                                                type="text" 
+                                                placeholder="Enter your email" 
+                                                name="first_name"
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="input-profile-field">
+                                        <label for="last_name">Apellidos </label>
+                                        <div class="input-box">
+                                            <input 
+                                                type="text" 
+                                                placeholder="Ingresa tus apellidos" 
+                                                name="last_name"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>         
+                                <div class="input-profile-container">
+                                    <div class="input-profile-field">
+                                        <label for="email">Correo electrónico </label>
+                                        <div class="input-box">
+                                            <input 
+                                                type="text" 
+                                                placeholder="Ingresa tu email" 
+                                                name="email"
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="input-profile-field">
+                                        <label for="email">Confirma tu email </label>
+                                        <div class="input-box">
+                                            <input 
+                                                type="text" 
+                                                placeholder="Ingresa tu email" 
+                                                name="email"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>    
+                                <button class="login-button" type="submit">Pagar Ahora</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>        
+        <!-- Footer -->
+        <%- include('partials/footer') %>
+        <!-- Footer -->      
+    </body>
+</html>

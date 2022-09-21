@@ -81,6 +81,12 @@
                                     required
                                 >
                             </div>
+                            <% if (locals.errors && errors.img) { %>
+                                <div class="text-danger">
+                                    <%= errors.img.msg %> 
+                                </div>
+                                <br>
+                            <% } %>
                             <button type="submit">Sign up</button>
                             <div class="text">Already have an account? 
                                 <a href="/user/login">Login now</a> 

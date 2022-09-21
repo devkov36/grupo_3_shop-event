@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Compra'}) %>
+<body>
+    <!-- Header -->
+    <%- include('partials/header') %>
+    <!-- Header -->
+        <main>
+            <article class="main-detail">
+                <div class="portada-detail-img">
+                    <div class="img-product-portada">
+                        <img src="/images/eventos/<%= event.banner_img %>" alt="<%=event.banner_img%>" class="product-img-detail-portada"> 
+                    </div>
+                    <img src="/images/eventos/<%= event.banner_img %>" alt="<%=event.banner_img%>" class="product_img-detail">       
+                </div>
+                <section class="login-section">
+                    <div class="container-login">
+                        <div class="user-title">
+                            <h1>Selecciona el método de pago</h1>
+                        </div>
+                            <p>Método de pago 1</p>
+                            <p>Método de pago 2</p>
+                        <div>
+                            <br>
+                            <h1>Datos de la tarjeta de crédito / débito</h1>
+                            <br>
+                            <form action="/user/profile/edit/password?_method=PUT" method= "POST">
+                                <div class="input-profile-field">
+                                    <label for="first_name">Numero de tarjeta </label>
+                                    <div class="input-box">
+                                        <input 
+                                            type="text" 
+                                            placeholder="Enter your email" 
+                                            name="first_name"
+                                        >
+                                    </div>
+                                </div>
+                                <div class="input-profile-field">
+                                    <label for="last_name">Nombre asociado a la tarjeta </label>
+                                    <div class="input-box">
+                                        <input 
+                                            type="text" 
+                                            placeholder="Ingresa tus apellidos" 
+                                            name="last_name"
+                                        >
+                                    </div>
+                                </div>   
+                                <div class="input-profile-field">
+                                    <label for="email">Fecha de expiración </label>
+                                    <div class="input-box">
+                                        <input 
+                                            type="text" 
+                                            placeholder="Ingresa tu email" 
+                                            name="email"
+                                        >
+                                    </div>
+                                </div>
+                                <div class="input-profile-field">
+                                    <label for="email">Código de seguridad (CVV) </label>
+                                    <div class="input-box">
+                                        <input 
+                                            type="text" 
+                                            placeholder="Ingresa tu email" 
+                                            name="email"
+                                        >
+                                    </div>
+                                </div> 
+                                <br>
+                                <hr size="2px" width="80%" noshade="noshade" align="right" />  
+                                <br>     
+                                <h1>Información de cobro</h1>
+                                <br>    
+                                <button class="login-button" type="submit">Pagar Ahora</button>
+                                <div class="input-profile-field">
+                                    <label for="email">Calle y número </label>
+                                    <div class="input-box">
+                                        <input 
+                                            type="text" 
+                                            placeholder="Ingresa tu email" 
+                                            name="email"
+                                        >
+                                    </div>
+                                </div>
+                                <div class="input-profile-field">
+                                    <label for="email">Código Postal </label>
+                                    <div class="input-box">
+                                        <input 
+                                            type="text" 
+                                            placeholder="Ingresa tu email" 
+                                            name="email"
+                                        >
+                                    </div>
+                                </div> 
+                                <div class="input-profile-field">
+                                    <label><input type="checkbox" id="cbox1" value="first_checkbox"> Acepto términos y condiciones</label><br>
+                                </div> 
+
+                                <button class="login-button" type="submit">Realizar compra</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>        
+        <!-- Footer -->
+        <%- include('partials/footer') %>
+        <!-- Footer -->      
+    </body>
+</html>

@@ -18,10 +18,13 @@ router.post('/login', validationLogin, usersdbController.processLogin);
 router.get('/register', guestMiddlewares, usersdbController.register);
 router.post('/register', uploadFile.single('avatar'), validationsRegister, usersdbController.processRegister );
 
-// Perfil de Usuario
 router.get('/profile', authtMiddlewares, usersdbController.profile);
+router.get('/profile/edit', authtMiddlewares, usersdbController.editProfile);
+router.put('/profile/edit', authtMiddlewares, usersdbController.processEditProfile);
 
-// Logout
+router.get('/profile/edit/password', authtMiddlewares, usersdbController.editPassword);
+router.put('/profile/edit/password', authtMiddlewares, usersdbController.processEditPassord);
+
 router.get('/logout', usersdbController.logout);
 
 
