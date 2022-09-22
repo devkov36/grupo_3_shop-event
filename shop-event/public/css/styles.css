@@ -347,6 +347,16 @@ article.contenedor-articulo-carrito-home{
     margin: auto;
 }
 
+.input_field{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 .description-detail{
     padding: 20px;
     background-color:#ECECEC;
@@ -578,6 +588,10 @@ form .form-content .input-box{
 .form-content .input-box i{
     position: absolute;
     font-size: 17px;
+}
+
+.input-box{
+    padding: 0 10px;
 }
 
 form .form-content .text{
