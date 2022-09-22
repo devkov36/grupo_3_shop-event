@@ -196,17 +196,19 @@ div .main-article {
 
 div .main-article-home {
     display: grid;
-    color: #ca4b40;
-    font-size: x-large;
+    color: black;
+    font-size: 20px;
     padding: 20px;
     background-color: #ffff;
     width: 100%;
+    height: 50%;
     text-align: center;
     align-content: space-evenly;
     justify-content: center;
     align-items: center;
 }
 img.product_img-carrito-home {
+    height: 50%;
     width: 100%;
 }
 
@@ -345,6 +347,16 @@ article.contenedor-articulo-carrito-home{
     margin: auto;
 }
 
+.input_field{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 .description-detail{
     padding: 20px;
     background-color:#ECECEC;
@@ -355,6 +367,15 @@ article.contenedor-articulo-carrito-home{
     font-size: xx-large;
     border: 5px solid lightgray;
     border-radius: 2px;
+}
+
+.description-detail p{
+    font-size: 20px;
+    display: flex;
+}
+
+.description-detail i{
+    margin-right: 8px;
 }
 
 .product_img-detail{
@@ -412,7 +433,6 @@ article.contenedor-articulo-carrito-home{
     right: 0px;
     font-family: 'Roboto';
     margin-right:auto ;
-    font-size: 10px;
     display: flexbox;
 }
 
@@ -568,6 +588,10 @@ form .form-content .input-box{
 .form-content .input-box i{
     position: absolute;
     font-size: 17px;
+}
+
+.input-box{
+    padding: 0 10px;
 }
 
 form .form-content .text{

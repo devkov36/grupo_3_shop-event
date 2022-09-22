@@ -55,7 +55,7 @@ const eventdbController = {
 
         if(resultValidation.errors.length > 0){
             console.log(resultValidation.errors);
-            return res.render('event-create-form', {
+            return res.render('event/event-create-form', {
                 errors: resultValidation.mapped(),
                 oldData: req.body,
             }
@@ -132,13 +132,11 @@ const eventdbController = {
             }     
         })
         .then(movie => {
-            console.log(movie);
+            res.redirect("/");
         })
         .catch((error)=>{
             console.log(error);
         });
-
-        res.redirect("/");
     },
 
     orderDetail: (req, res) => {

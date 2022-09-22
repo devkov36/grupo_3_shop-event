@@ -16,29 +16,29 @@
                 </div>
                 <article class="contenedor-producto-detail-principal">
                     <div class="description-detail">
-                        <h2><%= event.title %></h2>
-                        <p> <%= event.event_date %>                 
-                        <br><%= event.ubication %> </br>
-                        </p>
+                        <h1><%= event.title %></h1>
+                        <br>
+                        <p>  <i class="fa-regular fa-calendar"></i> <%= event.event_date %></p>                 
+                        <p>   <i class="fa-solid fa-map"></i> <%= event.ubication %></p>
                     </div>
                     <div class="texto-descripcion">
                     
-                        <h2 class="txt-description">Tickets  a la venta a traves de Shop Event</h2>
-                    
-                    
+                        <h1 class="txt-description">Sobre el evento</h1>
+                        <br>
                         <p class="info-concierto">
                             <%= event.description %>
                         </p>
                     </div>    
                     <div class="recinto-details">
+                        <h1 class="">Recinto</h1>
+                        <br>
                         <img src="/images/recintos/luna park.jpg2.jpg" alt="Informacion" class="recinto-img-detail" >            
                         <article>
-                            <h3  class="titulo">Recinto</h3> 
-                            <br>
                             <p class="luna-park"><%= event.ubication %>.
-                                <br>Direccion </br>
+                                <br>Dirección </br>
                                 <br>Av. Eduardo Madero 470, C1106 CABA</br>
-                            </p>                    
+                            </p>
+                            <br>                    
                         </article>
                         <div class="medio-de-pago">
                             <h2>Selecciona tus boletos</h2>
@@ -53,6 +53,7 @@
                             <p class="valor-entrada">
                                 <br>entradas desde <%= event.cost %> </br>
                             </p>     
+                            <br>
                             <h4 class="cuotas"> Cuotas sin interés </h4>        
                             <a href="#"> Ver promociones bancarias <i class="fa-solid fa-credit-card"></i></a>            
                         </div>
