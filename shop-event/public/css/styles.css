@@ -196,17 +196,19 @@ div .main-article {
 
 div .main-article-home {
     display: grid;
-    color: #ca4b40;
-    font-size: x-large;
+    color: black;
+    font-size: 20px;
     padding: 20px;
     background-color: #ffff;
     width: 100%;
+    height: 50%;
     text-align: center;
     align-content: space-evenly;
     justify-content: center;
     align-items: center;
 }
 img.product_img-carrito-home {
+    height: 50%;
     width: 100%;
 }
 
@@ -357,6 +359,15 @@ article.contenedor-articulo-carrito-home{
     border-radius: 2px;
 }
 
+.description-detail p{
+    font-size: 20px;
+    display: flex;
+}
+
+.description-detail i{
+    margin-right: 8px;
+}
+
 .product_img-detail{
     width: 100%;
     display: flex;
@@ -412,7 +423,6 @@ article.contenedor-articulo-carrito-home{
     right: 0px;
     font-family: 'Roboto';
     margin-right:auto ;
-    font-size: 10px;
     display: flexbox;
 }
 
