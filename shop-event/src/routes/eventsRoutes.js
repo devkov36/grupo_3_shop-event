@@ -36,6 +36,7 @@ eventsdbController.update);
 //OBTIENE UN EVENTO
 
 router.get('/detail/:id', eventsdbController.detail);
+router.post('/autocomplete/', eventsdbController.autocomplete);
 
 // ELIMINAR UN EVENTO
 router.post('/delete/:id', eventsdbController.delete);
