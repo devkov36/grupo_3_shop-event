@@ -19,6 +19,18 @@ const eventdbController = {
         });
     },
 
+    autocomplete: (req, res) => {
+        const search_text = +req.body.term;
+
+        db.Event.findByPk(search_text)
+        .then(event => {
+            res.render('productDetail', {event});
+        })
+        .catch(error =>{
+            console.log(error);
+        });
+    },
+
     create: (req, res) => {
         res.render('event-create-form',{mensaje:''});
     },

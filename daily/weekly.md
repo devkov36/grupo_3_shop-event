@@ -47,4 +47,20 @@ Semana del 2 de Agosto  al 9 de Agosto:
 Realizamos la confeccion de Tablas
 
 Semanda del 10 de Agosto al 17 de Agosto:
-Terminamos de definir lastablas y seguimos realizando las tareas asignadas para terminar con el Sprint 6
+Terminamos con parte del Sprint 6
+
+Semanda del 18 de Agosto al 25 de Agosto:
+Terminamos el print 6
+
+Semanda del 26 de Agosto al 02 de Septiembre :
+Comenzamos a trabajar sobre el sprint 7
+
+Semanda del 03 de Septiembre al 10 de Septiembre:
+Trabajamos sobre le sprint 7
+
+Semanda del 11 de Septiembre al 17 de Septiembre:
+Terminamos tareas del sprint 6 y terminamos tareas del sprint 7
+
+Semanda del 18 de Septiembre al 22 de Septiembre:
+Comenzamos el sprint 8 repartimos temas para presentacion y ultimamos detalles
+
