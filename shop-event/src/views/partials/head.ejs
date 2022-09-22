@@ -16,8 +16,8 @@
           $( "#autocomplete" ).autocomplete({
             source: function( request, response ) {
               $.ajax( {
-                url: "/event/autocomplete",
-                dataType: "jsonp",
+                url: "/event/autocomplete",                
+                dataType: "json",
                 data: {
                   term: request.term
                 },
@@ -29,6 +29,7 @@
             minLength: 2,
             select: function( event, ui ) {
               log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+              window.location='/event/detail/'+ ui.item.value;       
             }
           } );
         } );

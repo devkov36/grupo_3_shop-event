@@ -1,5 +1,6 @@
 const db = require('../database/models');
 const { validationResult } = require('express-validator');
+const { sequelize } = require('../database/models');
 
 const eventdbController = {
 
@@ -20,11 +21,24 @@ const eventdbController = {
     },
 
     autocomplete: (req, res) => {
-        const search_text = +req.body.term;
-
-        db.Event.findByPk(search_text)
-        .then(event => {
-            res.render('productDetail', {event});
+        
+        
+        const search_text = req.query.term;        
+        const Op=db.Sequelize.Op;
+        console.log(Op);
+        const results = [];
+        db.Event.findAll({
+            where:{
+                title:{[Op.like]:'%'+search_text+'%'}
+            }
+        })
+        .then(result => {
+                result.forEach(evento => {
+                    let { id, title } = evento;
+                    results.push({ value: id, label: title });
+                });
+                
+                res.json(results);
         })
         .catch(error =>{
             console.log(error);
